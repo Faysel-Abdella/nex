@@ -28,7 +28,7 @@ export default function HeroSection() {
 
             {/* Main Heading - 56px with 120% line height (no forced line breaks) */}
             <h1
-              className="text-3xl md:text-7xl ltr:max-w-4xl rtl:max-w-3xl  font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white"
+              className="text-3xl md:text-7xl ltr:max-w-5xl rtl:max-w-3xl  font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white"
               style={{ fontWeight: 400 }}
             >
               {t("mainHeading")}
@@ -70,21 +70,15 @@ export default function HeroSection() {
           {/* Right visual - anchored bottom-right */}
           <div className="relative h-72 md:h-full flex items-end justify-end w-full md:ltr:-mr-16  lg:ltr:-mr-32  md:top-42 md:pb-0">
             <div className="absolute bottom-0 ltr:right-0 rtl:left-0 w-full max-w-sm md:max-w-xl">
-              {/* Glow effect */}
-              <div
-                className="absolute inset-0 rounded-full filter blur-3xl opacity-40"
-                style={{ backgroundColor: "rgba(0, 212, 255, 0.2)" }}
-              />
-
               {/* Brain visualization */}
               <div className="relative w-full  aspect-square rounded-full overflow-hidden">
                 <Image
                   src="/brain.png"
                   alt="Neural network brain visualization"
                   fill
-                  className="object-cover object-bottom"
+                  className="object-cover object-bottom opacity-75"
                   priority
-                  quality={90}
+                  quality={100}
                 />
               </div>
             </div>
