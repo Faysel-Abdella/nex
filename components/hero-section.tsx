@@ -68,7 +68,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right visual - anchored bottom-right */}
-          <div className="lg:relative h-36 lg:h-full w-full lg:ltr:-mr-16  xl:ltr:-mr-32 top-0  lg:top-15 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:my-2">
+          <div className="lg:relative h-36 lg:h-full w-full lg:ltr:-mr-16  xl:ltr:-mr-32 top-0  lg:top-15 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:my-5">
             <div className="lg:absolute lg:bottom-0 ltr:right-0 rtl:left-0 w-full max-w-44
              lg:max-w-sm">
               {/* Brain visualization */}
