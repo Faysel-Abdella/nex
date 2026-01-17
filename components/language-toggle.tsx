@@ -16,30 +16,30 @@ export default function LanguageToggle() {
 
   return (
     <div className="flex items-center gap-2 text-sm text-white">
-      <Image
+      {/* <Image
         src="/translate.svg"
         alt="translate"
         width={18}
         height={18}
         className="md:w-[18px] md:h-[18px]"
-      />
+      /> */}
       <div className="flex items-center gap-2">
         <button
           onClick={() => changeLanguage("en")}
           className={`px-2 py-1 rounded-md transition-colors border border-transparent cursor-pointer ${
             locale === "en"
-              ? "text-[#00d4ff] bg-white/5 border-white/10"
+              ? "text-[#00d4ff]"
               : "text-white/70 hover:text-white"
           }`}
         >
-          English
+          EN
         </button>
         <span className="text-white/40">/</span>
         <button
           onClick={() => changeLanguage("ar")}
           className={`px-2 py-1 rounded-md transition-colors border border-transparent cursor-pointer ${
             locale === "ar"
-              ? "text-[#00d4ff] bg-white/5 border-white/10"
+              ? "text-[#00d4ff] "
               : "text-white/70 hover:text-white"
           }`}
         >

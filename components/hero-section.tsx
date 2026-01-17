@@ -39,7 +39,7 @@ export default function HeroSection() {
               {t("subHeading")}
             </p>
 
-            {/* Feature Box - Desktop only */}
+            {/* Feature Box */}
             <div className="flex  max-w-md">
               <div className=" flex-1 max-w-1 rounded-full bg-white"></div>
               <div className="ps-5">
@@ -50,7 +50,7 @@ export default function HeroSection() {
                     ),
                   })}
                 </p>
-                <p className="text-gray-400 text-sm leading-relaxed max-w-72">
+                <p className="text-gray-400 text-sm leading-relaxed max-lg:leading-snug max-w-72">
                   {t("featureText")}
                 </p>
               </div>
@@ -68,10 +68,10 @@ export default function HeroSection() {
           </div>
 
           {/* Right visual - anchored bottom-right */}
-          <div className="lg:relative h-36 lg:h-full w-full lg:ltr:-mr-16  xl:ltr:-mr-32 top-0  lg:top-15 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:my-5">
+          <div className="lg:relative h-36 lg:h-full w-full lg:ltr:-mr-16  xl:ltr:-mr-32 top-0  lg:-top-4 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:my-5">
             <div
-              className="lg:absolute lg:bottom-0 ltr:right-0 rtl:left-0 w-full max-w-44
-             lg:max-w-sm"
+              className="lg:absolute lg:bottom-0 ltr:right-0 rtl:left-0 w-full max-w-40
+             lg:max-w-88"
             >
               {/* Brain visualization */}
               <div className="relative w-full aspect-square rounded-full overflow-hidden animate-pulse">
