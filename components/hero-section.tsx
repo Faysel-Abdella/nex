@@ -30,7 +30,7 @@ export default function HeroSection() {
             <h1 className="text-[1.67rem] md:text-[2.67rem] lg:text-[3.35rem]  tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading")}
             </h1>
-              <h1 className="-mt-10 max-md:-mt-8 rtl:-mt-6 rtl:max-md:-mt-7 text-[1.67rem] md:text-[2.67rem] lg:text-[3.35rem]  tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
+              <h1 className="-mt-10 max-lg:-mt-9 rtl:-mt-6 rtl:max-md:-mt-7 text-[1.67rem] md:text-[2.67rem] lg:text-[3.35rem]  tracking-tight font-medium font-sf-pro mb-5 md:mb-6 md:leading-[120%] text-white">
               {t("mainHeading2")}
             </h1>
 
