@@ -1,12 +1,10 @@
-import RegionalFitSection from "@/components/regional-fit-section";
-import Header from "@/components/header";
-import HeroSection from "@/components/hero-section";
-import YourCRM from "@/components/your-crm";
-import FeatureShowcase from "@/components/feature-showcase";
-import MigrationCTA from "@/components/migration-cta";
-import PricingCTA from "@/components/pricing-cta";
-import BottomCTA from "@/components/bottom-cta";
-import Footer from "@/components/footer";
+import BottomCTA from "@/app/_components/bottom-cta";
+import FeatureShowcase from "@/app/_components/feature-showcase";
+import HeroSection from "@/app/_components/hero-section";
+import MigrationCTA from "@/app/_components/migration-cta";
+import PricingCTA from "@/app/_components/pricing-cta";
+import RegionalFitSection from "@/app/_components/regional-fit-section";
+import YourCRM from "@/app/_components/your-crm";
 
 export default function Home() {
   return (
