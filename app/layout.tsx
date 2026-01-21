@@ -122,7 +122,6 @@ export default async function RootLayout({
   const messages = await getMessages();
   const isRTL = locale === "ar";
 
-  console.log({ locale, isRTL });
   const defaultFont = locale === "ar" ? sfArabic : sfPro;
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
