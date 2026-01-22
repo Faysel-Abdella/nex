@@ -1,35 +1,37 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
-const principles = [
-  {
-    icon: "/icons/WhatsappLogo.svg",
-    title: "WhatsApp-first by design",
-    description:
-      "Astrah surfaces what matters. Silence, risk, intent, next actions.",
-  },
-  {
-    icon: "/icons/ToggleLeft.svg",
-    title: "Control over automation",
-    description: "No surprise actions. Nothing is sent without confirmation.",
-  },
-  {
-    icon: "/icons/Pulse.svg",
-    title: "Execution over logging",
-    description: "The goal is revenue movement, not activity tracking.",
-  },
-  {
-    icon: "/icons/Translate.svg",
-    title: "GCC-first reality",
-    description:
-      "WhatsApp-first workflows, bilingual by default, region-aware operations.",
-  },
-];
 const OperatingPrinciples = () => {
+  const t = useTranslations("about.operatingPrinciples");
+
+  const principles = [
+    {
+      icon: "/icons/WhatsappLogo.svg",
+      title: t("cards.whatsapp.title"),
+      description: t("cards.whatsapp.desc"),
+    },
+    {
+      icon: "/icons/ToggleLeft.svg",
+      title: t("cards.control.title"),
+      description: t("cards.control.desc"),
+    },
+    {
+      icon: "/icons/Pulse.svg",
+      title: t("cards.execution.title"),
+      description: t("cards.execution.desc"),
+    },
+    {
+      icon: "/icons/Translate.svg",
+      title: t("cards.reality.title"),
+      description: t("cards.reality.desc"),
+    },
+  ];
+
   return (
     <section className="section-container w-full font-sf-pro">
       <div className="  section-content ">
         <p className=" font-medium text-3xl md:text-[40px] text-center">
-          Operating principles.
+          {t("title")}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-14 gap-7">
           {principles.map((principle) => (

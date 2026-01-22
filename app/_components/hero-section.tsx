@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export default function HeroSection() {
-  const t = useTranslations("hero");
+  const t = useTranslations("landing.hero");
 
   return (
     <section className="section-container relative  font-sf-pro min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">

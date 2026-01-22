@@ -1,36 +1,32 @@
 import { Dot } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Founder = () => {
+  const t = useTranslations("about.founder");
+  const list = t.raw("list") as string[];
+
   return (
     <section className="section-container relative  font-sf-pro">
       <div className="section-content   flex gap-20 items-center max-md:flex-col max-md:justify-center">
         <div className=" md:w-1/2 shrink-0 justify-center ">
           <div className="">
             <div className="flex text-muted-foreground text-sm md:text-base items-center">
-              <Dot size={26} /> <span>FOUNDER</span>
+              <Dot size={26} /> <span>{t("label")}</span>
             </div>
             <p className=" text-3xl md:text-[53px] font-medium   mt-5 ">
-              Zoltan Hajdu
+              {t("name")}
             </p>
-            <p className="text-muted-foreground mt-6">Founder, Astrah OS</p>
-            <p className="text-muted-foreground mt-6">
-              I&apos;m building Astrah OS for one reason: in the Gulf, a “CRM”
-              is not enough. Revenue teams need an operating system that
-              reflects how business actually runs, conversation-first and
-              high-speed.
-            </p>
-            <p className="text-muted-foreground mt-6">Astrah is designed to:</p>
+            <p className="text-muted-foreground mt-6">{t("title")}</p>
+            <p className="text-muted-foreground mt-6">{t("bio")}</p>
+            <p className="text-muted-foreground mt-6">{t("designedTo")}</p>
             <ul className="text-muted-foreground list-disc ps-5 mt-4 max-md:max-w-sm text-start">
-              <li>detect deal silence and risk early</li>
-              <li>keep follow-ups disciplined</li>
-              <li>bring clarity to the pipeline</li>
-              <li>help teams close the gap from agreement to payment</li>
+              {list.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
             </ul>
-            <p className="text-muted-foreground mt-6">
-              Built under Alhaya Solutions FZCO (Dubai).
-            </p>
+            <p className="text-muted-foreground mt-6">{t("entity")}</p>
           </div>
         </div>
         <div className=" md:w-1/2  w-full flex justify-center">
@@ -42,7 +38,7 @@ const Founder = () => {
               src="/images/image.png"
               alt="Founder"
               fill
-              className="object-cover"
+              className="object-cover rtl:scale-x-[-1]"
             />
             <div className="absolute inset-0 bg-background h-full w-full mix-blend-color" />
           </div>

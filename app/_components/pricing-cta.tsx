@@ -1,7 +1,10 @@
 import React from "react";
 import { Button } from "../../components/ui/button";
+import { useTranslations } from "next-intl";
 
 const PricingCTA = () => {
+  const t = useTranslations("landing.pricing");
+
   return (
     <section className="w-full font-sf-pro section-container">
       <div className="relative min-h-100 md:min-h-90 w-full max-w-175  flex items-center justify-center  mx-auto overflow-hidden">
@@ -16,14 +19,14 @@ const PricingCTA = () => {
             className="w-16 h-16 object-cover rounded-3xl"
           />
           <p className=" text-2xl md:text-[32px] font-medium mt-8">
-            Transparent pricing.
+            {t("title")}
           </p>
           <p className="mt-6">
-            Plans start at <span className="text-primary">$39/month</span>.
-            7-day free trial on paid plans.
+            {t("startAt")} <span className="text-primary">{t("price")}</span>
+            {t("trial")}
             <div className="w-full h-px  mt-8 bg-linear-to-r shrink-0 from-transparent via-border to-transparent" />
           </p>
-          <Button className="mt-8 font-gilroy h-11.5 px-7">View Pricing</Button>
+          <Button className="mt-8 font-gilroy h-11.5 px-7">{t("cta")}</Button>
         </div>
       </div>
     </section>

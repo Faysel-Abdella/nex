@@ -1,25 +1,22 @@
+import { useTranslations } from "next-intl";
 import React from "react";
 
 const FeatureShowcase = () => {
+  const t = useTranslations("landing.featureShowcase");
+
   return (
     <section className="relative section-container  font-sf-pro">
       <div className="section-content  flex flex-col gap-30 items-center ">
         <div className="flex max-md:gap-10 max-md:flex-col  ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
-              Demand, built in.
+              {t("demand.title")}
             </p>
-            <p className="text-muted-foreground mt-6">
-              Astrah doesn&apos;t just manage leads. It helps generate pipeline
-              inside your OS.
-            </p>
+            <p className="text-muted-foreground mt-6">{t("demand.desc")}</p>
             <ul className="text-muted-foreground list-disc ps-5 mt-4 max-md:max-w-sm text-start">
-              <li>Discover and rank opportunities</li>
-              <li>
-                Discover and rank opportunities Region-tuned signals (GCC
-                context) Draft outreach (never auto-sends)
-              </li>
-              <li>Draft outreach (never auto-sends)</li>
+              <li>{t("demand.list1")}</li>
+              <li>{t("demand.list2")}</li>
+              <li>{t("demand.list3")}</li>
             </ul>
           </div>
           <div className="md:w-1/2">
@@ -31,19 +28,15 @@ const FeatureShowcase = () => {
         <div className="flex  max-md:gap-10  flex-row-reverse max-md:flex-col ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
-              Stop revenue leaks.
+              {t("revenue.title")}
             </p>
-            <p className="text-muted-foreground mt-6">
-              Astrah detects risk before it becomes loss.
-            </p>
+            <p className="text-muted-foreground mt-6">{t("revenue.desc")}</p>
             <ul className="text-muted-foreground list-disc ps-5 mt-4 max-md:max-w-sm text-start">
-              <li>Silence detection</li>
-              <li>Stagnation alerts</li>
-              <li>Priority queue for follow-ups</li>
+              <li>{t("revenue.list1")}</li>
+              <li>{t("revenue.list2")}</li>
+              <li>{t("revenue.list3")}</li>
             </ul>
-            <p className="text-muted-foreground mt-6">
-              No auto-sending. No surprise actions. You stay in control.
-            </p>
+            <p className="text-muted-foreground mt-6">{t("revenue.footer")}</p>
           </div>
           <div className="md:w-1/2">
             <div className="relative w-full ">
@@ -54,22 +47,17 @@ const FeatureShowcase = () => {
         <div className="flex max-md:gap-10  max-md:flex-col ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
-              Inbox intelligence.
+              {t("inbox.title")}
             </p>
-            <p className="text-muted-foreground mt-6">
-              One unified view. Thread summaries. Priority signals. Clear next
-              steps.
-            </p>
+            <p className="text-muted-foreground mt-6">{t("inbox.desc")}</p>
             <p className="font-medium text-3xl md:text-[40px]">
-              From agreement to cash.
+              {t("cash.title")}
             </p>
-            <p className="text-muted-foreground mt-6">
-              Close the admin gap. Go from “yalla” to paid.
-            </p>
+            <p className="text-muted-foreground mt-6">{t("cash.desc")}</p>
             <ul className="text-muted-foreground list-disc ps-5 mt-4 max-md:max-w-sm text-start">
-              <li>Mobile-first offer link</li>
-              <li>WhatsApp OTP acceptance</li>
-              <li>Card/Apple Pay/Mada support (where available)</li>
+              <li>{t("cash.list1")}</li>
+              <li>{t("cash.list2")}</li>
+              <li>{t("cash.list3")}</li>
             </ul>
           </div>
           <div className="md:w-1/2">
@@ -81,16 +69,10 @@ const FeatureShowcase = () => {
         <div className="flex  max-md:gap-10 flex-row-reverse max-md:flex-col ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium  text-3xl md:text-[40px]">
-              The system is alive.
+              {t("alive.title")}
             </p>
-            <p className="text-muted-foreground mt-6">
-              Persistent intelligence layer that surfaces signals, risks, and
-              next actions.
-            </p>
-            <p className="text-muted-foreground mt-6">
-              Not a chatbot toy. Not random guesses. Supports decisions. You
-              decide.{" "}
-            </p>
+            <p className="text-muted-foreground mt-6">{t("alive.desc1")}</p>
+            <p className="text-muted-foreground mt-6">{t("alive.desc2")}</p>
           </div>
           <div className="md:w-1/2">
             <div className="relative w-full ">

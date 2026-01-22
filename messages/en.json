@@ -5,21 +5,187 @@
     "migration": "Migration",
     "talkToAstrah": "Talk to <bold>ASTRAH</bold>"
   },
-  "hero": {
-    "tagline": "THE BUSINESS OPERATING SYSTEM FOR THE GULF",
-    "mainHeading": "Stop managing chaos.",
-    "mainHeading2": "Start managing revenue.",
-    "subHeading": "The AI-native OS built for WhatsApp-first sales teams.",
-    "buttonText": "Talk to <bold>ASTRAH</bold>",
-    "featureLabel": "Not A CRM. <highlight>A System.</highlight>",
-    "featureText": "Built for how business actually happens across the GCC and MENA."
-  },
-  "features": {
-    "title": "Built for how business actually happens",
-    "description": "Across the GCC and MENA"
-  },
   "language": {
     "english": "English",
     "arabic": "عربي"
+  },
+  "footer": {
+    "tagline": "Enterprise AI operating system for GCC teams turning conversations into revenue.",
+    "links": {
+      "title": "LINKS",
+      "product": "Product",
+      "terms": "Terms",
+      "migration": "Migration"
+    },
+    "legal": {
+      "title": "LEGAL",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "acceptableUse": "Acceptable Use",
+      "refunds": "Refunds/Cancellation"
+    },
+    "contact": {
+      "title": "GET IN TOUCH",
+      "description": "Question or feedback? we'd love to listen from you.",
+      "button": "Contact Us"
+    },
+    "copyright": "All rights reserved 2026."
+  },
+  "landing": {
+    "hero": {
+      "tagline": "THE BUSINESS OPERATING SYSTEM FOR THE GULF",
+      "mainHeading": "Stop managing chaos.",
+      "mainHeading2": "Start managing revenue.",
+      "subHeading": "The AI-native OS built for WhatsApp-first sales teams.",
+      "buttonText": "Talk to <bold>ASTRAH</bold>",
+      "featureLabel": "Not A CRM. <highlight>A System.</highlight>",
+      "featureText": "Built for how business actually happens across the GCC and MENA."
+    },
+    "features": {
+      "title": "Built for how business actually happens",
+      "description": "Across the GCC and MENA"
+    },
+    "pricing": {
+      "title": "Transparent pricing.",
+      "startAt": "Plans start at",
+      "price": "$39/month",
+      "trial": ". 7-day free trial on paid plans.",
+      "cta": "View Pricing"
+    },
+    "regionalFit": {
+      "title": "Built for the reality of the GCC.",
+      "whatsapp": "WhatsApp-first by design.",
+      "gccNative": "GCC-native operations (timezone, weekend modes, regional workflows)",
+      "bilingual": "Bilingual (English/Arabic) from day one",
+      "ai": "AI that monitors deals, silence, and momentum"
+    },
+    "crm": {
+      "title": "Your CRM is lying to you.",
+      "p1": "WhatsApp messages are ignored. Follow-ups are missed. Deals die in silence.",
+      "p2": "Traditional CRMs are databases that rely on manual entry. They don't see conversations.",
+      "p3": "They don't see silence. They don't see risk.",
+      "astrahDoes": "Astrah does."
+    },
+    "bottomCta": {
+      "title": "Built for serious operators.",
+      "description": "If you're done managing chaos and ready to run a real system, talk to Astrah.",
+      "talkTo": "Talk to",
+      "brand": "ASTRAH"
+    },
+    "featureShowcase": {
+      "demand": {
+        "title": "Demand, built in.",
+        "desc": "Astrah doesn't just manage leads. It helps generate pipeline inside your OS.",
+        "list1": "Discover and rank opportunities",
+        "list2": "Region-tuned signals (GCC context) Draft outreach (never auto-sends)",
+        "list3": "Draft outreach (never auto-sends)"
+      },
+      "revenue": {
+        "title": "Stop revenue leaks.",
+        "desc": "Astrah detects risk before it becomes loss.",
+        "list1": "Silence detection",
+        "list2": "Stagnation alerts",
+        "list3": "Priority queue for follow-ups",
+        "footer": "No auto-sending. No surprise actions. You stay in control."
+      },
+      "inbox": {
+        "title": "Inbox intelligence.",
+        "desc": "One unified view. Thread summaries. Priority signals. Clear next steps."
+      },
+      "cash": {
+        "title": "From agreement to cash.",
+        "desc": "Close the admin gap. Go from “yalla” to paid.",
+        "list1": "Mobile-first offer link",
+        "list2": "WhatsApp OTP acceptance",
+        "list3": "Card/Apple Pay/Mada support (where available)"
+      },
+      "alive": {
+        "title": "The system is alive.",
+        "desc1": "Persistent intelligence layer that surfaces signals, risks, and next actions.",
+        "desc2": "Not a chatbot toy. Not random guesses. Supports decisions. You decide."
+      }
+    },
+    "migration": {
+      "title": "Go live in days, not weeks.",
+      "desc": "Most standard migrations go live in ~72 hours.Complex environments are scoped separately.",
+      "cta": "View Migration"
+    }
+  },
+  "about": {
+    "hero": {
+      "tagline": "ABOUT ASTRAH OS",
+      "title": "A system built for the Gulf.",
+      "description": "Astrah OS is a WhatsApp-first, AI-native Business Operating System designed for GCC teams. Not a CRM. A system.",
+      "viewProduct": "View Product",
+      "secondaryTitle": "Business in the GCC runs on conversations.",
+      "p1": "Most CRMs were built for email-first markets and manual data entry. But in the Gulf, revenue happens inside WhatsApp threads, voice notes, fast decisions, and follow-ups that can't be missed.",
+      "p2": "That's why traditional CRMs feel disconnected from reality: they store records, but they don't detect silence, they don't surface risk, and they don't protect pipeline momentum.",
+      "p3": "Astrah OS exists to make revenue execution feel controlled."
+    },
+    "principles": {
+      "mainTitle": "Not a tool. An operating layer.",
+      "combines": "Astrah OS combines:",
+      "list": {
+        "crm": "CRM foundations (contacts, deals, tasks)",
+        "comm": "A unified communication layer (WhatsApp + email)",
+        "intelligence": "An intelligence layer that monitors deal signals, risk, and stagnation",
+        "transaction": "Transaction support that closes the gap from agreement to payment"
+      },
+      "operatingTitle": "Operating principles",
+      "items": [
+        "Astrah supports decisions.",
+        "It does not auto-send messages.",
+        "It does not act without confirmation.",
+        "You stay in control."
+      ]
+    },
+    "regionalFit": {
+      "title": "Built for GCC operators.",
+      "description": "We serve teams across the GCC and selected MENA markets.",
+      "features": {
+        "whatsapp": "WhatsApp-first workflows",
+        "regionAware": "Region-aware operations (timezone and weekend modes)",
+        "bilingual": "English + Arabic with true RTL support",
+        "teams": "Designed for serious teams, not hobby usage"
+      }
+    },
+    "founder": {
+      "label": "FOUNDER",
+      "name": "Zoltan Hajdu",
+      "title": "Founder, Astrah OS",
+      "bio": "I'm building Astrah OS for one reason: in the Gulf, a “CRM” is not enough. Revenue teams need an operating system that reflects how business actually runs, conversation-first and high-speed.",
+      "designedTo": "Astrah is designed to:",
+      "list": [
+        "detect deal silence and risk early",
+        "keep follow-ups disciplined",
+        "bring clarity to the pipeline",
+        "help teams close the gap from agreement to payment"
+      ],
+      "entity": "Built under Alhaya Solutions FZCO (Dubai)."
+    },
+    "operatingPrinciples": {
+      "title": "Operating principles.",
+      "cards": {
+        "whatsapp": {
+          "title": "WhatsApp-first by design",
+          "desc": "Astrah surfaces what matters. Silence, risk, intent, next actions."
+        },
+        "control": {
+          "title": "Control over automation",
+          "desc": "No surprise actions. Nothing is sent without confirmation."
+        },
+        "execution": {
+          "title": "Execution over logging",
+          "desc": "The goal is revenue movement, not activity tracking."
+        },
+        "reality": {
+          "title": "GCC-first reality",
+          "desc": "WhatsApp-first workflows, bilingual by default, region-aware operations."
+        }
+      }
+    },
+    "cta": {
+      "description": "If you want to see how Astrah OS fits your pipeline and workflows, talk to us."
+    }
   }
 }
