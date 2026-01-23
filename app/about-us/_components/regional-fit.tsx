@@ -1,4 +1,6 @@
 "use client";
+import StyledIcon from "@/components/styled-icon";
+import { Globe, Languages } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function RegionalFit() {
@@ -12,12 +14,12 @@ export default function RegionalFit() {
     },
     {
       id: 2,
-      icon: "/icons/globe.svg",
+      icon: Globe,
       content: t("features.regionAware"),
     },
     {
       id: 3,
-      icon: "/icons/Translate.svg",
+      icon: Languages,
       content: t("features.bilingual"),
     },
     {
@@ -47,13 +49,7 @@ export default function RegionalFit() {
                 key={feature.id}
                 className="flex break-inside-avoid h-full rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-10.5  items-center"
               >
-                <div className=" rounded-full  shrink-0 size-14 bg-white/10 border-t-2 border-t-white/20 flex items-center justify-center">
-                  <img
-                    src={feature.icon}
-                    alt={feature.content}
-                    className="w-6 h-6 "
-                  />
-                </div>
+                <StyledIcon Icon={feature.icon} />
                 <p className="text-muted-foreground text-center max-w-60">
                   {feature.content}
                 </p>

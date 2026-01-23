@@ -1,5 +1,6 @@
-import React from "react";
 import { useTranslations } from "next-intl";
+import StyledIcon from "@/components/styled-icon";
+import { Activity, Languages, ToggleLeft } from "lucide-react";
 
 const OperatingPrinciples = () => {
   const t = useTranslations("about.operatingPrinciples");
@@ -11,17 +12,17 @@ const OperatingPrinciples = () => {
       description: t("cards.whatsapp.desc"),
     },
     {
-      icon: "/icons/ToggleLeft.svg",
+      icon: ToggleLeft,
       title: t("cards.control.title"),
       description: t("cards.control.desc"),
     },
     {
-      icon: "/icons/Pulse.svg",
+      icon: Activity,
       title: t("cards.execution.title"),
       description: t("cards.execution.desc"),
     },
     {
-      icon: "/icons/Translate.svg",
+      icon: Languages,
       title: t("cards.reality.title"),
       description: t("cards.reality.desc"),
     },
@@ -39,13 +40,7 @@ const OperatingPrinciples = () => {
               key={principle.title}
               className="flex break-inside-avoid h-full rounded-2xl  bg-card border flex-col    p-5 "
             >
-              <div className=" rounded-full  shrink-0 size-14 bg-white/10 border-t-2 border-t-white/20 flex items-center justify-center">
-                <img
-                  src={principle.icon}
-                  alt={principle.title}
-                  className="w-6 h-6 "
-                />
-              </div>
+              <StyledIcon Icon={principle.icon} />
               <p className="text-lg font-medium mt-6 ">{principle.title}</p>
               <p className="text-muted-foreground  mt-4 lg:max-w-52 ">
                 {principle.description}
