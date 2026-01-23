@@ -187,5 +187,237 @@
     "cta": {
       "description": "If you want to see how Astrah OS fits your pipeline and workflows, talk to us."
     }
+  },
+  "migration": {
+    "hero": {
+      "badge": "MIGRATION",
+      "title": "Go live in days, not weeks.",
+      "description": "Most standard migrations go live in ~72 hours. Complex environments are scoped separately.",
+      "cta": "See what's included"
+    },
+    "comparison": {
+      "title": "Migration isn't hard. Bad migration is.",
+      "sub": "Most CRM migrations fail for two reasons:",
+      "reasons": ["Dirty data", "Broken workflows"],
+      "description": "Astrah migration is designed to prevent both. <br /> We migrate the data and validate the operating flow so your team can actually use it on day one.",
+      "cardTitle": "What we migrate.",
+      "cardSub": "For standard migrations, we move and map the core objects you need to operate immediately:",
+      "coreObjects": [
+        "Contacts and Companies",
+        "Deals (pipelines, stages, values)",
+        "Activities and notes",
+        "Owners / assignments (where applicable)",
+        "Basic tags and custom fields (reasonable set)"
+      ],
+      "footer": "If your old system contains extensive custom modules or heavily customized objects, we scope those separately."
+    },
+    "progress": {
+      "title": "The standard go-live process.",
+      "footer": "No surprises. No silent changes. Everything is validated before go-live.",
+      "days": [
+        {
+          "id": "01",
+          "label": "Day 1",
+          "title": "Export + data audit",
+          "steps": [
+            "You provide exports from your current CRM (or we guide you).",
+            "We audit for duplicates, missing fields, and structural issues."
+          ]
+        },
+        {
+          "id": "02",
+          "label": "Day 2",
+          "title": "Mapping + import",
+          "steps": [
+            "Field mapping to Astrah data model",
+            "Import and integrity checks",
+            "Pipeline + stage alignment"
+          ]
+        },
+        {
+          "id": "03",
+          "label": "Day 3",
+          "title": "Validation + go-live",
+          "steps": [
+            "Quick validation of records, pipelines, and core workflows",
+            "Your team is ready to operate in Astrah"
+          ]
+        }
+      ]
+    },
+    "requirements": {
+      "title": "What we need from you.",
+      "items": [
+        "Access to exports (CSV) or admin access to your existing CRM",
+        "One point of contact for quick approvals",
+        "Your pipeline stages and deal definitions (simple list)",
+        "30-60 minutes for a final validation call (optional but recommended)"
+      ]
+    },
+    "plan": {
+      "title": "When migration needs a scoped plan.",
+      "description": "Some environments require a scoped migration plan. This includes:",
+      "environments": [
+        "Heavy CRM customization (custom objects/modules)",
+        "Multiple CRMs combined",
+        "Large volume historical activity logs",
+        "Strict compliance requirements or multi-entity setups",
+        "Non-standard data structures or missing exports"
+      ],
+      "footer": "If this is you, we'll define a migration plan and timeline before any work begins."
+    },
+    "safety": {
+      "title": "Migration with control.",
+      "description": "Astrah is built to run your business. Migration must be safe.",
+      "principles": [
+        "Data integrity checks",
+        "Controlled mapping (no guesswork)",
+        "Validation before go-live",
+        "Clear scope boundaries"
+      ],
+      "footer": "Astrah never auto-sends messages during migration. Your communication stays under your control."
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "id": "faq1",
+          "question": "Is ~72 hours guaranteed?",
+          "answer": "It applies to standard migrations where exports are available and workflows are not heavily customized. Complex environments are scoped separately."
+        },
+        {
+          "id": "faq2",
+          "question": "Can you migrate WhatsApp history?",
+          "answer": "Yes, we can migrate WhatsApp history if the data export is available from your current CRM or messaging platform."
+        },
+        {
+          "id": "faq3",
+          "question": "Will my team need training?",
+          "answer": "Most teams adapt quickly to Astrah's intuitive interface. We provide documentation and optional training sessions to ensure a smooth transition."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to migrate without chaos?",
+      "description": "If you want a controlled, fast migration into a real operating system, talk to Astrah.",
+      "backHome": "Back to Home"
+    }
+  },
+  "pricingPage": {
+    "hero": {
+      "badge": "PRICING",
+      "title": "Transparent pricing for GCC operators.",
+      "description": "Astrah OS is built for WhatsApp-first revenue teams in the Gulf. Choose a plan that matches your volume and intelligence needs.",
+      "secondaryCta": "View Product",
+      "footer": "Operating outside the GCC? We offer regional pricing for MENA. Talk to us."
+    },
+    "plans": {
+      "general": {
+        "month": "month",
+        "migrationLabel": "Migration",
+        "oneTime": "one-time",
+        "included": "Included"
+      },
+      "starter": {
+        "name": "Starter",
+        "tagline": "For Freelancers And Small Service Teams.",
+        "cta": "Start Free Trial",
+        "inclusionLabel": "Includes:",
+        "migrationNote": "Standard",
+        "features": [
+          "Core CRM (contacts, companies, deals, tasks, calendar)",
+          "WhatsApp Intelligence (Lite)",
+          "AI Deal Intelligence (Lite)",
+          "AI Inbox Zero (Lite)",
+          "AI Lead Generator: 100 leads / month",
+          "Internal AI Intelligence: Included",
+          "External AI usage: 200 tokens / month",
+          "Multilingual UI: English + Arabic (RTL)",
+          "Orb Intelligence: Standard"
+        ]
+      },
+      "business": {
+        "name": "Business",
+        "tagline": "For Growing Teams (3-15 Users).",
+        "cta": "Start Free Trial",
+        "inclusionLabel": "Everything in Starter, plus:",
+        "migrationNote": "Standard",
+        "features": [
+          "Everything in Starter",
+          "WhatsApp Intelligence (Full)",
+          "AI Deal Intelligence (Full)",
+          "AI Inbox Zero (Full)",
+          "AI Priority Queue",
+          "AI Data Enhancer",
+          "Campaigns (Email + WhatsApp)",
+          "Automations (Basic)",
+          "Make.com integration (Basic)",
+          "External AI usage: 1,000 tokens / month",
+          "Expanded multilingual support"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "tagline": "For Established Teams (15-50 Users).",
+        "cta": "Start Free Trial",
+        "inclusionLabel": "Everything in Business, plus:",
+        "migrationNote": "Advanced",
+        "features": [
+          "Everything in Business",
+          "Advanced automations",
+          "AI Meeting Notes",
+          "AI Action Planner",
+          "AI Campaign Optimizer",
+          "Advanced analytics & dashboards",
+          "AI Lead Generator: 2,000 leads / month",
+          "External AI usage: 5,000 tokens / month",
+          "Advanced permissions & audit trail",
+          "Orb Intelligence: Enhanced"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "tagline": "For Large Organizations And Holding Groups.",
+        "cta": "Talk to Astrah",
+        "inclusionLabel": "Everything in Pro, plus:",
+        "features": [
+          "Everything in Pro",
+          "Custom workflows & automations",
+          "Organization-wide logic",
+          "Dedicated success management",
+          "Custom branding (domain, login)",
+          "Private cloud deployment (optional)",
+          "AI Lead Generator: 5,000–10,000 leads / month",
+          "External AI usage: 20,000 tokens / month"
+        ]
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "id": "faq1",
+          "question": "Is Astrah available outside the GCC?",
+          "answer": "Yes. We support MENA markets and offer regional pricing based on country and operating model. Talk to us."
+        },
+        {
+          "id": "faq2",
+          "question": "What are “External AI tokens”?",
+          "answer": "External AI tokens are used when Astrah integrates with external AI services. These tokens are separate from the internal AI usage included in your plan."
+        },
+        {
+          "id": "faq3",
+          "question": "Is migration included?",
+          "answer": "Migration support varies by plan. The Starter plan includes a one-time migration fee, while the Business and Pro plans include migration support at no additional cost."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Outside the GCC?",
+      "description": "If you operate in MENA outside the Gulf, we offer regional pricing and tailored onboarding. Talk to us and we'll recommend the right plan.",
+      "button": "Talk to us for regional pricing"
+    }
   }
 }

@@ -1,113 +1,74 @@
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import React from "react";
-export const pricingPlans = [
-  {
-    id: "starter",
-    name: "Starter",
-    price: 39,
-    billingPeriod: "month",
-    tagline: "For Freelancers And Small Service Teams.",
-    cta: "Start Free Trial",
-
-    migration: {
-      price: 199,
-      type: "one-time",
-      note: "Standard",
-    },
-    inclusionLabel: "Includes:",
-    features: [
-      "Core CRM (contacts, companies, deals, tasks, calendar)",
-      "WhatsApp Intelligence (Lite)",
-      "AI Deal Intelligence (Lite)",
-      "AI Inbox Zero (Lite)",
-      "AI Lead Generator: 100 leads / month",
-      "Internal AI Intelligence: Included",
-      "External AI usage: 200 tokens / month",
-      "Multilingual UI: English + Arabic (RTL)",
-      "Orb Intelligence: Standard",
-    ],
-  },
-  {
-    id: "business",
-    name: "Business",
-    price: 99,
-    billingPeriod: "month",
-    tagline: "For Growing Teams (3-15 Users).",
-    cta: "Start Free Trial",
-    migration: {
-      price: 0,
-      type: "included",
-      note: "Standard",
-    },
-    inclusionLabel: "Everything in Starter, plus:",
-    features: [
-      "Everything in Starter",
-      "WhatsApp Intelligence (Full)",
-      "AI Deal Intelligence (Full)",
-      "AI Inbox Zero (Full)",
-      "AI Priority Queue",
-      "AI Data Enhancer",
-      "Campaigns (Email + WhatsApp)",
-      "Automations (Basic)",
-      "Make.com integration (Basic)",
-      "External AI usage: 1,000 tokens / month",
-      "Expanded multilingual support",
-    ],
-  },
-  {
-    id: "pro",
-    name: "Pro",
-    price: 199,
-    billingPeriod: "month",
-    tagline: "For Established Teams (15-50 Users).",
-    cta: "Start Free Trial",
-    migration: {
-      price: 0,
-      type: "included",
-      note: "Advanced",
-    },
-    inclusionLabel: "Everything in Business, plus:",
-    features: [
-      "Everything in Business",
-      "Advanced automations",
-      "AI Meeting Notes",
-      "AI Action Planner",
-      "AI Campaign Optimizer",
-      "Advanced analytics & dashboards",
-      "AI Lead Generator: 2,000 leads / month",
-      "External AI usage: 5,000 tokens / month",
-      "Advanced permissions & audit trail",
-      "Orb Intelligence: Enhanced",
-    ],
-  },
-  {
-    id: "enterprise",
-    name: "Enterprise",
-    priceRange: {
-      min: 599,
-      max: 1500,
-    },
-    billingPeriod: "month",
-    tagline: "For Large Organizations And Holding Groups.",
-    cta: "Talk to Astrah",
-
-    migration: null,
-    inclusionLabel: "Everything in Pro, plus:",
-    features: [
-      "Everything in Pro",
-      "Custom workflows & automations",
-      "Organization-wide logic",
-      "Dedicated success management",
-      "Custom branding (domain, login)",
-      "Private cloud deployment (optional)",
-      "AI Lead Generator: 5,000–10,000 leads / month",
-      "External AI usage: 20,000 tokens / month",
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 const Pricing = () => {
+  const t = useTranslations("pricingPage.plans");
+  const tGeneral = useTranslations("pricingPage.plans.general");
+
+  const pricingPlans = [
+    {
+      id: "starter",
+      name: t("starter.name"),
+      price: 39,
+      billingPeriod: tGeneral("month"),
+      tagline: t("starter.tagline"),
+      cta: t("starter.cta"),
+      migration: {
+        price: 199,
+        type: "one-time",
+        note: t("starter.migrationNote"),
+      },
+      inclusionLabel: t("starter.inclusionLabel"),
+      features: t.raw("starter.features") as string[],
+    },
+    {
+      id: "business",
+      name: t("business.name"),
+      price: 99,
+      billingPeriod: tGeneral("month"),
+      tagline: t("business.tagline"),
+      cta: t("business.cta"),
+      migration: {
+        price: 0,
+        type: "included",
+        note: t("business.migrationNote"),
+      },
+      inclusionLabel: t("business.inclusionLabel"),
+      features: t.raw("business.features") as string[],
+    },
+    {
+      id: "pro",
+      name: t("pro.name"),
+      price: 199,
+      billingPeriod: tGeneral("month"),
+      tagline: t("pro.tagline"),
+      cta: t("pro.cta"),
+      migration: {
+        price: 0,
+        type: "included",
+        note: t("pro.migrationNote"),
+      },
+      inclusionLabel: t("pro.inclusionLabel"),
+      features: t.raw("pro.features") as string[],
+    },
+    {
+      id: "enterprise",
+      name: t("enterprise.name"),
+      priceRange: {
+        min: 599,
+        max: 1500,
+      },
+      billingPeriod: tGeneral("month"),
+      tagline: t("enterprise.tagline"),
+      cta: t("enterprise.cta"),
+      migration: null,
+      inclusionLabel: t("enterprise.inclusionLabel"),
+      features: t.raw("enterprise.features") as string[],
+    },
+  ];
+
   return (
     <section className=" section-container gap-5">
       <div className="section-content grid md:grid-cols-2 gap-8">
@@ -115,7 +76,7 @@ const Pricing = () => {
           <div
             key={plan.id}
             className={cn(
-              "bg-card overflow-hidden relative shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)] w-full border flex flex-col h-full p-8 justify-center  rounded-3xl",
+              "bg-card overflow-hidden relative shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)] w-full border flex flex-col h-full p-8 justify-center rounded-3xl",
               plan.id === "enterprise" &&
                 "border-primary shadow-[inset_0_0px_50px_rgba(255,255,255,0.15)]",
             )}
@@ -149,10 +110,10 @@ const Pricing = () => {
                 ))}
               </ul>
             </div>
-            <div className=" h-fit  grow  flex-col   flex mt-6 ">
+            <div className=" h-fit grow flex-col flex mt-6 ">
               <button
                 className={cn(
-                  "  bg-third-background border border-white/10 w-full py-3 rounded-lg text-sm ",
+                  "bg-third-background border border-white/10 w-full py-3 rounded-lg text-sm",
                   plan.id === "enterprise" &&
                     "bg-primary text-black border-transparent hover:bg-primary/90 mt-10",
                 )}
@@ -161,17 +122,19 @@ const Pricing = () => {
               </button>
               {plan.migration && (
                 <div className="mt-6">
-                  <p className=" font-light">Migration</p>
+                  <p className=" font-light">{tGeneral("migrationLabel")}</p>
                   <div className="flex items-end gap-1 mt-3">
                     {plan.migration.type === "included" ? (
-                      <span className="text-3xl font-medium">Included</span>
+                      <span className="text-3xl font-medium">
+                        {tGeneral("included")}
+                      </span>
                     ) : (
                       <div className="flex gap-1 items-end">
                         <span className="text-3xl font-medium">
                           ${plan.migration.price}
                         </span>
                         <span className="text-sm text-muted-foreground pb-0.5">
-                          one-time
+                          {tGeneral("oneTime")}
                         </span>
                       </div>
                     )}

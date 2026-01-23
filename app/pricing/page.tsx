@@ -10,6 +10,7 @@ const PricingPage = () => {
       <PricingHero />
       <Pricing />
       <PricingFaq />
+
       <PricingCTA />
     </main>
   );

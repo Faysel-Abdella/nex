@@ -1,61 +1,39 @@
 import { useTranslations } from "next-intl";
 import StyledIcon from "@/components/styled-icon";
 import {
-  Activity,
   CircleCheck,
-  Languages,
   LocateFixed,
   Network,
   SlidersHorizontal,
-  ToggleLeft,
 } from "lucide-react";
 
 const MigrationSafety = () => {
-  const t = useTranslations("about.operatingPrinciples");
+  const t = useTranslations("migration.safety");
+  const principlesLabels = t.raw("principles") as string[];
 
-  const safetyPrinciples = [
-    {
-      icon: Network,
-      label: "Data integrity checks",
-    },
-    {
-      icon: SlidersHorizontal,
-      label: "Controlled mapping (no guesswork)",
-    },
-    {
-      icon: CircleCheck,
-      label: "Validation before go-live",
-    },
-    {
-      icon: LocateFixed,
-      label: "Clear scope boundaries",
-    },
-  ];
+  const icons = [Network, SlidersHorizontal, CircleCheck, LocateFixed];
 
   return (
     <section className="section-container w-full font-sf-pro">
-      <div className="  section-content flex flex-col items-center">
+      <div className="section-content flex flex-col items-center">
         <p className=" font-medium text-3xl md:text-[40px] text-center">
-          Migration with control.
+          {t("title")}
         </p>
         <p className="text-center text-muted-foreground mt-5 max-w-md">
-          Astrah is built to run your business. Migration must be safe.
+          {t("description")}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-12 gap-7">
-          {safetyPrinciples.map((principle) => (
+          {principlesLabels.map((label, index) => (
             <div
-              key={principle.label}
-              className="flex break-inside-avoid h-fit rounded-2xl  bg-card border flex-col    p-5 "
+              key={label}
+              className="flex break-inside-avoid h-fit rounded-2xl bg-card border flex-col p-5 "
             >
-              <StyledIcon Icon={principle.icon} />
-              <p className="text-lg font-medium mt-6 ">{principle.label}</p>
+              <StyledIcon Icon={icons[index]} />
+              <p className="text-lg font-medium mt-6 ">{label}</p>
             </div>
           ))}
         </div>
-        <p className="text-center mt-12 max-w-md">
-          Astrah never auto-sends messages during migration. Your communication
-          stays under your control.
-        </p>
+        <p className="text-center mt-12 max-w-md">{t("footer")}</p>
       </div>
     </section>
   );
