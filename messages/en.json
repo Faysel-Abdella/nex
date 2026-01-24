@@ -393,6 +393,17 @@
         ]
       }
     },
+    "billingAndTrials": {
+      "title": "Billings & Trials",
+      "billingInfo": [
+        "Monthly and annual plans available",
+        "Annual billing = price of 10 months (≈2 months free)",
+        "Auto-converts to paid unless canceled",
+        "Credit card required",
+        "7-day free trial on Starter, Business, Pro",
+        "Enterprise has no trial"
+      ]
+    },
     "faq": {
       "badge": "FAQ",
       "title": "Frequently asked questions",
