@@ -7,7 +7,7 @@ import RegionalFit from "./_components/regional-fit";
 
 const AboutUsPage = () => {
   return (
-    <main className="min-h-screen bg-background overflow-x-hidden space-y-30 pt-24 md:pt-32">
+    <main className="min-h-screen bg-background overflow-x-hidden space-y-16 lg:space-y-30 pt-24 md:pt-32">
       <AboutUsHero />
       <Principles />
       <RegionalFit />
