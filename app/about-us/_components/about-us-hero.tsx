@@ -8,7 +8,7 @@ const AboutUsHero = () => {
 
   return (
     <section className="section-container w-full font-sf-pro">
-      <div className="  pt-24 md:pt-32  max-w-2xl text-center items-center flex flex-col justify-center mx-auto ">
+      <div className="    max-w-2xl text-center items-center flex flex-col justify-center mx-auto ">
         <div className="flex text-muted-foreground text-base items-center">
           <Dot size={26} /> <span>{t("tagline")}</span>
         </div>

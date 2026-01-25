@@ -29,7 +29,8 @@
       "description": "Question or feedback? we'd love to listen from you.",
       "button": "Contact Us"
     },
-    "copyright": "All rights reserved 2026."
+    "infra": "Infrastructure: AWS (UAE region)",
+    "copyright": "©<bold>Astrah OS</bold>, All rights reserved 2026"
   },
   "landing": {
     "hero": {

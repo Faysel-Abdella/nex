@@ -80,10 +80,16 @@ const Footer = () => {
       </div>
       <div className="mt-16 mb-10 flex items-center flex-col justify-center gap-10">
         <div className="shrink bg-linear-to-r from-transparent via-border to-transparent h-px w-full" />
-        <p className="text-sm text-white/">
-          © ASTRAH OS,{" "}
-          <span className="text-muted-foreground">{t("copyright")}</span>
-        </p>
+        <div className=" flex justify-between items-center w-full max-w-7xl max-md:flex-col max-md:gap-4">
+          <p className="text-sm text-muted-foreground">{t("infra")}</p>
+          <div className="md:hidden shrink bg-linear-to-r from-transparent via-border to-transparent h-px w-full" />
+
+          <p className="text-sm text-muted-foreground">
+            {t.rich("copyright", {
+              bold: (chunk) => <span className="text-white">{chunk}</span>,
+            })}
+          </p>
+        </div>
       </div>
     </section>
   );
