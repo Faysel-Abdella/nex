@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Dot } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import React from "react";
 
 const MigrationHero = () => {
@@ -20,10 +21,12 @@ const MigrationHero = () => {
           {t("description")}
         </p>
         <div className="flex mt-10 gap-5 ">
-          <Button className=" font-gilroy h-13.5 sm:px-7">
-            {tHeader.rich("talkToAstrah", {
-              bold: (chunks) => <span className="font-bold">{chunks}</span>,
-            })}
+          <Button className=" font-gilroy h-13.5 sm:px-7" asChild>
+            <Link href="/contact-us">
+              {tHeader.rich("talkToAstrah", {
+                bold: (chunks) => <span className="font-bold">{chunks}</span>,
+              })}
+            </Link>
           </Button>
           <Button
             variant="outline"

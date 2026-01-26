@@ -3,6 +3,7 @@ import { Dot, PhoneCall, Send } from "lucide-react";
 import React from "react";
 import { useTranslations } from "next-intl";
 import ContactUsForm from "./contact-us-form";
+import Link from "next/link";
 
 const Hero = () => {
   const t = useTranslations("contactUs.hero");
@@ -28,8 +29,9 @@ const Hero = () => {
             <Button
               variant="outline"
               className=" border-white sm:px-7 font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
+              asChild
             >
-              {t("secondaryCta")}
+              <Link href="/pricing">{t("secondaryCta")}</Link>
             </Button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const MigrationCTA = () => {
   const t = useTranslations("migration.cta");
@@ -14,16 +15,19 @@ const MigrationCTA = () => {
             {t("description")}
           </p>
           <div className="flex mt-10 gap-5 ">
-            <Button className=" font-gilroy h-13.5 px-7">
-              {tHeader.rich("talkToAstrah", {
-                bold: (chunks) => <span className="font-bold">{chunks}</span>,
-              })}
+            <Button className=" font-gilroy h-13.5 px-7" asChild>
+              <Link href="/contact-us">
+                {tHeader.rich("talkToAstrah", {
+                  bold: (chunks) => <span className="font-bold">{chunks}</span>,
+                })}
+              </Link>
             </Button>
             <Button
               variant="outline"
               className=" border-white px-7 font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
+              asChild
             >
-              {t("backHome")}
+              <Link href="/">{t("backHome")}</Link>
             </Button>
           </div>
           <div className="w-1/3 -top-20 blur-[100px] rounded-full absolute h-40 bg-white/20"></div>

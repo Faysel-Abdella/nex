@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../../components/ui/button";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const BottomCTA = () => {
   const t = useTranslations("landing.bottomCta");
@@ -13,8 +14,10 @@ const BottomCTA = () => {
           <p className="text-muted-foreground mt-6 max-w-xl ">
             {t("description")}
           </p>
-          <Button className="mt-8 font-gilroy h-11.5 px-7">
-            {t("talkTo")} <span className="font-bold">{t("brand")}</span>
+          <Button className="mt-8 font-gilroy h-11.5 px-7" asChild>
+            <Link href="/contact-us">
+              {t("talkTo")} <span className="font-bold">{t("brand")}</span>
+            </Link>
           </Button>
           <div className="  w-1/3 -top-20 blur-[100px]  rounded-full absolute h-40 bg-white/20"></div>
         </div>

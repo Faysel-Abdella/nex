@@ -132,6 +132,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  button {
+    @apply cursor-pointer!;
+  }
   html[dir="rtl"] {
     direction: rtl;
   }

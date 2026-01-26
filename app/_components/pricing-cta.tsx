@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../../components/ui/button";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const PricingCTA = () => {
   const t = useTranslations("landing.pricing");
@@ -26,7 +27,9 @@ const PricingCTA = () => {
             {t("trial")}
             <div className="w-full h-px  mt-8 bg-linear-to-r shrink-0 from-transparent via-border to-transparent" />
           </div>
-          <Button className="mt-8 font-gilroy h-11.5 px-7">{t("cta")}</Button>
+          <Button className="mt-8 font-gilroy h-11.5 px-7" asChild>
+            <Link href="/pricing">{t("cta")}</Link>
+          </Button>
         </div>
       </div>
     </section>
