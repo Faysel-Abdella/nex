@@ -7,6 +7,7 @@ import LanguageToggle from "./language-toggle";
 import Logo from "./logo";
 import MobileMenu from "./mobile-menu";
 import Navigation from "./navigation";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,14 +46,16 @@ export default function Header() {
       </div>
 
       {/* Mobile menu overlay */}
-      {isOpen && <MobileMenuPanel setIsOpen={setIsOpen} />}
+      {<MobileMenuPanel isOpen={isOpen} setIsOpen={setIsOpen} />}
     </header>
   );
 }
 
 function MobileMenuPanel({
   setIsOpen,
+  isOpen,
 }: {
+  isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }) {
   const t = useTranslations("header");
@@ -67,7 +70,12 @@ function MobileMenuPanel({
   ];
 
   return (
-    <div className="md:hidden bg-background ">
+    <div
+      className={cn(
+        "md:hidden bg-background transition-all overflow-hidden ",
+        isOpen ? "h-48" : "h-0",
+      )}
+    >
       <nav className="px-4 py-4 space-y-3">
         {mobileMenuItems.map((item) => (
           <Link
@@ -79,7 +87,7 @@ function MobileMenuPanel({
             {item.label}
           </Link>
         ))}
-        <Link href="/contact-us">
+        <Link href="/contact-us" onClick={closeMenu}>
           <button
             className="cursor-pointer w-full mt-4 px-4 py-2.5 rounded-full font-medium transition-colors text-black"
             style={{ backgroundColor: "#00d4ff" }}
