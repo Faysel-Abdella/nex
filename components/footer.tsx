@@ -8,18 +8,18 @@ const footerLinks = [
   {
     titleKey: "links.title",
     links: [
-      { nameKey: "links.product", url: "#" },
-      { nameKey: "links.terms", url: "#" },
+      { nameKey: "links.product", url: "/#product" },
+      { nameKey: "links.terms", url: "/terms" },
       { nameKey: "links.migration", url: "/migration" },
     ],
   },
   {
     titleKey: "legal.title",
     links: [
-      { nameKey: "legal.privacy", url: "#" },
-      { nameKey: "legal.terms", url: "#" },
-      { nameKey: "legal.acceptableUse", url: "#" },
-      { nameKey: "legal.refunds", url: "#" },
+      { nameKey: "legal.privacy", url: "/privacy" },
+      { nameKey: "legal.terms", url: "/terms" },
+      { nameKey: "legal.acceptableUse", url: "/acceptableUse" },
+      { nameKey: "legal.refunds", url: "/acceptableUse" },
     ],
   },
   {

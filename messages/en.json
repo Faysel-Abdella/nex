@@ -494,5 +494,12 @@
       ],
       "footer": "No spam. No mass outreach. One conversation, handled properly."
     }
+  },
+  "legal": {
+    "toc": "Table of Contents",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "acceptableUse": "Acceptable Use",
+    "refunds": "Refunds/Cancellation"
   }
 }
