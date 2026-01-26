@@ -18,7 +18,7 @@ const footerLinks = [
     links: [
       { nameKey: "legal.privacy", url: "/privacy" },
       { nameKey: "legal.terms", url: "/terms" },
-      { nameKey: "legal.acceptableUse", url: "/acceptableUse" },
+      { nameKey: "legal.acceptableUse", url: "/acceptable-use" },
       { nameKey: "legal.refunds", url: "/refunds" },
     ],
   },
