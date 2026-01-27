@@ -497,9 +497,9 @@
   },
   "legal": {
     "toc": "Table of Contents",
-    "privacy": "Privacy",
-    "terms": "Terms",
-    "acceptableUse": "Acceptable Use",
-    "refunds": "Refunds/Cancellation"
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "acceptableUse": "Acceptable Use Policy (AUP)",
+    "refunds": "Refunds & Cancellations Policy"
   }
 }

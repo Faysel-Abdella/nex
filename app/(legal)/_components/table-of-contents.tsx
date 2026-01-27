@@ -59,7 +59,7 @@ const TableOfContents = ({ tocSections }: TableOfContentsProps) => {
     <div className=" w-68 md:min-h-screen h-auto  ">
       <div
         ref={tocContainerRef}
-        className="md:sticky md:top-32 lg:top-26 flex flex-col gap-6 h-auto max-h-[calc(100vh-2rem)] overflow-y-auto"
+        className="md:sticky md:top-32 lg:top-26 flex flex-col gap-6 h-auto  overflow-y-auto"
       >
         <h3 className="text-xl font-inter font-bold">{t("toc")}</h3>
         <div className="relative">

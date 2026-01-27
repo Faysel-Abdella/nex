@@ -1,30 +1,64 @@
-At Astrah OS, commercial fairness is our baseline. We aim to provide a transparent and predictable billing experience. This policy outlines the circumstances under which refunds or credits may be issued.
+**Effective Date: 28-01-2026**
 
-As an enterprise platform, our relationships are governed by contracts and service agreements. The terms below apply unless superseded by a specific master services agreement.
+This Refunds & Cancellations Policy explains how cancellations, refunds, and billing disputes are handled for **Astrah OS**. This policy applies unless superseded by a separate written agreement (such as an Order Form, MSA, or Enterprise SLA).
 
-## Subscription Services
+---
 
-Astrah OS is generally billed on a subscription basis (monthly or annually).
+## Cancellations
 
-- **Non-Refundable by Default:** Payments for subscription periods are generally non-refundable, including cases where you choose to stop using the service before the end of the current billing cycle.
-- **Cancellations:** You may cancel your subscription at any time. Your access will continue until the end of the current billing period, after which no further charges will be applied.
+- You may cancel your **Astrah OS** subscription at any time.
+- Your subscription will remain active until the end of your current paid billing period (monthly or annual).
+- After the billing period ends, your subscription will not renew and you will not be charged again unless you re-subscribe.
 
-## Service Level Agreement (SLA) Credits
+---
 
-We stand behind our system reliability. If Astrah OS fails to meet the uptime or performance guarantees defined in your Service Level Agreement (SLA), you may be eligible for service credits.
+## Refunds (Default Rule)
 
-- Credits are calculated based on the downtime duration and the terms of your specific SLA.
-- Credits are applied to future billing cycles and are not issued as cash refunds.
+- All subscription fees are non-refundable by default.
+- This includes cases where you stop using the Service before the end of the billing period.
+- **Astrah OS** does not provide pro-rated refunds or credits for unused time unless required by applicable law or explicitly stated in a separate written agreement.
 
-## Exceptional Circumstances
+---
 
-We review refund requests related to billing errors or system malfunctions on a case-by-case basis. If you believe you were charged incorrectly or if the service was fundamentally inaccessible due to a failure on our part:
+## Billing Errors
 
-1.  Contact support within 30 days of the disputed charge.
-2.  Provide documentation of the issue.
+If you believe you were charged incorrectly (for example, duplicate charges or wrong plan billing), contact us within **30 days** of the charge.
 
-We reserve the right to deny refund requests that fall outside of our SLA terms or are the result of user configuration errors.
+We may issue a refund or credit only where:
 
-## Dispute Resolution
+- A billing error occurred on our side, or
+- A charge was demonstrably unauthorized or incorrect
 
-We encourage customers to contact our support team to resolve billing issues before initiating chargebacks. Unjustified chargebacks may result in the suspension of your account and a ban from future use of Astrah OS services.
+---
+
+## Service Credits
+
+**(Enterprise Only, If an SLA Exists)**
+
+If your subscription includes a separate written Service Level Agreement (SLA) and **Astrah OS** fails to meet the SLA commitments, you may be eligible for service credits as defined in that SLA.
+
+- Credits apply to future billing cycles only.
+- Credits are not cash refunds.
+
+If you do not have an SLA, this section does not apply.
+
+---
+
+## Chargebacks and Payment Disputes
+
+Before initiating a chargeback, you agree to contact **Astrah OS** support to attempt resolution.
+
+Unjustified chargebacks may result in:
+
+- Immediate suspension of the Workspace or Account, and/or
+- Restriction from future use of **Astrah OS**
+
+---
+
+## Contact
+
+For billing issues, cancellations, or refund-related inquiries, contact **Astrah OS** at:
+
+**[legal@astrah.net](mailto:legal@astrah.net)**
+
+---
