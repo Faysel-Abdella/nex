@@ -7,7 +7,7 @@ export default function HeroSection() {
   const t = useTranslations("landing.hero");
 
   return (
-    <section className="section-container relative  pt-24 md:pt-32   lg:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
+    <section className="section-container mb-0 relative  pt-28 md:pt-32   lg:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
       {/* Background gradient overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/10 to-background pointer-events-none" /> */}
 
@@ -68,7 +68,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right visual - anchored bottom-right */}
-          <div className="lg:relative h-36 lg:h-full w-full top-0  lg:-top-10 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:my-5">
+          <div className="lg:relative h-36 lg:h-full w-full top-0  lg:-top-10 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:mt-7 max-lg:mb-10">
             <div
               className="lg:absolute lg:bottom-0 ltr:right-20 rtl:left-20 w-full max-w-40
              lg:max-w-88"

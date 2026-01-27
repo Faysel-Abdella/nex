@@ -21,7 +21,7 @@ const PricingHero = () => {
         </p>
         <div className="flex mt-10 gap-5 ">
           <Button className=" font-gilroy h-13.5 px-7" asChild>
-            <Link href="/contact-us">
+            <Link href="/contact">
               {tHeader.rich("talkToAstrah", {
                 bold: (chunks) => <span className="font-bold">{chunks}</span>,
               })}

@@ -15,7 +15,7 @@ const BottomCTA = () => {
             {t("description")}
           </p>
           <Button className="mt-8 font-gilroy h-11.5 px-7" asChild>
-            <Link href="/contact-us">
+            <Link href="/contact">
               {t("talkTo")} <span className="font-bold">{t("brand")}</span>
             </Link>
           </Button>

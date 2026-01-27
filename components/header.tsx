@@ -31,7 +31,7 @@ export default function Header() {
           {/* Right section */}
           <div className="flex items-center gap-3 lg:gap-6 md:w-1/3 justify-end">
             <LanguageToggle />
-            <Link href="/contact-us">
+            <Link href="/contact">
               <button className="cursor-pointer hidden md:inline-block px-7 py-4 border-[1.5px] border-white text-white rounded-lg hover:bg-white/10 transition-colors font-gilroy  text-sm">
                 {t.rich("talkToAstrah", {
                   bold: (chunk) => (
@@ -87,7 +87,7 @@ function MobileMenuPanel({
             {item.label}
           </Link>
         ))}
-        <Link href="/contact-us" onClick={closeMenu}>
+        <Link href="/contact" onClick={closeMenu}>
           <button
             className="cursor-pointer w-full mt-4 px-4 py-2.5 rounded-full font-medium transition-colors text-black"
             style={{ backgroundColor: "#00d4ff" }}
