@@ -9,8 +9,9 @@ const footerLinks = [
     titleKey: "links.title",
     links: [
       { nameKey: "links.product", url: "/#product" },
-      { nameKey: "links.terms", url: "/terms" },
+      { nameKey: "links.pricing", url: "/pricing" },
       { nameKey: "links.migration", url: "/migration" },
+      { nameKey: "links.about", url: "/about" },
     ],
   },
   {

@@ -3,6 +3,7 @@
     "product": "Product",
     "pricing": "Pricing",
     "migration": "Migration",
+    "about": "About",
     "talkToAstrah": "Talk to <bold>ASTRAH</bold>"
   },
   "language": {
@@ -14,8 +15,9 @@
     "links": {
       "title": "LINKS",
       "product": "Product",
-      "terms": "Terms",
-      "migration": "Migration"
+      "pricing": "Pricing",
+      "migration": "Migration",
+      "about": "About"
     },
     "legal": {
       "title": "LEGAL",
@@ -214,7 +216,7 @@
     },
     "progress": {
       "title": "The standard go-live process.",
-      "footer": "No surprises. No silent changes. Everything is validated before go-live.",
+      "footer": "No surprises. No silent changes. Everything is validated before Go-live.",
       "days": [
         {
           "id": "01",

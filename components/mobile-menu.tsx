@@ -7,7 +7,7 @@ interface MobileMenuProps {
 export default function MobileMenu({ isOpen, setIsOpen }: MobileMenuProps) {
   return (
     <button
-      className="md:hidden p-2 hover:bg-cyan-400/10 rounded-lg transition-colors"
+      className="lg:hidden p-2 hover:bg-cyan-400/10 rounded-lg transition-colors"
       onClick={() => setIsOpen((prev: boolean) => !prev)}
       aria-label="Toggle menu"
     >

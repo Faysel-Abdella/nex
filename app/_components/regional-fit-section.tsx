@@ -37,11 +37,11 @@ export default function RegionalFitSection() {
           {t("title")}
         </p>
         <div className=" w-full lg:w-2/3">
-          <div className="  md:columns-2 gap-8 ">
+          <div className="  md:columns-2  gap-6 ">
             {features.map((feature) => (
               <div
                 key={feature.id}
-                className="flex break-inside-avoid h-full rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-10.5  items-center"
+                className="flex break-inside-avoid h-full rounded-2xl   bg-card border flex-col  mb-6 gap-4  flex-1 py-5 px-10.5  items-center"
               >
                 <StyledIcon Icon={feature.icon} />
                 <p className="text-muted-foreground text-center max-w-68">

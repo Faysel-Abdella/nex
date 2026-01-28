@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
+const FEATURE_SAMPLE_IMAGE = "/images/feature-sample.webp";
 const FeatureShowcase = () => {
   const t = useTranslations("landing.featureShowcase");
 
@@ -21,7 +22,7 @@ const FeatureShowcase = () => {
           </div>
           <div className="md:w-1/2">
             <div className="relative w-full ">
-              <img src={"/feature/feature-1.png"} />
+              <img src={FEATURE_SAMPLE_IMAGE} />
             </div>
           </div>
         </div>
@@ -40,7 +41,7 @@ const FeatureShowcase = () => {
           </div>
           <div className="md:w-1/2">
             <div className="relative w-full ">
-              <img src={"/feature/feature-2.png"} />
+              <img src={FEATURE_SAMPLE_IMAGE} />
             </div>
           </div>
         </div>
@@ -50,6 +51,15 @@ const FeatureShowcase = () => {
               {t("inbox.title")}
             </p>
             <p className="text-muted-foreground mt-6">{t("inbox.desc")}</p>
+          </div>
+          <div className="md:w-1/2 flex items-center">
+            <div className="relative w-full  ">
+              <img src={FEATURE_SAMPLE_IMAGE} />
+            </div>
+          </div>
+        </div>
+        <div className="flex max-md:gap-10 flex-row-reverse max-md:flex-col ">
+          <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]  mt-6 md:mt-8 lg:mt-10">
               {t("cash.title")}
             </p>
@@ -62,11 +72,11 @@ const FeatureShowcase = () => {
           </div>
           <div className="md:w-1/2 flex items-center">
             <div className="relative w-full  ">
-              <img src={"/feature/feature-3.png"} />
+              <img src={FEATURE_SAMPLE_IMAGE} />
             </div>
           </div>
         </div>
-        <div className="flex  max-md:gap-10 flex-row-reverse max-md:flex-col ">
+        <div className="flex  max-md:gap-10 max-md:flex-col ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium  text-3xl md:text-[40px]">
               {t("alive.title")}
@@ -76,7 +86,7 @@ const FeatureShowcase = () => {
           </div>
           <div className="md:w-1/2">
             <div className="relative w-full ">
-              <img src={"/feature/feature-4.png"} />
+              <img src={FEATURE_SAMPLE_IMAGE} />
             </div>
           </div>
         </div>

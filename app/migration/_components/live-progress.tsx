@@ -37,7 +37,9 @@ const LiveProgress = () => {
             </div>
           ))}
         </div>
-        <p className="text-center mt-12 max-w-md">{t("footer")}</p>
+        <p className="text-center mt-12 max-w-100 text-xl text-white font-semibold">
+          {t("footer")}
+        </p>
       </div>
     </section>
   );

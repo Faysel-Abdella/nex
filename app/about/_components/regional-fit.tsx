@@ -31,23 +31,23 @@ export default function RegionalFit() {
 
   return (
     <section className="section-container relative  font-sf-pro">
-      <div className="section-content   flex gap-10 items-center max-lg:flex-col max-lg:justify-center">
-        <div className="lg:w-1/3  justify-center">
-          <div className="max-w-80">
-            <p className=" text-3xl md:text-[40px] font-medium   max-lg:text-center">
+      <div className="section-content   flex gap-10 items-center flex-col justify-center">
+        <div className="full  justify-center">
+          <div className="max-w-127 text-center flex flex-col items-center">
+            <p className=" text-3xl md:text-[40px] font-medium   text-center">
               {t("title")}
             </p>
-            <p className="text-muted-foreground mt-6 max-lg:text-center">
+            <p className="text-muted-foreground mt-5 text-center max-w-96">
               {t("description")}
             </p>
           </div>
         </div>
-        <div className=" w-full lg:w-2/3">
-          <div className="  md:columns-2 gap-8 ">
+        <div className=" w-full ">
+          <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
             {features.map((feature) => (
               <div
                 key={feature.id}
-                className="flex break-inside-avoid h-full rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-10.5  items-center"
+                className="flex break-inside-avoid h-full lg:h-fit rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-10.5  items-center"
               >
                 <StyledIcon Icon={feature.icon} />
                 <p className="text-muted-foreground text-center max-w-60">

@@ -10,10 +10,11 @@ export default function Navigation() {
     { label: t("product"), href: "/#product" },
     { label: t("pricing"), href: "/pricing" },
     { label: t("migration"), href: "/migration" },
+    { label: t("about"), href: "/about" },
   ];
 
   return (
-    <nav className="hidden md:flex gap-8">
+    <nav className="hidden lg:flex gap-8">
       {navItems.map((item) => (
         <Link
           key={item.href}

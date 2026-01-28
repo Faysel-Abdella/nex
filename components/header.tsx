@@ -15,24 +15,24 @@ export default function Header() {
   const t = useTranslations("header");
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-background border-b border-white/5 px-6 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto  py-4 md:py-5">
+    <header className="fixed top-0 w-full z-50 bg-background border-b border-white/5 px-6  lg:px-16">
+      <div className="max-w-7xl mx-auto  py-4 lg:py-5">
         <div className="flex items-center justify-between ">
           {/* Left section */}
-          <div className="flex items-center md:w-1/3 justify-start">
+          <div className="flex items-center lg:w-1/3 justify-start">
             <Logo />
           </div>
 
           {/* Center section - Navigation */}
-          <div className="hidden  md:flex items-center md:w-1/3 justify-center">
+          <div className="hidden  lg:flex items-center lg:w-1/3 justify-center">
             <Navigation />
           </div>
 
           {/* Right section */}
-          <div className="flex items-center gap-3 lg:gap-6 md:w-1/3 justify-end">
+          <div className="flex items-center gap-3 lg:gap-6 lg:w-1/3 justify-end">
             <LanguageToggle />
             <Link href="/contact">
-              <button className="cursor-pointer hidden md:inline-block px-7 py-4 border-[1.5px] border-white text-white rounded-lg hover:bg-white/10 transition-colors font-gilroy  text-sm">
+              <button className="cursor-pointer hidden lg:inline-block px-7 py-4 border-[1.5px] border-primary text-white rounded-lg hover:bg-white/10 transition-colors font-gilroy  text-sm">
                 {t.rich("talkToAstrah", {
                   bold: (chunk) => (
                     <span className="font-semibold">{chunk}</span>
@@ -67,13 +67,14 @@ function MobileMenuPanel({
     { label: t("product"), href: "/#product" },
     { label: t("pricing"), href: "/pricing" },
     { label: t("migration"), href: "/migration" },
+    { label: t("about"), href: "/about" },
   ];
 
   return (
     <div
       className={cn(
-        "md:hidden bg-background transition-all overflow-hidden ",
-        isOpen ? "h-48" : "h-0",
+        "lg:hidden bg-background transition-all overflow-hidden ",
+        isOpen ? "h-56" : "h-0",
       )}
     >
       <nav className="px-4 py-4 space-y-3">

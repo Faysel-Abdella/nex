@@ -3,6 +3,7 @@
     "product": "منتج",
     "pricing": "التسعير",
     "migration": "الهجرة",
+    "about": "حول",
     "talkToAstrah": "تحدث إلى <bold>ASTRAH</bold>"
   },
   "language": {
@@ -14,8 +15,9 @@
     "links": {
       "title": "الروابط",
       "product": "المنتج",
-      "terms": "الأسعار",
-      "migration": "الترحيل"
+      "pricing": "الأسعار",
+      "migration": "الترحيل",
+      "about": "حول"
     },
     "legal": {
       "title": "قانوني",
