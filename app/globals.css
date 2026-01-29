@@ -9,6 +9,7 @@
   --background: oklch(0.1683 0.0181 263.9);
   --foreground: #ffffff;
   --card: oklch(0.2 0.0216 263.9);
+  --card-secondary: #111620;
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(0.2 0.0216 263.9);
   --popover-foreground: oklch(0.145 0 0);

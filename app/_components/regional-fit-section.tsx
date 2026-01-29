@@ -1,6 +1,6 @@
 "use client";
 
-import DepthCard from "@/components/glow-card";
+import DepthCard from "@/components/depth-card";
 import StyledIcon from "@/components/styled-icon";
 import { Languages } from "lucide-react";
 import { useTranslations } from "next-intl";

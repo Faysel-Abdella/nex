@@ -1,4 +1,5 @@
 "use client";
+import DepthCard from "@/components/depth-card";
 import StyledIcon from "@/components/styled-icon";
 import { Globe, Languages } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -43,17 +44,17 @@ export default function RegionalFit() {
           </div>
         </div>
         <div className=" w-full ">
-          <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 ">
+          <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
             {features.map((feature) => (
-              <div
+              <DepthCard
                 key={feature.id}
-                className="flex break-inside-avoid h-full lg:h-fit rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-10.5  items-center"
+                className="flex break-inside-avoid h-full lg:h-fit rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-5  items-center"
               >
                 <StyledIcon Icon={feature.icon} />
-                <p className="text-muted-foreground text-center max-w-60">
+                <p className="text-muted-foreground text-center ">
                   {feature.content}
                 </p>
-              </div>
+              </DepthCard>
             ))}
           </div>
         </div>

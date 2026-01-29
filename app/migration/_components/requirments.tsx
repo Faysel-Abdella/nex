@@ -1,5 +1,6 @@
 "use client";
 
+import DepthCard from "@/components/depth-card";
 import StyledIcon from "@/components/styled-icon";
 import { FileUp, List, Timer, CheckSquare } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -19,13 +20,13 @@ export default function Requirments() {
         <div className=" w-full lg:w-2/3">
           <div className=" md:columns-2 gap-8 ">
             {items.map((content, index) => (
-              <div
+              <DepthCard
                 key={index}
                 className="flex break-inside-avoid h-full  rounded-2xl bg-card border flex-col mb-4 gap-4 flex-1 py-5 px-8 items-center"
               >
                 <StyledIcon Icon={icons[index]} />
                 <p className="text-muted-foreground text-center ">{content}</p>
-              </div>
+              </DepthCard>
             ))}
           </div>
         </div>

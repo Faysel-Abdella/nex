@@ -1,5 +1,8 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+import DepthCard from "@/components/depth-card";
+import GlowCard, { GlowCardDirections } from "@/components/glow-card";
+import Pricing from "@/app/pricing/_components/pricing";
 
 interface Step {
   id: string;
@@ -12,6 +15,7 @@ const LiveProgress = () => {
   const t = useTranslations("migration.progress");
   const principles = t.raw("days") as Step[];
 
+  const glowDirection: GlowCardDirections[] = ["top", "bottom", "top"];
   return (
     <section className="section-container w-full font-sf-pro">
       <div className="section-content flex flex-col items-center">
@@ -19,10 +23,11 @@ const LiveProgress = () => {
           {t("title")}
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-3 mt-14 gap-7">
-          {principles.map((principle) => (
-            <div
+          {principles.map((principle, index) => (
+            <GlowCard
               key={principle.title}
-              className="flex h-full rounded-2xl bg-card border flex-col p-5 "
+              className="flex h-full rounded-2xl  border-0 flex-col p-5  shadow-[inset_0_0px_10px_rgba(255,255,255,0.05)]"
+              glowDirection={glowDirection[index]}
             >
               <div className="w-full items-center justify-between flex">
                 <p className="text-[40px] font-medium">{principle.id}</p>
@@ -34,7 +39,7 @@ const LiveProgress = () => {
                   <li key={index}>{step}</li>
                 ))}
               </ul>
-            </div>
+            </GlowCard>
           ))}
         </div>
         <p className="text-center mt-12 max-w-100 md:text-lg lg:text-xl text-white font-semibold">

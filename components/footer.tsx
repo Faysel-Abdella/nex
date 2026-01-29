@@ -56,9 +56,10 @@ const Footer = () => {
               {section.buttonKey && (
                 <Button
                   variant="outline"
-                  className=" border-white px-7 font-sf-pro text-sm  text-white/75  h-10 hover:border-primary rounded-md"
+                  className=" border-white px-7 font-sf-pro text-sm shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)]  text-white/75  h-10 hover:border-primary rounded-md"
+                  asChild
                 >
-                  {t(section.buttonKey)}
+                  <Link href={"/contact"}>{t(section.buttonKey)}</Link>
                 </Button>
               )}
               {section.links && (

@@ -11,7 +11,7 @@ const StyledIcon = ({ Icon, className }: StyledIconProps) => {
   return (
     <div
       className={cn(
-        "rounded-full shrink-0 size-14 bg-white/10 border-x border-primary/20 shadow-[inset_0_0px_25px_rgba(128,237,249,0.1)] -rotate-45 flex items-center justify-center",
+        "rounded-full shrink-0 size-14 bg-white/5 border-x border-primary/15 shadow-[inset_0_0px_25px_rgba(128,237,249,0.1)] -rotate-45 flex items-center justify-center",
       )}
     >
       <div className="rotate-45">

@@ -195,7 +195,9 @@
     "hero": {
       "badge": "MIGRATION",
       "title": "Go live in days, not weeks.",
-      "description": "Most standard migrations go live in ~72 hours. Complex environments are scoped separately.",
+
+      "description-1": "Most standard migrations go live in ~72 hours.",
+      "description-2": " Complex environments are scoped separately.",
       "cta": "See what's included"
     },
     "comparison": {

@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import React from "react";
 import { useTranslations } from "next-intl";
+import DepthCard from "@/components/depth-card";
 
 const Principles = () => {
   const t = useTranslations("about.principles");
@@ -21,7 +22,7 @@ const Principles = () => {
             <li>{t("list.transaction")}</li>
           </ul>
         </div>
-        <div className="w-full md:w-1/2 bg-card h-full rounded-3xl border p-8">
+        <DepthCard className="w-full md:w-1/2 bg-card h-full rounded-3xl border p-8">
           <p className="font-medium text-2xl md:text-[32px] ">
             {t("operatingTitle")}
           </p>
@@ -35,7 +36,7 @@ const Principles = () => {
               </div>
             ))}
           </div>
-        </div>
+        </DepthCard>
       </div>
     </section>
   );

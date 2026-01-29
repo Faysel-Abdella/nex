@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
+import GlowCard from "./glow-card";
 
 interface FAQAccordionProps {
   faqData: {
@@ -35,36 +36,38 @@ const FAQAccordion = ({ faqData }: FAQAccordionProps) => {
             value={faq.id}
             key={faq.id}
             className={cn(
-              "w-full border   rounded-3xl transition-all p-5 mb-4  shadow-lg",
+              "w-full    rounded-[18px] overflow-hidden transition-all  mb-4  shadow-lg",
               isOpen ? "bg-[#1E242D] border-white/5" : "bg-card",
             )}
           >
-            <AccordionTrigger
-              hasIcon={false}
-              className="flex w-full group items-center justify-between   py-0 hover:no-underline cursor-pointer"
-            >
-              <div className=" flex items-start ">
-                <p
+            <GlowCard className="p-5" hasGlow={isOpen}>
+              <AccordionTrigger
+                hasIcon={false}
+                className="flex w-full group items-center justify-between   py-0 hover:no-underline cursor-pointer"
+              >
+                <div className=" flex items-start ">
+                  <p
+                    className={cn(
+                      " text-lg group-hover:underline font-medium",
+                      isOpen && "font-semibold",
+                    )}
+                  >
+                    {faq.question}
+                  </p>
+                </div>
+                <div
                   className={cn(
-                    " text-lg group-hover:underline font-medium",
-                    isOpen && "font-semibold",
+                    "flex size-9 shrink-0 items-center justify-center ",
                   )}
                 >
-                  {faq.question}
-                </p>
-              </div>
-              <div
-                className={cn(
-                  "flex size-9 shrink-0 items-center justify-center ",
-                )}
-              >
-                {isOpen ? <Minus /> : <Plus />}
-              </div>
-            </AccordionTrigger>
+                  {isOpen ? <Minus /> : <Plus />}
+                </div>
+              </AccordionTrigger>
 
-            <AccordionContent className="flex flex-col  p-0 pt-4">
-              <p className="text-start text-muted-foreground">{faq.answer}</p>
-            </AccordionContent>
+              <AccordionContent className="flex flex-col  p-0 pt-4">
+                <p className="text-start text-muted-foreground">{faq.answer}</p>
+              </AccordionContent>
+            </GlowCard>
           </AccordionItem>
         );
       })}

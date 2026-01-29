@@ -6,6 +6,7 @@ import {
   Network,
   SlidersHorizontal,
 } from "lucide-react";
+import DepthCard from "@/components/depth-card";
 
 const MigrationSafety = () => {
   const t = useTranslations("migration.safety");
@@ -24,13 +25,13 @@ const MigrationSafety = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-12 gap-7">
           {principlesLabels.map((label, index) => (
-            <div
+            <DepthCard
               key={label}
               className="flex break-inside-avoid h-fit rounded-2xl bg-card border flex-col p-5 "
             >
               <StyledIcon Icon={icons[index]} />
               <p className="text-lg font-medium mt-6 ">{label}</p>
-            </div>
+            </DepthCard>
           ))}
         </div>
         <p className="text-center mt-12 max-w-132 md:text-lg lg:text-xl text-white font-semibold">

@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import React from "react";
 
 const PlanComparison = () => {
@@ -49,8 +50,16 @@ const PlanComparison = () => {
               <tr className="">
                 <th className="py-4 px-6"></th>
                 {plans.map((plan) => (
-                  <th key={plan} className="py-4 px-6 font-medium text-sm">
-                    {plan}
+                  <th key={plan} className={cn("py-4 px-6 font-medium ")}>
+                    <span
+                      className={
+                        plan == "Enterprise"
+                          ? "bg-linear-to-bl text-xl from-white via-primary to-white bg-clip-text text-transparent"
+                          : ""
+                      }
+                    >
+                      {plan}
+                    </span>
                   </th>
                 ))}
               </tr>

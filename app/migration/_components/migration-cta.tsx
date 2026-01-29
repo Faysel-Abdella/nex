@@ -24,7 +24,7 @@ const MigrationCTA = () => {
             </Button>
             <Button
               variant="outline"
-              className=" border-white px-7 font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
+              className=" border-white px-7 font-sf-pro shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
               asChild
             >
               <Link href="/">{t("backHome")}</Link>

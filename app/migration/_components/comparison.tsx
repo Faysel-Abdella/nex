@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import React from "react";
 import { useTranslations } from "next-intl";
+import DepthCard from "@/components/depth-card";
 
 const Comparison = () => {
   const t = useTranslations("migration.comparison");
@@ -26,7 +27,7 @@ const Comparison = () => {
             })}
           </p>
         </div>
-        <div className="w-full md:w-1/2 bg-card h-full rounded-3xl border p-8 max-w-133">
+        <DepthCard className="w-full md:w-1/2 bg-card h-full rounded-3xl border p-8 max-w-133">
           <p className="font-medium text-2xl md:text-3xl lg:text-[32px] ">
             {t("cardTitle")}
           </p>
@@ -42,7 +43,7 @@ const Comparison = () => {
             ))}
           </div>
           <p className="text-muted-foreground mt-8 ">{t("footer")}</p>
-        </div>
+        </DepthCard>
       </div>
     </section>
   );

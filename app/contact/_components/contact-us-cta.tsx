@@ -16,7 +16,7 @@ const ContactUsCTA = () => {
             </Button>
             <Button
               variant="outline"
-              className=" border-white px-7 font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
+              className=" border-white px-7 shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
             >
               {t("secondaryButton")}
             </Button>

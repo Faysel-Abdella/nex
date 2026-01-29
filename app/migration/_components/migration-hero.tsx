@@ -9,8 +9,8 @@ const MigrationHero = () => {
   const tHeader = useTranslations("header");
 
   return (
-    <section className="section-container flex max-md:gap-10 max-md:flex-col  ">
-      <div className="max-w-137.5 flex flex-col max-md:items-center max-md:text-center justify-center mx-auto ">
+    <section className="section-container flex gap-10 flex-col  ">
+      <div className="max-w-137.5 flex flex-col items-center text-center justify-center mx-auto ">
         <div className="flex text-muted-foreground ">
           <Dot size={26} /> <span>{t("badge")}</span>
         </div>
@@ -18,8 +18,9 @@ const MigrationHero = () => {
           {t("title")}
         </p>
         <p className="text-muted-foreground mt-5 max-w-xl ">
-          {t("description")}
+          {t("description-1")}
         </p>
+        <p className="text-muted-foreground  max-w-xl ">{t("description-2")}</p>
         <div className="flex mt-10 gap-5 ">
           <Button className=" font-gilroy h-13.5 sm:px-7" asChild>
             <Link href="/contact">
@@ -30,15 +31,10 @@ const MigrationHero = () => {
           </Button>
           <Button
             variant="outline"
-            className=" border-white sm:px-7 font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
+            className=" border-white sm:px-7 font-sf-pro shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] text-sm text-white/75 h-13.5 hover:border-primary rounded-md"
           >
             {t("cta")}
           </Button>
-        </div>
-      </div>
-      <div className="md:w-1/2 shrink-0">
-        <div className="relative w-full ">
-          <img src={"/feature/feature-1.png"} alt="Migration illustration" />
         </div>
       </div>
     </section>

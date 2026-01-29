@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../components/ui/button";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import GlowCard from "@/components/glow-card";
 
 const PricingCTA = () => {
   const t = useTranslations("landing.pricing");
@@ -13,7 +14,10 @@ const PricingCTA = () => {
         <div className="absolute w-[90%] h-full bg-card border rounded-3xl max-w-157.5 mx-auto top-10 "></div>
         <div className="w-full h-96 md:h-86 bg-linear-to-b bottom-0  absolute from-transparent  to-background"></div>
 
-        <div className="z-10 w-[80%] max-md:text-center h-fit bg-card border rounded-3xl  mx-auto flex flex-col p-6 items-center  ">
+        <GlowCard
+          outerClassName="z-10 z-10 w-[80%] rounded-3xl  "
+          className=" max-md:text-center h-fit rounded-[23px]   mx-auto flex flex-col p-6 items-center  "
+        >
           <img
             src="/icons/pricing.png"
             alt="Pricing icon"
@@ -30,7 +34,7 @@ const PricingCTA = () => {
           <Button className="mt-8 font-gilroy h-11.5 px-7" asChild>
             <Link href="/pricing">{t("cta")}</Link>
           </Button>
-        </div>
+        </GlowCard>
       </div>
     </section>
   );
