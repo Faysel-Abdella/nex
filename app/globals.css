@@ -151,6 +151,10 @@
   .section-content {
     @apply max-w-278 mx-auto w-full;
   }
+
+  .inner-card-glow {
+    @apply shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)];
+  }
 }
 
 @layer utilities {
