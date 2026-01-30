@@ -25,123 +25,133 @@ import {
 import AskAstrah from "@/components/ask-astrah";
 
 const SystemModules = () => {
+  const t = useTranslations("landing.SystemModules");
+  const [visibleModuleIndex, setVisibleModuleIndex] = useState(0);
+
   const modules = [
     {
       id: 1,
+      key: "whatsapp",
       icon: "/icons/WhatsappLogo.svg",
       iconSelected: "/icons/WhatsappLogoSelected.svg",
-      title: "WhatsApp Intelligence",
-      description:
-        "Turns WhatsApp threads into structured CRM activity (summaries, signals, follow-ups)",
+      title: t("modules.whatsapp.title"),
+      buttonTitle: t("modules.whatsapp.buttonTitle"),
+      description: t("modules.whatsapp.description"),
       output: {
         Icon: TriangleAlert,
-        title: "Thread requires follow-up",
-        evidence: <div>Pricing & timeline mentioned </div>,
-        suggestion: "Suggested: clarify scope + send offer",
+        title: t("modules.whatsapp.output.title"),
+        evidence: <div>{t("modules.whatsapp.output.evidence")}</div>,
+        suggestion: t("modules.whatsapp.output.suggestion"),
       },
     },
     {
       id: 2,
+      key: "dealHealth",
       icon: Activity,
-      title: "Deal Health",
-      description:
-        "Detects risk early (silence + stagnation) and recommends the next best action.",
+      title: t("modules.dealHealth.title"),
+      buttonTitle: t("modules.dealHealth.buttonTitle"),
+      description: t("modules.dealHealth.description"),
       output: {
         Icon: TriangleAlert,
-        title: "Silence detected",
-        evidence: <div>Last inbound WhatsApp: 6 days ago</div>,
-        suggestion: "Suggested: draft follow-up",
+        title: t("modules.dealHealth.output.title"),
+        evidence: <div>{t("modules.dealHealth.output.evidence")}</div>,
+        suggestion: t("modules.dealHealth.output.suggestion"),
       },
     },
     {
       id: 3,
+      key: "inboxZero",
       icon: "/icons/sms-tracking.svg",
       iconSelected: "/icons/sms-tracking-selected.svg",
-      title: "AI Inbox Zero",
-      description:
-        "Unified view that triages conversations and produces next steps.",
+      title: t("modules.inboxZero.title"),
+      buttonTitle: t("modules.inboxZero.buttonTitle"),
+      description: t("modules.inboxZero.description"),
       output: {
         Icon: TriangleAlert,
-        title: "High-intent lead detected",
-        evidence: <div>Match score: 84/100 · High intent signals</div>,
-        suggestion: "Suggested: draft outreach message",
+        title: t("modules.inboxZero.output.title"),
+        evidence: <div>{t("modules.inboxZero.output.evidence")}</div>,
+        suggestion: t("modules.inboxZero.output.suggestion"),
       },
     },
     {
       id: 4,
+      key: "priorityQueue",
       icon: List,
-      title: "AI Priority Queue",
-      description:
-        "Ranks what to do now across deals and chats so nothing slips.",
+      title: t("modules.priorityQueue.title"),
+      buttonTitle: t("modules.priorityQueue.buttonTitle"),
+      description: t("modules.priorityQueue.description"),
       output: {
         Icon: TriangleAlert,
-        title: "Pricing inquiry detected",
-        evidence: <div>Client asked about pricing + timeline</div>,
-        suggestion: "Suggested: clarify scope + send offer",
+        title: t("modules.priorityQueue.output.title"),
+        evidence: <div>{t("modules.priorityQueue.output.evidence")}</div>,
+        suggestion: t("modules.priorityQueue.output.suggestion"),
       },
     },
     {
       id: 5,
+      key: "smartClose",
       icon: "/icons/lamp-charge.svg",
       iconSelected: "/icons/lamp-charge-selected.svg",
-      title: "Smart Close",
-      description: "Offer + payment request + embedded e-sign to close faster.",
+      title: t("modules.smartClose.title"),
+      buttonTitle: t("modules.smartClose.buttonTitle"),
+      description: t("modules.smartClose.description"),
       output: {
         Icon: TriangleAlert,
-        title: "Payment Request",
-        evidence: <div>Amount: 50,000 AED</div>,
-        suggestion: "Suggested: send secure payment link",
+        title: t("modules.smartClose.output.title"),
+        evidence: <div>{t("modules.smartClose.output.evidence")}</div>,
+        suggestion: t("modules.smartClose.output.suggestion"),
       },
     },
-
     {
       id: 6,
+      key: "askAstrah",
       icon: MessageCircleQuestion,
-      title: "Ask Astrah (Orb AI Assistant)",
-      description:
-        "Answers across CRM + WhatsApp + docs, with optional general knowledge mode.",
-      output: "/feature/ask-ai.png",
+      title: t("modules.askAstrah.title"),
+      buttonTitle: t("modules.askAstrah.buttonTitle"),
+      description: t("modules.askAstrah.description"),
+      output: t("modules.askAstrah.placeholder"),
     },
     {
       id: 7,
+      key: "leadGen",
       icon: Binoculars,
-      title: "AI Lead Generator",
-      description:
-        "Finds and ranks target companies using GCC-tuned signals and enrichment.",
+      title: t("modules.leadGen.title"),
+      buttonTitle: t("modules.leadGen.buttonTitle"),
+      description: t("modules.leadGen.description"),
       output: {
         Icon: TriangleAlert,
-        title: "High-intent lead detected",
-        evidence: <div>Match score: 84/100 · High intent signals</div>,
-        suggestion: "Suggested: draft outreach message",
+        title: t("modules.leadGen.output.title"),
+        evidence: <div>{t("modules.leadGen.output.evidence")}</div>,
+        suggestion: t("modules.leadGen.output.suggestion"),
       },
     },
   ];
-  const [visibleModuleIndex, setVisibleModuleIndex] = useState(0);
+
   const visibleModule = modules[visibleModuleIndex];
 
   return (
     <section id="product" className="section-container w-full font-sf-pro">
-      <div className="  section-content  flex flex-col items-center">
-        <p className=" font-medium  text-3xl md:text-[40px] text-center">
-          System Modules
+      <div className="section-content flex flex-col items-center">
+        <p className="font-medium text-3xl md:text-[40px] text-center">
+          {t("sectionTitle")}
         </p>
-        <p className="text-muted-foreground mt-6 text-center ">
-          One operating layer. Each module produces signals you can act on.
+        <p className="text-muted-foreground mt-6 text-center">
+          {t("sectionSubtitle")}
         </p>
-        <div className=" max-lg:hidden grid grid-cols-2 w-full mt-14 gap-30">
-          <div className=" flex flex-col">
+        <div className="max-lg:hidden grid grid-cols-2 w-full mt-14 gap-30">
+          <div className="flex flex-col">
             {modules.map((module, index) => (
               <div
                 key={module.id}
                 className={cn(
-                  "relative w-full h-full rounded-[21px]  from-white/10 via-primary/30 to-white/10 p-px   overflow-hidden",
-                  index == visibleModuleIndex && "bg-linear-to-br ",
+                  "relative w-full h-full rounded-[21px] from-white/10 via-primary/30 to-white/10 p-px overflow-hidden",
+                  index == visibleModuleIndex && "bg-linear-to-br",
                 )}
               >
                 <button
                   className={cn(
-                    "h-fit w-full  flex items-center gap-4 rounded-[20px] p-5 transition-all bg-background border border-background",
-                    index == visibleModuleIndex && "bg-card ",
+                    "h-fit w-full flex items-center gap-4 rounded-[20px] p-5 transition-all bg-background border border-background text-start",
+                    index == visibleModuleIndex && "bg-card",
                   )}
                   onClick={() => setVisibleModuleIndex(index)}
                 >
@@ -158,7 +168,7 @@ const SystemModules = () => {
                   ) : (
                     <module.icon
                       className={cn(
-                        "w-6 h-6  opacity-80",
+                        "w-6 h-6 opacity-80 shrink-0",
                         visibleModule.id === module.id && "text-primary",
                       )}
                     />
@@ -170,7 +180,7 @@ const SystemModules = () => {
                         : "text-muted-foreground text-lg",
                     )}
                   >
-                    {module.title}
+                    {module.buttonTitle}
                   </span>
                 </button>
               </div>
@@ -181,7 +191,7 @@ const SystemModules = () => {
             <p className="text-white/60 mt-6">{visibleModule.description}</p>
             <div className="mt-14">
               {typeof visibleModule.output == "string" ? (
-                <AskAstrah />
+                <AskAstrah placeholder={visibleModule.output} />
               ) : (
                 <GlassCard
                   Icon={visibleModule.output.Icon}
@@ -195,15 +205,28 @@ const SystemModules = () => {
           </div>
         </div>
 
-        <Carousel className=" lg:hidden w-full  mt-15">
-          <CarouselContent className="h-fit ">
+        <Carousel className="lg:hidden w-full mt-15" dir="ltr">
+          {/* Note: Carousel direction is usually controlled by the parent html dir, 
+              but specifically for shadcn/embla carousel, you might need to ensure 
+              content direction is handled if the carousel logic relies on LTR. 
+              If the site is RTL, remove dir="ltr" above to test native behavior.
+           */}
+          <CarouselContent className="h-fit">
             {modules.map((module) => (
               <CarouselItem key={module.id} className="h-fit">
-                <p className="text-2xl font-medium">{module.title}</p>
-                <p className="text-white/60 mt-6">{module.description}</p>
+                <p className="text-2xl font-medium text-center">
+                  {module.title}
+                </p>
+                <p className="text-white/60 mt-6 text-center">
+                  {module.description}
+                </p>
                 <div className="mt-14 flex justify-center max-w-96 pb-10 mx-auto">
                   {typeof module.output == "string" ? (
-                    <img src={module.output} className="w-full mx-auto h-fit" />
+                    <img
+                      src={module.output}
+                      className="w-full mx-auto h-fit"
+                      alt="AI Feature"
+                    />
                   ) : (
                     <GlassCard
                       Icon={module.output.Icon}
@@ -217,8 +240,8 @@ const SystemModules = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className=" start-10" />
-          <CarouselNext className="end-10" />
+          <CarouselPrevious className="start-10 left-10 rtl:right-10 rtl:left-auto" />
+          <CarouselNext className="end-10 right-10 rtl:left-10 rtl:right-auto" />
           <CarouselDots />
         </Carousel>
       </div>

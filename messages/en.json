@@ -76,13 +76,97 @@
       "talkTo": "Talk to",
       "brand": "ASTRAH"
     },
+    "SystemModules": {
+      "sectionTitle": "System Modules",
+      "sectionSubtitle": "One operating layer. Each module produces signals you can act on.",
+      "modules": {
+        "whatsapp": {
+          "buttonTitle": "WhatsApp Intelligence",
+
+          "title": "WhatsApp Intelligence",
+          "description": "Turns WhatsApp threads into structured CRM activity (summaries, signals, follow-ups)",
+          "output": {
+            "title": "Thread requires follow-up",
+            "evidence": "Pricing & timeline mentioned",
+            "suggestion": "Suggested: clarify scope + send offer"
+          }
+        },
+        "dealHealth": {
+          "buttonTitle": "Deal Health",
+
+          "title": "Deal Health",
+          "description": "Detects risk early (silence + stagnation) and recommends the next best action.",
+          "output": {
+            "title": "Silence detected",
+            "evidence": "Last inbound WhatsApp: 6 days ago",
+            "suggestion": "Suggested: draft follow-up"
+          }
+        },
+        "inboxZero": {
+          "buttonTitle": "AI Inbox Zero",
+
+          "title": "AI Inbox Zero",
+          "description": "Unified view that triages conversations and produces next steps.",
+          "output": {
+            "title": "High-intent lead detected",
+            "evidence": "Match score: 84/100 · High intent signals",
+            "suggestion": "Suggested: draft outreach message"
+          }
+        },
+        "priorityQueue": {
+          "buttonTitle": "AI Priority Queue",
+
+          "title": "AI Priority Queue",
+          "description": "Ranks what to do now across deals and chats so nothing slips.",
+          "output": {
+            "title": "Pricing inquiry detected",
+            "evidence": "Client asked about pricing + timeline",
+            "suggestion": "Suggested: clarify scope + send offer"
+          }
+        },
+        "leadGen": {
+          "buttonTitle": "AI Lead Generator",
+
+          "title": "AI Lead Generator",
+          "description": "Finds and ranks target companies using GCC-tuned signals and enrichment.",
+          "output": {
+            "title": "High-intent lead detected",
+            "evidence": "Match score: 84/100 · High intent signals",
+            "suggestion": "Suggested: draft outreach message"
+          }
+        },
+        "askAstrah": {
+          "buttonTitle": "Ask Astrah (Orb AI Assistant)",
+
+          "title": "Ask Astrah (Orb AI Assistant)",
+          "description": "Answers across CRM + WhatsApp + docs, with optional general knowledge mode.",
+          "placeholder": "Ask anything"
+        },
+        "smartClose": {
+          "buttonTitle": "Smart Close",
+
+          "title": "Smart Close",
+          "description": "Offer + payment request + embedded e-sign to close faster.",
+          "output": {
+            "title": "Payment Request",
+            "evidence": "Amount: 50,000 AED",
+            "suggestion": "Suggested: send secure payment link"
+          }
+        }
+      }
+    },
     "featureShowcase": {
       "demand": {
         "title": "Demand, built in.",
         "desc": "Astrah doesn't just manage leads. It helps generate pipeline inside your OS.",
         "list1": "Discover and rank opportunities",
         "list2": "Region-tuned signals (GCC context)",
-        "list3": "Draft outreach (never auto-sends)"
+        "list3": "Draft outreach (never auto-sends)",
+        "output": {
+          "title": "Silence detected",
+          "evidence": "Last inbound WhatsApp: 6 days ago",
+          "suggestion": "Suggested: draft follow-up"
+        }
       },
       "revenue": {
         "title": "Stop revenue leaks.",
@@ -90,23 +174,43 @@
         "list1": "Silence detection → “No reply in 5d”",
         "list2": "Stagnation alerts → “Stage unchanged 14d”",
         "list3": "Priority queue for follow-ups → “Next actions ranked”",
+        "output": {
+          "title": "Pricing inquiry detected",
+          "evidence": "Client asked about pricing + timeline",
+          "suggestion": "Suggested: clarify scope + send offer"
+        },
         "footer": "No auto-sending. No surprise actions. You stay in control."
       },
       "inbox": {
         "title": "Inbox intelligence.",
-        "desc": "One unified view. Thread summaries. Priority signals. Clear next steps."
+        "desc": "One unified view. Thread summaries. Priority signals. Clear next steps.",
+        "output": {
+          "title": "Thread requires follow-up",
+          "evidence": "Pricing & timeline mentioned",
+          "suggestion": "Suggested: clarify scope + send offer"
+        }
       },
       "cash": {
         "title": "From agreement to cash.",
         "desc": "Close the admin gap. Go from “yalla” to paid.",
         "list1": "Mobile-first offer link",
         "list2": "WhatsApp OTP acceptance",
-        "list3": "Card/Apple Pay/Mada support (where available)"
+        "list3": "Card/Apple Pay/Mada support (where available)",
+        "output": {
+          "title": "Payment Request",
+          "evidence": "Amount: 50,000 AED",
+          "suggestion": "Suggested: send secure payment link"
+        }
       },
       "alive": {
         "title": "The system is alive.",
         "desc1": "Persistent intelligence layer that surfaces signals, risks, and next actions.",
-        "desc2": "Not a chatbot toy. Not random guesses. Supports decisions. You decide."
+        "desc2": "Not a chatbot toy. Not random guesses. Supports decisions. You decide.",
+        "output": {
+          "title": "High-intent lead detected",
+          "evidence": "Match score: 84/100 · High intent signals",
+          "suggestion": "Suggested: draft outreach message"
+        }
       }
     },
     "migration": {
@@ -319,84 +423,209 @@
       "secondaryCta": "View Product",
       "footer": "Operating outside the GCC? We offer regional pricing for MENA.<bold> Talk to us.</bold>"
     },
+    "modal": {
+      "modalOpenButton": "View full features",
+      "creditsAndResults": "Lead credits and results vary by category, location, and enrichment depth. Migration timelines apply to standard CSV-based migrations; complex scopes are scoped separately. WhatsApp includes a monthly allowance; higher volume is available via add-on bundles.",
+      "team": "Team",
+      "whatsappDesc": "includes allowance; usage beyond allowance is metered.",
+      "migration": "Migration",
+      "included": "Included"
+    },
     "plans": {
-      "general": {
-        "month": "month",
-        "migrationLabel": "Migration",
-        "oneTime": "one-time",
+      "labels": {
+        "migration": "Migration",
         "included": "Included"
       },
       "starter": {
         "name": "STARTER",
-        "tagline": "For Freelancers And Small Service Teams.",
+        "billingPeriod": "/month",
+        "tagline": "For Solo Operators And Small Service Teams.",
+        "team": "1 user included.",
         "cta": "Start Free Trial",
-        "inclusionLabel": "Includes:",
         "migrationNote": "Standard",
-        "features": [
-          "Core CRM (contacts, companies, deals, tasks, calendar)",
-          "WhatsApp Intelligence (Lite)",
-          "AI Deal Intelligence (Lite)",
-          "AI Inbox Zero (Lite)",
-          "AI Lead Generator: 100 leads / month",
-          "Internal AI Intelligence: Included",
-          "External AI usage: 200 tokens / month",
-          "Multilingual UI: English + Arabic (RTL)",
-          "Orb Intelligence: Standard"
+        "inclusionLabel": "Core:",
+        "modalInclusionLabel": "Includes",
+        "summarizedFeatures": [
+          "Core: CRM (contacts, companies, deals, tasks, calendar), pipeline views + basic KPIs",
+          "Communication: Unified Inbox (WhatsApp + Email), bilingual UI (EN/AR with RTL)",
+          "AI Modules: Deal Health + AI Inbox Zero + AI Priority Queue (core signals + next steps)",
+          "AI Lead Generator: 100 lead credits / month",
+          "Ask Astrah: Business Data included + General AI: 200 queries / month",
+          "WhatsApp: Includes monthly allowance; higher volume available via add-on bundles"
+        ],
+        "featureCategories": [
+          {
+            "title": "Core:",
+            "features": [
+              "CRM (contacts, companies, deals, tasks, calendar)",
+              "Pipeline views + basic KPIs",
+              "Roles & permissions (basic)"
+            ]
+          },
+          {
+            "title": "Communication:",
+            "features": [
+              "Unified Inbox (WhatsApp + Email)",
+              "Arabic/English UI (RTL)"
+            ]
+          },
+          {
+            "title": "Intelligence (Lite):",
+            "features": [
+              "WhatsApp Intelligence (Lite)",
+              "Deal Health (Lite)",
+              "AI Inbox Zero (Lite)",
+              "AI Lead Generator: 100 leads/month"
+            ]
+          },
+          {
+            "title": "Ask Astrah:",
+            "features": [
+              "Unlimited for your business data",
+              "General knowledge queries: 200/month"
+            ]
+          }
         ]
       },
       "business": {
         "name": "BUSINESS",
-        "tagline": "For Growing Teams (3-15 Users).",
+        "billingPeriod": "/month",
+        "tagline": "For Growing Teams.",
+        "team": "Up to 5 users included",
         "cta": "Start Free Trial",
-        "inclusionLabel": "Everything in Starter, plus:",
-        "migrationNote": "Standard",
-        "features": [
-          "Everything in Starter",
-          "WhatsApp Intelligence (Full)",
-          "AI Deal Intelligence (Full)",
-          "AI Inbox Zero (Full)",
-          "AI Priority Queue",
-          "AI Data Enhancer",
-          "Campaigns (Email + WhatsApp)",
-          "Automations (Basic)",
-          "Make.com integration (Basic)",
-          "External AI usage: 1,000 tokens / month",
-          "Expanded multilingual support"
+        "migrationNote": "~72 hours standard",
+        "inclusionLabel": "Everything in Starter, Plus:",
+        "summarizedFeatures": [
+          "Smart Close: Quote/Offer + embedded e-sign (BoldSign) + Tap payment (where available)",
+          "Automations: Rules + reminders + notifications",
+          "Integrations: Make.com (standard)",
+          "Support: Standard support (48h response time)",
+          "AI Lead Generator: 500 lead credits / month",
+          "Ask Astrah: Business Data included + General AI: 1,000 queries / month"
+        ],
+        "featureCategories": [
+          {
+            "title": "Intelligence (Full):",
+            "features": [
+              "WhatsApp Intelligence (Full)",
+              "Deal Health (Full)",
+              "AI Inbox Zero (Full)",
+              "AI Priority Queue",
+              "AI Lead Generator: 500 leads/month"
+            ]
+          },
+          {
+            "title": "Smart Close:",
+            "features": [
+              "Offer + payment request",
+              "Embedded e-sign (BoldSign)"
+            ]
+          },
+          {
+            "title": "Automations:",
+            "features": [
+              "Rules + reminders + notifications",
+              "Make.com integration (standard)"
+            ]
+          },
+          {
+            "title": "Ask Astrah:",
+            "features": [
+              "Unlimited for your business data",
+              "General knowledge queries: 1,000/month"
+            ]
+          }
         ]
       },
       "pro": {
         "name": "PRO",
-        "tagline": "For Established Teams (15-50 Users).",
+        "billingPeriod": "/month",
+        "tagline": "For Established Teams.",
+        "team": "Up to 15 users included.",
         "cta": "Start Free Trial",
-        "inclusionLabel": "Everything in Business, plus:",
-        "migrationNote": "Advanced",
-        "features": [
-          "Everything in Business",
-          "Advanced automations",
-          "AI Meeting Notes",
-          "AI Action Planner",
-          "AI Campaign Optimizer",
-          "Advanced analytics & dashboards",
-          "AI Lead Generator: 2,000 leads / month",
-          "External AI usage: 5,000 tokens / month",
-          "Advanced permissions & audit trail",
-          "Orb Intelligence: Enhanced"
+        "migrationNote": "~72 hours standard",
+        "inclusionLabel": "Everything in Business, Plus:",
+        "summarizedFeatures": [
+          "Management & control: Role-based access control (RBAC) + manager visibility, dashboards & KPIs",
+          "Integrations: Make.com + Webhooks",
+          "Support: Priority support (24h SLA) + 1-hour onboarding session + advanced migration support",
+          "AI Lead Generator: 2,000 lead credits / month",
+          "Ask Astrah: Business Data included + General AI: 5,000 queries / month"
+        ],
+        "featureCategories": [
+          {
+            "title": "Management & Control:",
+            "features": [
+              "Role-based access control",
+              "Manager visibility + permissions",
+              "Management dashboards & KPIs"
+            ]
+          },
+          {
+            "title": "Advanced Integrations:",
+            "features": ["Integrations (Make.com + Webhooks)"]
+          },
+          {
+            "title": "Support:",
+            "features": [
+              "Priority support (24h response SLA)",
+              "1-hour onboarding session",
+              "Advanced migration support"
+            ]
+          },
+          {
+            "title": "Ask Astrah:",
+            "features": [
+              "Unlimited for your business data",
+              "General knowledge queries: 5,000/month"
+            ]
+          },
+          {
+            "title": "Lead Generator:",
+            "features": ["2,000 leads/month"]
+          }
         ]
       },
       "enterprise": {
         "name": "ENTERPRISE",
+        "billingPeriod": "/month",
         "tagline": "For Large Organizations And Holding Groups.",
+        "team": "Large organizations and holding groups.",
         "cta": "Talk to Astrah",
-        "inclusionLabel": "Everything in Pro, plus:",
-        "features": [
-          "Everything in Pro",
-          "Custom workflows & automations",
-          "Organization-wide logic",
-          "Dedicated success management",
-          "Custom branding (domain, login)",
-          "Private cloud deployment (optional)",
-          "AI Lead Generator: 5,000–10,000 leads / month",
-          "External AI usage: 20,000 tokens / month"
+        "migrationNote": "~72 hours standard",
+        "inclusionLabel": "Everything in Pro, Plus:",
+        "summarizedFeatures": [
+          "Organization-wide controls",
+          "Dedicated success manager",
+          "Custom onboarding & workshops",
+          "Custom integrations & implementation support",
+          "Custom branding options (domain/login/branding)",
+          "GCC data residency aligned / in-region hosting options",
+          "AI Lead Generator: 5,000-10,000 lead credits / month",
+          "Ask Astrah: Business Data included + General AI: 20,000 queries / month"
+        ],
+        "featureCategories": [
+          {
+            "title": "",
+            "features": [
+              "Organization-wide controls",
+              "Dedicated success manager",
+              "Custom onboarding & workshops",
+              "Advanced integrations support (Make.com + Webhooks)",
+              "Custom branding options (domain/login/branding)"
+            ]
+          },
+          {
+            "title": "Ask Astrah:",
+            "features": [
+              "Unlimited for your business data",
+              "General knowledge queries: 20,000/month"
+            ]
+          },
+          {
+            "title": "AI Lead Generator:",
+            "features": ["5,000-10,000 leads/month"]
+          }
         ]
       }
     },
@@ -405,10 +634,19 @@
       "billingInfo": [
         "Monthly and annual plans available",
         "Annual billing = price of 10 months (≈2 months free)",
-        "Auto-converts to paid unless canceled",
-        "Credit card required",
         "7-day free trial on Starter, Business, Pro",
-        "Enterprise has no trial"
+        "Auto-converts unless canceled",
+        "Enterprise: no trial"
+      ]
+    },
+    "onRoadmap": {
+      "title": "On the Roadmap",
+      "roadmap": [
+        "AI Agents (Sales / Support / Analyst)",
+        "Advanced workflow engine",
+        "Voice & call intelligence",
+        "Full audit logging / SSO",
+        "Campaigns (Email + WhatsApp)"
       ]
     },
     "faq": {

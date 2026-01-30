@@ -1,7 +1,6 @@
 "use client";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogDescription,
   DialogHeader,
@@ -10,10 +9,11 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { PricingPlan } from "@/types";
-import { Check, X } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { Check, InfoIcon, X } from "lucide-react";
+import React from "react";
 import { isEnterprisePlan } from "./pricing";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface PlanModalProps {
   pricingPlan: PricingPlan;
@@ -29,34 +29,27 @@ const PlanModal = ({
     migration,
     name,
     price,
-    summarizedFeatures,
     tagline,
     priceRange,
     team,
   },
 }: PlanModalProps) => {
+  const t = useTranslations("pricingPage.modal");
   const searchParams = useSearchParams();
   const router = useRouter();
-  const pathname = usePathname(); // Get base path to construct URLs safely
+  const pathname = usePathname();
 
-  // 1. Determine if modal is open based STRICTLY on URL
   const isOpen =
     !!searchParams.get("priceModal") && searchParams.get("id") === id;
 
-  // 2. Handle Closing (The Fix)
   const handleClose = () => {
-    // If we have history, go back to remove the query param
-    // This allows the "Forward" button to re-open it, and keeps the stack clean
     router.back();
   };
 
-  // 3. Handle Opening/State Changes
   const onOpenChange = (open: boolean, openingId?: string) => {
     if (open) {
-      // When opening, PUSH to history so the Back button has something to "undo"
       router.push(`${pathname}?priceModal=true&id=${id}`, { scroll: false });
     } else {
-      // When closing via clicking outside or Escape key, we also want to go back
       handleClose();
     }
   };
@@ -66,7 +59,7 @@ const PlanModal = ({
         className="text-sm font-light mx-auto text-muted-foreground mt-6"
         onClick={() => onOpenChange(true, id)}
       >
-        View full features
+        {t("modalOpenButton")}
       </button>
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
         <DialogTrigger asChild></DialogTrigger>
@@ -117,7 +110,7 @@ const PlanModal = ({
                     />
                   </div>
                   <div>
-                    <p className=" font-semibold">Team</p>
+                    <p className=" font-semibold">{t("team")}</p>
                     <p className=" font-light mt-2">{team}</p>
                   </div>
                 </div>
@@ -130,23 +123,28 @@ const PlanModal = ({
                   </div>
                   <div>
                     <p className=" font-semibold">WhatsApp</p>
-                    <p className=" font-light mt-2">
-                      includes allowance; usage beyond allowance is metered.
-                    </p>
+                    <p className=" font-light mt-2">{t("whatsappDesc")}</p>
                   </div>
                 </div>
               </div>
 
               <div className="max-md:hidden">
-                <div className="h-fit flex-col flex mt-5 z-10">
-                  <div className="mt-6  ">
+                {isEnterprisePlan(id) ? (
+                  <div className="flex gap-3">
+                    <InfoIcon className="size-5 text-muted-foreground shrink-0" />
+                    <p className="text-xs text-muted-foreground">
+                      {t("creditsAndResults")}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="h-fit flex-col flex mt-5 z-10">
                     <p className="font-light  text-muted-foreground">
-                      Migration
+                      {t("migration")}
                     </p>
                     <div className="flex items-baseline gap-2 mt-1">
                       {migration.type === "included" ? (
                         <span className="text-xl font-medium text-white">
-                          Included
+                          {t("included")}
                         </span>
                       ) : (
                         <div className="flex gap-1 items-baseline">
@@ -163,7 +161,7 @@ const PlanModal = ({
                       </span>
                     </div>
                   </div>
-                </div>
+                )}
 
                 <div className="h-px w-full bg-border shrink-0 my-6"></div>
 
@@ -182,7 +180,7 @@ const PlanModal = ({
                 <>
                   <div
                     className={
-                      "absolute opacity-40 max-md:hidden -bottom-1/3 w-1/2 left-1/4 h-60 bg-primary/80 mx-auto blur-[100px] pointer-events-none"
+                      "absolute opacity-30 max-md:hidden -bottom-1/3 w-1/2 left-1/4 h-60 bg-primary/80 mx-auto blur-[100px] pointer-events-none"
                     }
                   />
                   <div className="w-1/2 max-md:hidden left-1/4 h-px -bottom-5 absolute bg-linear-to-r from-transparent via-white/50 to-transparent z-0"></div>{" "}
@@ -226,15 +224,22 @@ const PlanModal = ({
 
             <div className="relative md:hidden">
               <div>
-                <div className="h-fit flex-col flex mt-5 z-10">
-                  <div className="mt-6  ">
+                {isEnterprisePlan(id) ? (
+                  <div className="flex gap-3">
+                    <InfoIcon className="size-5 text-muted-foreground shrink-0" />
+                    <p className="text-xs text-muted-foreground">
+                      {t("creditsAndResults")}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="h-fit flex-col flex mt-5 z-10">
                     <p className="font-light  text-muted-foreground">
-                      Migration
+                      {t("migration")}
                     </p>
                     <div className="flex items-baseline gap-2 mt-1">
                       {migration.type === "included" ? (
                         <span className="text-xl font-medium text-white">
-                          Included
+                          {t("included")}
                         </span>
                       ) : (
                         <div className="flex gap-1 items-baseline">
@@ -251,7 +256,7 @@ const PlanModal = ({
                       </span>
                     </div>
                   </div>
-                </div>
+                )}
 
                 <div className="h-px w-full bg-border shrink-0 my-6"></div>
 

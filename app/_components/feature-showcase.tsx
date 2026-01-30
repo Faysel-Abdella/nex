@@ -10,33 +10,33 @@ const FeatureShowcase = () => {
   const outputs = [
     {
       Icon: TriangleAlert,
-      title: "Silence detected",
-      evidence: <div>Last inbound WhatsApp: 6 days ago</div>,
-      suggestion: "Suggested: draft follow-up",
+      title: t("demand.output.title"),
+      evidence: <div>{t("demand.output.evidence")}</div>,
+      suggestion: t("demand.output.suggestion"),
     },
     {
       Icon: TriangleAlert,
-      title: "Pricing inquiry detected",
-      evidence: <div>Client asked about pricing + timeline</div>,
-      suggestion: "Suggested: clarify scope + send offer",
+      title: t("revenue.output.title"),
+      evidence: <div>{t("revenue.output.evidence")}</div>,
+      suggestion: t("revenue.output.suggestion"),
     },
     {
       Icon: TriangleAlert,
-      title: "Thread requires follow-up",
-      evidence: <div>Pricing & timeline mentioned </div>,
-      suggestion: "Suggested: clarify scope + send offer",
+      title: t("inbox.output.title"),
+      evidence: <div>{t("inbox.output.evidence")}</div>,
+      suggestion: t("inbox.output.suggestion"),
     },
     {
       Icon: TriangleAlert,
-      title: "Payment Request",
-      evidence: <div>Amount: 50,000 AED</div>,
-      suggestion: "Suggested: send secure payment link",
+      title: t("cash.output.title"),
+      evidence: <div>{t("cash.output.evidence")}</div>,
+      suggestion: t("cash.output.suggestion"),
     },
     {
       Icon: TriangleAlert,
-      title: "High-intent lead detected",
-      evidence: <div>Match score: 84/100 · High intent signals</div>,
-      suggestion: "Suggested: draft outreach message",
+      title: t("alive.output.title"),
+      evidence: <div>{t("alive.output.evidence")}</div>,
+      suggestion: t("alive.output.suggestion"),
     },
   ];
 

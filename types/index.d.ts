@@ -31,7 +31,7 @@ interface BasePlan {
   tagline: string;
   team?: string;
   cta: string;
-  inclusionLabel: string;
+  inclusionLabel?: string;
   modalInclusionLabel?: string;
   summarizedFeatures: string[];
   featureCategories: FeatureCategory[];

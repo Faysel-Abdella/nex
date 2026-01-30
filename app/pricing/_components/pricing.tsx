@@ -6,214 +6,225 @@ import PlanModal from "./plan-modal";
 import { PricingPlan } from "@/types";
 
 export const isEnterprisePlan = (id: string) => id == "enterprise";
+
 const Pricing = () => {
   const t = useTranslations("pricingPage.plans");
-  const tGeneral = useTranslations("pricingPage.plans.general");
 
   const pricingPlans: PricingPlan[] = [
     {
       id: "starter",
-      name: "STARTER",
+      name: t("starter.name"),
       price: 39,
-      billingPeriod: "/month",
-      tagline: "For Solo Operators And Small Service Teams.",
-      team: "1 user included.",
-      cta: "Start Free Trial",
+      billingPeriod: t("starter.billingPeriod"),
+      tagline: t("starter.tagline"),
+      team: t("starter.team"),
+      cta: t("starter.cta"),
       migration: {
         price: 199,
         type: "one-time",
-        note: "Standard",
+        note: t("starter.migrationNote"),
       },
-      inclusionLabel: "Core:",
-      modalInclusionLabel: "Includes",
+      // inclusionLabel: t("starter.inclusionLabel"),
+      modalInclusionLabel: t("starter.modalInclusionLabel"),
       summarizedFeatures: [
-        "CRM (contacts, companies, deals, tasks, calendar)",
-        "Pipeline views + basic KPIs",
-        "Roles & permissions (basic)",
+        t("starter.summarizedFeatures.0"),
+        t("starter.summarizedFeatures.1"),
+        t("starter.summarizedFeatures.2"),
+        t("starter.summarizedFeatures.3"),
+        t("starter.summarizedFeatures.4"),
+        t("starter.summarizedFeatures.5"),
       ],
       featureCategories: [
         {
-          title: "Core:",
+          title: t("starter.featureCategories.0.title"),
           features: [
-            "CRM (contacts, companies, deals, tasks, calendar)",
-            "Pipeline views + basic KPIs",
-            "Roles & permissions (basic)",
+            t("starter.featureCategories.0.features.0"),
+            t("starter.featureCategories.0.features.1"),
+            t("starter.featureCategories.0.features.2"),
           ],
         },
         {
-          title: "Communication:",
+          title: t("starter.featureCategories.1.title"),
           features: [
-            "Unified Inbox (WhatsApp + Email)",
-            "Arabic/English UI (RTL)",
+            t("starter.featureCategories.1.features.0"),
+            t("starter.featureCategories.1.features.1"),
           ],
         },
         {
-          title: "Intelligence (Lite):",
+          title: t("starter.featureCategories.2.title"),
           features: [
-            "WhatsApp Intelligence (Lite)",
-            "Deal Health (Lite)",
-            "AI Inbox Zero (Lite)",
-            "AI Lead Generator: 100 leads/month",
+            t("starter.featureCategories.2.features.0"),
+            t("starter.featureCategories.2.features.1"),
+            t("starter.featureCategories.2.features.2"),
+            t("starter.featureCategories.2.features.3"),
           ],
         },
         {
-          title: "Ask Astrah:",
+          title: t("starter.featureCategories.3.title"),
           features: [
-            "Unlimited for your business data",
-            "General knowledge queries: 200/month",
+            t("starter.featureCategories.3.features.0"),
+            t("starter.featureCategories.3.features.1"),
           ],
         },
       ],
     },
     {
       id: "business",
-      name: "BUSINESS",
+      name: t("business.name"),
       price: 99,
-      billingPeriod: "/month",
-      tagline: "For solo operators and small service teams.",
-      team: "Up to 5 users included",
-      cta: "Start Free Trial",
+      billingPeriod: t("business.billingPeriod"),
+      tagline: t("business.tagline"),
+      team: t("business.team"),
+      cta: t("business.cta"),
       migration: {
         price: 0,
         type: "included",
-        note: "~72 hours standard",
+        note: t("business.migrationNote"),
       },
-      inclusionLabel: "Everything in Starter, Plus:",
-
+      inclusionLabel: t("business.inclusionLabel"),
       summarizedFeatures: [
-        "WhatsApp Intelligence (Full)",
-        "Automations(Basic)",
-        "Make.com integration (Basic)",
-        "Expanded multilingual support",
+        t("business.summarizedFeatures.0"),
+        t("business.summarizedFeatures.1"),
+        t("business.summarizedFeatures.2"),
+        t("business.summarizedFeatures.3"),
+        t("business.summarizedFeatures.4"),
+        t("business.summarizedFeatures.5"),
       ],
       featureCategories: [
         {
-          title: "Intelligence (Full):",
+          title: t("business.featureCategories.0.title"),
           features: [
-            "WhatsApp Intelligence (Full)",
-            "Deal Health (Full)",
-            "AI Inbox Zero (Full)",
-            "AI Priority Queue",
-            "AI Lead Generator: 500 leads/month",
+            t("business.featureCategories.0.features.0"),
+            t("business.featureCategories.0.features.1"),
+            t("business.featureCategories.0.features.2"),
+            t("business.featureCategories.0.features.3"),
+            t("business.featureCategories.0.features.4"),
           ],
         },
         {
-          title: "Smart Close:",
-          features: ["Offer + payment request", "Embedded e-sign (BoldSign)"],
-        },
-        {
-          title: "Automations:",
+          title: t("business.featureCategories.1.title"),
           features: [
-            "Rules + reminders + notifications",
-            "Make.com integration (standard)",
+            t("business.featureCategories.1.features.0"),
+            t("business.featureCategories.1.features.1"),
           ],
         },
         {
-          title: "Ask Astrah:",
+          title: t("business.featureCategories.2.title"),
           features: [
-            "Unlimited for your business data",
-            "General knowledge queries: 1,000/month",
+            t("business.featureCategories.2.features.0"),
+            t("business.featureCategories.2.features.1"),
+          ],
+        },
+        {
+          title: t("business.featureCategories.3.title"),
+          features: [
+            t("business.featureCategories.3.features.0"),
+            t("business.featureCategories.3.features.1"),
           ],
         },
       ],
     },
     {
       id: "pro",
-      name: "PRO",
+      name: t("pro.name"),
       price: 199,
-      billingPeriod: "/month",
-      tagline: "For Established Teams.",
-      team: "For established teams.",
-      cta: "Start Free Trial",
+      billingPeriod: t("pro.billingPeriod"),
+      tagline: t("pro.tagline"),
+      team: t("pro.team"),
+      cta: t("pro.cta"),
       migration: {
         price: 0,
         type: "included",
-        note: "~72 hours standard",
+        note: t("pro.migrationNote"),
       },
-      inclusionLabel: "Everything in Business, Plus:",
+      inclusionLabel: t("pro.inclusionLabel"),
       summarizedFeatures: [
-        "Management dashboards & KPIs ",
-        "Advanced integrations",
-        "Advanced migration support",
-        "Advanced migration support",
+        t("pro.summarizedFeatures.0"),
+        t("pro.summarizedFeatures.1"),
+        t("pro.summarizedFeatures.2"),
+        t("pro.summarizedFeatures.3"),
+        t("pro.summarizedFeatures.4"),
       ],
       featureCategories: [
         {
-          title: "Management & Control:",
+          title: t("pro.featureCategories.0.title"),
           features: [
-            "Role-based access control",
-            "Manager visibility + permissions",
-            "Management dashboards & KPIs",
+            t("pro.featureCategories.0.features.0"),
+            t("pro.featureCategories.0.features.1"),
+            t("pro.featureCategories.0.features.2"),
           ],
         },
         {
-          title: "Advanced Integrations:",
-          features: ["Integrations (Make.com + Webhooks)"],
+          title: t("pro.featureCategories.1.title"),
+          features: [t("pro.featureCategories.1.features.0")],
         },
         {
-          title: "Support:",
+          title: t("pro.featureCategories.2.title"),
           features: [
-            "Priority support (24h response SLA)",
-            "1-hour onboarding session",
-            "Advanced migration support",
+            t("pro.featureCategories.2.features.0"),
+            t("pro.featureCategories.2.features.1"),
+            t("pro.featureCategories.2.features.2"),
           ],
         },
         {
-          title: "Ask Astrah:",
+          title: t("pro.featureCategories.3.title"),
           features: [
-            "Unlimited for your business data",
-            "General knowledge queries: 5,000/month",
+            t("pro.featureCategories.3.features.0"),
+            t("pro.featureCategories.3.features.1"),
           ],
         },
         {
-          title: "Lead Generator:",
-          features: ["2,000 leads/month"],
+          title: t("pro.featureCategories.4.title"),
+          features: [t("pro.featureCategories.4.features.0")],
         },
       ],
     },
     {
       id: "enterprise",
-      name: "ENTERPRISE",
+      name: t("enterprise.name"),
       priceRange: { min: 599, max: "1,500" },
       price: 599,
-      billingPeriod: "/month",
-      tagline: "For Large Organizations And Holding Groups.",
-      team: "organizations and holding groups.",
-      cta: "Talk to Astrah",
+      billingPeriod: t("enterprise.billingPeriod"),
+      tagline: t("enterprise.tagline"),
+      team: t("enterprise.team"),
+      cta: t("enterprise.cta"),
       migration: {
         price: 0,
         type: "included",
-        note: "~72 hours standard",
+        note: t("enterprise.migrationNote"),
       },
-      inclusionLabel: "Everything in Pro, Plus:",
+      inclusionLabel: t("enterprise.inclusionLabel"),
       summarizedFeatures: [
-        "Organization-wide controls",
-        "Dedicated success manager",
-        "Custom onboarding & workshops",
-        "Advanced integrations support (Make.com + Webhooks)",
-        "Custom branding options (domain/login/branding)",
+        t("enterprise.summarizedFeatures.0"),
+        t("enterprise.summarizedFeatures.1"),
+        t("enterprise.summarizedFeatures.2"),
+        t("enterprise.summarizedFeatures.3"),
+        t("enterprise.summarizedFeatures.4"),
+        t("enterprise.summarizedFeatures.5"),
+        t("enterprise.summarizedFeatures.6"),
+        t("enterprise.summarizedFeatures.7"),
       ],
       featureCategories: [
         {
           title: "",
           features: [
-            "Organization-wide controls",
-            "Dedicated success manager",
-            "Custom onboarding & workshops",
-            "Advanced integrations support (Make.com + Webhooks)",
-            "Custom branding options (domain/login/branding)",
+            t("enterprise.featureCategories.0.features.0"),
+            t("enterprise.featureCategories.0.features.1"),
+            t("enterprise.featureCategories.0.features.2"),
+            t("enterprise.featureCategories.0.features.3"),
+            t("enterprise.featureCategories.0.features.4"),
           ],
         },
         {
-          title: "Ask Astrah:",
+          title: t("enterprise.featureCategories.1.title"),
           features: [
-            "Unlimited for your business data",
-            "General knowledge queries: 20,000/month",
+            t("enterprise.featureCategories.1.features.0"),
+            t("enterprise.featureCategories.1.features.1"),
           ],
         },
         {
-          title: "AI Lead Generator:",
-          features: ["5,000-10,000 leads/month"],
+          title: t("enterprise.featureCategories.2.title"),
+          features: [t("enterprise.featureCategories.2.features.0")],
         },
       ],
     },
@@ -256,7 +267,7 @@ const Pricing = () => {
 
               <button
                 className={cn(
-                  "bg-third-background border mt-5 border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
+                  "bg-third-background border mt-5 border-white/10 w-full py-3 rounded-lg text-sm transition-colors hover:bg-white/5",
                   isEnterprisePlan(plan.id) &&
                     "bg-primary text-black border-transparent max-md:mt-37 hover:bg-primary/90",
                 )}
@@ -264,10 +275,11 @@ const Pricing = () => {
                 {plan.cta}
               </button>
               <div className="h-px w-full bg-border shrink-0 my-5"></div>
-
-              <p className="text-muted-foreground w-full text-start text-sm font-light ">
-                {plan.inclusionLabel}
-              </p>
+              {plan.inclusionLabel && (
+                <p className="text-muted-foreground w-full text-start text-sm font-light ">
+                  {plan.inclusionLabel}
+                </p>
+              )}
 
               <ul className="flex flex-col gap-3.5 mt-4 items-start w-full">
                 {plan.summarizedFeatures.map((feature, idx) => (
@@ -289,11 +301,13 @@ const Pricing = () => {
               <div className="h-fit flex-col flex mt-5 z-10">
                 <div className="h-px shrink-0 w-full bg-white/10 " />
                 <div className="mt-6  ">
-                  <p className="font-light  text-muted-foreground">Migration</p>
+                  <p className="font-light  text-muted-foreground">
+                    {t("labels.migration")}
+                  </p>
                   <div className="flex items-baseline gap-2 mt-1">
                     {plan.migration.type === "included" ? (
                       <span className="text-xl font-medium text-white">
-                        Included
+                        {t("labels.included")}
                       </span>
                     ) : (
                       <div className="flex gap-1 items-baseline">

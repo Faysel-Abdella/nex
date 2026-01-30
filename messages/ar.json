@@ -76,13 +76,90 @@
       "talkTo": "تحدث إلى",
       "brand": "ASTRAH"
     },
+    "SystemModules": {
+      "sectionTitle": "ادحو  ماظنلا ",
+      "sectionSubtitle": " ةقبط ليغشت ةدحاو . لك  ةدحو جتنُت تاراشإ ةلباق ذيفنتلل .",
+      "modules": {
+        "whatsapp": {
+          "buttonTitle": "WhatsApp Intelligence",
+          "title": "الذكاء واتس اب",
+          "description": "يحول محادثات واتساب إلى أنشطة منظمة لإدارة علاقات العملاء (ملخصات، إشارات، متابعات)",
+          "output": {
+            "title": " المحادثة تتطلب متابعة",
+            "evidence": " تم ذكر السعر والجدول الزمني",
+            "suggestion": " وضّح النطاق + أرسل العرض"
+          }
+        },
+        "dealHealth": {
+          "buttonTitle": "Deal Health",
+          "title": "صحة الصفقة",
+          "description": "يكتشف المخاطر مبكراً (الصمت + الركود) ويوصي بأفضل إجراء تالٍ.",
+          "output": {
+            "title": " تم رصد صمت",
+            "evidence": " آخر رسالة واردة عبر واتساب: قبل 6 أيام",
+            "suggestion": "الإجراء المقترح: صياغة رسالة متابعة"
+          }
+        },
+        "inboxZero": {
+          "buttonTitle": "AI Inbox Zero",
+          "title": "AI Inbox Zero",
+          "description": "رؤية موحدة تُصنّف المحادثات وتُحدد الخطوات التالية.",
+          "output": {
+            "title": " محادثة غير مقروءة",
+            "evidence": " 3 رسائل بانتظار الرد · 2 ذات أولوية عالية",
+            "suggestion": "الإجراء المقترح: مراجعة والرد"
+          }
+        },
+        "priorityQueue": {
+          "buttonTitle": "AI Priority Queue",
+          "title": "قائمة أولويات الذكاء الاصطناعي",
+          "description": "يُرتب ما يجب فعله الآن عبر الصفقات والمحادثات حتى لا يفوت أي شيء.",
+          "output": {
+            "title": "تم رصد استفسار عن الأسعار",
+            "evidence": "العميل سأل عن السعر والجدول الزمني",
+            "suggestion": "الإجراء المقترح: وضّح النطاق + أرسل العرض"
+          }
+        },
+        "leadGen": {
+          "buttonTitle": "AI Lead Generator",
+          "title": "مولد الرصاص بالذكاء الاصطناعي",
+          "description": "يجد ويصنف الشركات المستهدفة باستخدام إشارات وإثراء مُعدّلة بواسطة GCC.",
+          "output": {
+            "title": " شركة جديدة مطابقة",
+            "evidence": " شركة تقنية ناشئة · دبي · تقييم 84/100",
+            "suggestion": "الإجراء المقترح: صياغة رسالة تواصل"
+          }
+        },
+        "askAstrah": {
+          "buttonTitle": "Ask Astrah (Orb AI Assistant)",
+          "title": "اسأل أسترا (Orb)",
+          "description": "إجابات عبر نظام إدارة علاقات العملاء (CRM) + واتساب + المستندات، مع وضع المعرفة العامة الاختياري.",
+          "placeholder": "اسأل أي شيء"
+        },
+        "smartClose": {
+          "buttonTitle": "Smart Close",
+          "title": "Smart Close",
+          "description": "عرض + طلب دفع + توقيع إلكتروني مدمج لإتمام الصفقة بشكل أسرع.",
+          "output": {
+            "title": " طلب دفع",
+            "evidence": "المبلغ: 50,000 درهم",
+            "suggestion": " إرسال رابط دفع آمن"
+          }
+        }
+      }
+    },
     "featureShowcase": {
       "demand": {
         "title": "الطلب… مدمج في النظام.",
         "desc": "Astrah لا يكتفي بإدارة العملاء المحتملين. بل يساعد على إنشاء خط مبيعات داخل نظامك.",
         "list1": "اكتشاف الفرص وترتيبها",
         "list2": "إشارات مُكيّفة للمنطقة (سياق دول GCC)",
-        "list3": "صياغة رسائل تواصل (ولا يرسل تلقائيًا)"
+        "list3": "صياغة رسائل تواصل (ولا يرسل تلقائيًا)",
+        "output": {
+          "title": " تم رصد صمت",
+          "evidence": " آخر رسالة واردة عبر واتساب: قبل 6 أيام",
+          "suggestion": "الإجراء المقترح: صياغة رسالة متابعة"
+        }
       },
       "revenue": {
         "title": "أوقف تسرب الإيرادات.",
@@ -90,23 +167,43 @@
         "list1": "اكتشاف الصمت",
         "list2": "تنبيهات التعثر",
         "list3": "قائمة أولوية للمتابعات",
+        "output": {
+          "title": "تم رصد استفسار عن الأسعار",
+          "evidence": "العميل سأل عن السعر والجدول الزمني",
+          "suggestion": "الإجراء المقترح: وضّح النطاق + أرسل العرض"
+        },
         "footer": "لا إرسال تلقائي. لا إجراءات مفاجئة. أنت من يبقى المتحكم."
       },
       "inbox": {
         "title": "ذكاء صندوق الوارد.",
-        "desc": "عرض موحّد. ملخصات للمحادثات. إشارات أولوية. خطوات تالية واضحة."
+        "desc": "عرض موحّد. ملخصات للمحادثات. إشارات أولوية. خطوات تالية واضحة.",
+        "output": {
+          "title": " المحادثة تتطلب متابعة",
+          "evidence": " تم ذكر السعر والجدول الزمني",
+          "suggestion": " وضّح النطاق + أرسل العرض"
+        }
       },
       "cash": {
         "title": "من الاتفاق إلى التحصيل.",
         "desc": "أغلق فجوة الإدارة. انتقل من “يلا” إلى مدفوع.",
         "list1": "رابط عرض مهيأ للجوال",
         "list2": "قبول عبر OTP على WhatsApp",
-        "list3": "دعم Card / Apple Pay / Mada (حيث يتوفر)"
+        "list3": "دعم Card / Apple Pay / Mada (حيث يتوفر)",
+        "output": {
+          "title": " طلب دفع",
+          "evidence": "المبلغ: 50,000 درهم",
+          "suggestion": " إرسال رابط دفع آمن"
+        }
       },
       "alive": {
         "title": "النظام حي.",
         "desc1": "طبقة ذكاء مستمرة تُظهر الإشارات والمخاطر وأفضل الخطوات التالية.",
-        "desc2": "ليس لعبة شات بوت. ولا تخمينات عشوائية. يدعم القرار. وأنت من يقرر."
+        "desc2": "ليس لعبة شات بوت. ولا تخمينات عشوائية. يدعم القرار. وأنت من يقرر.",
+        "output": {
+          "title": " شركة جديدة مطابقة",
+          "evidence": " شركة تقنية ناشئة · دبي · تقييم 84/100",
+          "suggestion": "الإجراء المقترح: صياغة رسالة تواصل"
+        }
       }
     },
     "migration": {
@@ -319,96 +416,232 @@
       "secondaryCta": "ابدأ التجربة المجانية",
       "footer": "تعمل خارج دول GCC؟ نقدم تسعيرًا إقليميًا لـ MENA. <bold>تواصل معنا.</bold>"
     },
+    "modal": {
+      "modalOpenButton": "عرض الميزات الكاملة",
+      "creditsAndResults": "تختلف أرصدة العملاء المحتملين والنتائج حسب الفئة والموقع وعمق الإثراء. تنطبق جداول زمنية محددة على عمليات نقل البيانات القياسية القائمة على ملفات CSV؛ أما النطاقات المعقدة فتُحدد بشكل منفصل. يتضمن تطبيق واتساب رصيدًا شهريًا؛ ويمكن الحصول على حجم أكبر عبر باقات إضافية.",
+      "team": "فريق",
+      "whatsappDesc": "يشمل ذلك البدل؛ ويتم احتساب الاستهلاك الذي يتجاوز البدل بالعداد.",
+      "migration": "الترحيل",
+      "included": "متضمنة"
+    },
     "plans": {
-      "general": {
-        "month": "month",
-        "migrationLabel": "Migration",
-        "oneTime": "one-time",
-        "included": "Included"
+      "labels": {
+        "migration": "الترحيل",
+        "included": "متضمنة"
       },
       "starter": {
         "name": "STARTER",
+        "billingPeriod": "/ شهر",
         "tagline": "للمستقلين وفرق الخدمات الصغيرة.",
+        "team": "مستخدم واحد مشمول",
         "cta": "ابدأ التجربة المجانية",
-        "inclusionLabel": "Includes:",
         "migrationNote": "Standard",
-        "features": [
-          "Core CRM (جهات الاتصال، الشركات، الصفقات، المهام، التقويم)",
-          "WhatsApp Intelligence (Lite)",
-          "AI Deal Intelligence (Lite)",
-          "AI Inbox Zero (Lite)",
-          "AI Lead Generator: 100 leads / month",
-          "Internal AI Intelligence: Included",
-          "External AI usage: 200 tokens / month",
-          "Multilingual UI: English + Arabic (RTL)",
-          "Orb Intelligence: Standard"
+        "inclusionLabel": "الأساسية:",
+        "modalInclusionLabel": "يشمل",
+        "summarizedFeatures": [
+          "النواة: CRM (contacts, companies, deals, tasks, calendar)، عرض خطوط الأنابيب + مؤشرات الأداء الأساسية",
+          "Unified Inbox: التواصل واجهة ثنائية (WhatsApp + Email) (EN/AR with RTL) اللغة",
+          "AI Modules: Deal Health + AI Inbox Zero + AI Priority Queue (core signals + next steps)",
+          "AI Lead Generator: رصيد 100 عملاء محتملين / شهر",
+          "Ask Astrah: بيانات الأعمال متضمنة + General AI: 200 استفسار / شهر",
+          "يشمل الحصة الشهرية: WhatsApp حجم أعلى متاح عبر حزم إضافية"
+        ],
+        "featureCategories": [
+          {
+            "title": "النواة",
+            "features": [
+              "CRM (contacts, companies, deals, tasks, calendar)",
+              "عرض خطوط الأنابيب + مؤشرات الأداء الأساسية",
+              "الأدوار والصلاحيات (basic)"
+            ]
+          },
+          {
+            "title": "التواصل:",
+            "features": [
+              "Unified Inbox (WhatsApp + Email)",
+              "واجهة عربية/إنجليزية (RTL)"
+            ]
+          },
+          {
+            "title": "الذكاء (Lite Intelligence):",
+            "features": [
+              "WhatsApp Intelligence (Lite)",
+              "Deal Health (Lite)",
+              "AI Inbox Zero (Lite)",
+              "AI Lead Generator: رصيد 100 عملاء محتملين / شهر"
+            ]
+          },
+          {
+            "title": "بسأل Astrah:",
+            "features": [
+              "غير محدود لبيانات أعمالك",
+              "استفسارات المعرفة العامة: 200 / شهر"
+            ]
+          }
         ]
       },
       "business": {
         "name": "BUSINESS",
-        "tagline": "للفرق المتنامية (3-15 مستخدمًا).",
+        "billingPeriod": "/ شهر",
+        "tagline": "للفرق المتنامية.",
+        "team": "حتى 5 مستخدمين",
         "cta": "ابدأ التجربة المجانية",
-        "inclusionLabel": "Everything In Starter, Plus:",
-        "migrationNote": "Standard",
-        "features": [
-          "Everything In Starter",
-          "WhatsApp Intelligence (Full)",
-          "AI Deal Intelligence (Full)",
-          "AI Inbox Zero (Full)",
-          "AI Priority Queue",
-          "AI Data Enhancer",
-          "Campaigns (Email + WhatsApp)",
-          "Automations (Basic)",
-          "Make.com integration (Basic)",
-          "External AI usage: 1,000 tokens / month",
-          "Expanded multilingual support"
+        "migrationNote": "hours standard 72~\u200E",
+        "inclusionLabel": "كل شيء في خطة Starter، بالإضافة إلى:",
+        "summarizedFeatures": [
+          "Smart Close: Quote/Offer + embedded e-sign (BoldSign) + الدفع عبر النقر (حيثما كان ذلك متاحاً)",
+          "Automations (Rules): قواعد + تذكيرات (Reminders) + إشعارات (Notifications)",
+          "التكاملات: Make.com (standard)",
+          "الدعم: دعم (48h standard response time)",
+          "AI Lead Generator: رصيد 500 عملاء محتملين / شهر",
+          "بيانات الأعمال: Ask Astrah متضمنة + General AI: 1,000 استفسار / شهر"
+        ],
+        "featureCategories": [
+          {
+            "title": "الذكاء (Full Intelligence):",
+            "features": [
+              "WhatsApp Intelligence (Full)",
+              "Deal Health (Full)",
+              "AI Inbox Zero (Full)",
+              "AI Priority Queue",
+              "AI Lead Generator: رصيد 500 عملاء محتملين / شهر"
+            ]
+          },
+          {
+            "title": "Smart Close:",
+            "features": [
+              "Offer + payment request",
+              "Embedded e-sign (BoldSign)"
+            ]
+          },
+          {
+            "title": "Automations:",
+            "features": [
+              "قواعد + تذكيرات + إشعارات (Notifications)",
+              "تكامل (Make.com (standard))"
+            ]
+          },
+          {
+            "title": "بسأل Astrah:",
+            "features": [
+              "غير محدود لبيانات أعمالك",
+              "استفسارات المعرفة العامة: 1,000 / شهر"
+            ]
+          }
         ]
       },
       "pro": {
         "name": "PRO",
-        "tagline": "للفرق المستقرة (15-50 مستخدمًا).",
+        "billingPeriod": "/ شهر",
+        "tagline": "للفرق المنشأة.",
+        "team": "حتى 15 مستخدماً",
         "cta": "ابدأ التجربة المجانية",
-        "inclusionLabel": "Everything In Business, Plus:",
         "migrationNote": "Advanced",
-        "features": [
-          "Everything In Business",
-          "Advanced automations",
-          "AI Meeting Notes",
-          "AI Action Planner",
-          "AI Campaign Optimizer",
-          "Advanced analytics & dashboards",
-          "AI Lead Generator: 2,000 leads / month",
-          "External AI usage: 5,000 tokens / month",
-          "Advanced permissions & audit trail",
-          "Orb Intelligence: Enhanced"
+        "inclusionLabel": "كل شيء في خطة Business، بالإضافة إلى:",
+        "summarizedFeatures": [
+          "Role-based access: الإدارة والتحكم control (RBAC) + رؤية المدير + لوحات التحكم ومؤشرات الأداء الرئيسية",
+          "التكاملات: Make.com + Webhooks",
+          "الدعم: دعم أولوي (24h SLA) + جلسة onboarding لمدة 1 ساعة + دعم متقدم للهجرة",
+          "AI Lead Generator: رصيد 2,000 عملاء محتملين / شهر",
+          "بيانات الأعمال متضمنة: Ask Astrah + General AI: 5,000 استفسار / شهر"
+        ],
+        "featureCategories": [
+          {
+            "title": "الإدارة والتحكم :",
+            "features": [
+              "Role-based access control",
+              "رؤية المدير + الصلاحيات",
+              "لوحات إدارة ومؤشرات الأداء الرئيسية"
+            ]
+          },
+          {
+            "title": "التكاملات المتقدمة:",
+            "features": ["تكاملات (Make.com + Webhooks)"]
+          },
+          {
+            "title": "الدعم:",
+            "features": [
+              "دعم أولوي (24h response SLA)",
+              "جلسة الإعداد لمدة 1 ساعة",
+              "دعم متقدم للهجرة"
+            ]
+          },
+          {
+            "title": "بسأل Astrah:",
+            "features": [
+              "غير محدود لبيانات أعمالك",
+              "استفسارات المعرفة العامة: 5,000 / شهر"
+            ]
+          },
+          {
+            "title": "Lead Generator:",
+            "features": ["Lead Generator: رصيد عملاء محتملين 2,000 / شهر"]
+          }
         ]
       },
       "enterprise": {
         "name": "ENTERPRISE",
-        "tagline": "للمؤسسات الكبيرة والمجموعات القابضة.",
+        "billingPeriod": "/ شهر",
+        "tagline": "للمنظمات الكبيرة والمجموعات القابضة.",
+        "team": "للمنظمات الكبيرة والمجموعات القابضة.",
         "cta": "تحدث إلى Astrah",
-        "inclusionLabel": "Everything In Pro, Plus:",
-        "features": [
-          "Everything In Pro",
-          "Custom workflows & automations",
-          "Organization-wide logic",
-          "Dedicated success management",
-          "Custom branding (domain, login)",
-          "Private cloud deployment (optional)",
-          "AI Lead Generator: 5,000–10,000 leads / month",
-          "External AI usage: 20,000 tokens / month"
+        "migrationNote": "Advanced",
+        "inclusionLabel": "كل شيء في خطة Pro، بالإضافة إلى:",
+        "summarizedFeatures": [
+          "ضوابط على مستوى المؤسسة",
+          "مدير نجاح مخصص",
+          "تدريب مخصص وورش عمل",
+          "تكاملات مخصصة ودعم التنفيذ",
+          "خيارات العلامة التجارية المخصصة (النطاق / تسجيل الدخول / العلامة التجارية)",
+          "توافق مع تخزين البيانات في دول الخليج / خيارات استضافة داخل المنطقة",
+          "AI Lead Generator: رصيد 5,000-10,000 عملاء محتملين / شهر",
+          "Ask Astrah: بيانات الأعمال متضمنة + الذكاء الاصطناعي العام: 20,000 استفسار شهريًا"
+        ],
+        "featureCategories": [
+          {
+            "title": "",
+            "features": [
+              "ضوابط على مستوى المؤسسة",
+              "مدير نجاح مخصص",
+              "جلسات الإعداد وورش عمل مخصصة",
+              "دعم التكاملات المتقدمة (Make.com + Webhooks)",
+              "خيارات العلامة التجارية المخصصة (النطاق / تسجيل الدخول / العلامة التجارية)"
+            ]
+          },
+          {
+            "title": "بسأل Astrah:",
+            "features": [
+              "غير محدود لبيانات أعمالك",
+              "استفسارات المعرفة العامة: 20,000 / شهر"
+            ]
+          },
+          {
+            "title": "AI Lead Generator:",
+            "features": [
+              "AI Lead Generator: رصيد عملاء محتملين 5,000-10,000 / شهر"
+            ]
+          }
         ]
       }
     },
     "billingAndTrials": {
-      "title": "الفوترة والمحاكمة",
+      "title": "Billings & Trials",
       "billingInfo": [
         "تتوفر خطط شهرية وسنوية",
         "الفوترة السنوية = سعر 10 أشهر (≈ شهران مجانًا)",
-        "تتحول تلقائيًا إلى خطة مدفوعة ما لم يتم الإلغاء",
-        "بطاقة ائتمان مطلوبة",
         "تجربة مجانية لمدة 7 أيام على Starter و Business و Pro",
-        "بدون تجربة مجانية Enterprise"
+        "تتحول تلقائيًا إلى خطة مدفوعة ما لم يتم الإلغاء",
+        "Enterprise بدون تجربة مجانية"
+      ]
+    },
+    "onRoadmap": {
+      "title": "On the Roadmap",
+      "roadmap": [
+        "وكلاء الذكاء الاصطناعي (المبيعات / الدعم / التحليلات)",
+        "محرك سير العمل المتقدم",
+        "ذكاء الصوت والمكالمات",
+        "تسجيل التدقيق الكامل / تسجيل الدخول الموحد",
+        "الحملات (البريد الإلكتروني + واتساب)"
       ]
     },
     "faq": {

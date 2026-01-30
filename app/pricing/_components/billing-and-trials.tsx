@@ -5,13 +5,7 @@ import React from "react";
 
 const BillingAndTrials = () => {
   const t = useTranslations("pricingPage.billingAndTrials");
-  const billingInfo = [
-    "Monthly and annual plans available",
-    "Annual billing = price of 10 months (≈2 months free)",
-    "7-day free trial on Starter, Business, Pro",
-    "Auto-converts unless canceled",
-    "Enterprise: no trial",
-  ];
+  const billingInfo = t.raw("billingInfo") as string[];
   return (
     <section className="section-container">
       <div className="section-content ">
@@ -26,7 +20,7 @@ const BillingAndTrials = () => {
               key={index}
               className={cn(
                 "flex items-start flex-col bg-card border rounded-2xl gap-3 p-5 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] md:min-h-34 ",
-                index > 2 && "xl:min-h-10",
+                index > 2 && "ltr:xl:min-h-10",
               )}
             >
               <div className="bg-third-background size-6 rounded-full shrink-0 flex items-center justify-center mt-1 border-t border-white/25"></div>

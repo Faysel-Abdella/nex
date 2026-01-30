@@ -1,20 +1,16 @@
 import DepthCard from "@/components/depth-card";
+import { useTranslations } from "next-intl";
 
 const OnTheRoadmap = () => {
-  const roadmapContents = [
-    "AI Agents (Sales / Support / Analyst)",
-    "Advanced workflow engine",
-    "Voice & call intelligence",
-    "Full audit logging / SSO",
-    "Campaigns (Email + WhatsApp)",
-  ];
+  const t = useTranslations("pricingPage.onRoadmap");
+  const roadmapContents = t.raw("roadmap") as string[];
 
   return (
     <section className="section-container">
       <div className="section-content">
         <div className="flex w-full justify-center">
           <p className="font-medium text-3xl md:text-[40px] text-center">
-            On the Roadmap
+            {t("title")}
           </p>
         </div>
 
@@ -28,7 +24,7 @@ const OnTheRoadmap = () => {
                 w-full 
                 md:w-[calc(50%-12px)] 
                 lg:w-[calc(33.33%-16px)]
-                md:min-h-30 lg:min-h-35 xl:min-h-10
+                md:min-h-30 lg:min-h-35 ltr:xl:min-h-10
               "
             >
               <div className="bg-third-background size-6 rounded-full shrink-0 flex items-center justify-center mt-1 border-t border-white/25"></div>

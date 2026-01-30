@@ -1,7 +1,7 @@
 import { Plus, SendHorizonal } from "lucide-react";
 import React from "react";
 
-const AskAstrah = () => {
+const AskAstrah = ({ placeholder }: { placeholder: string }) => {
   return (
     <div className=" w-full  h-fit   ">
       <div
@@ -15,11 +15,14 @@ const AskAstrah = () => {
           <div className=" shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)] bg-white/5 h-30 p-3 w-full  flex border rounded-2xl border-white/12 ">
             <div className="flex gap-3 w-full">
               <Plus size={26} />
-              <p className="text-lg">Ask Anything</p>
+              <p className="text-lg">{placeholder}</p>
             </div>
             <div className="w-full flex items-end justify-end">
               <button className=" bg-cyan-600 px-4.5 py-2 rounded-[8px] shadow-[inset_0_0px_20px_rgba(255,255,255,0.3)]   ">
-                <SendHorizonal size={22} className="text-white" />
+                <SendHorizonal
+                  size={22}
+                  className="text-white rtl:rotate-180"
+                />
               </button>
             </div>
           </div>
