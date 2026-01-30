@@ -22,12 +22,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import AskAstrah from "@/components/ask-astrah";
 
 const SystemModules = () => {
   const modules = [
     {
       id: 1,
       icon: "/icons/WhatsappLogo.svg",
+      iconSelected: "/icons/WhatsappLogoSelected.svg",
       title: "WhatsApp Intelligence",
       description:
         "Turns WhatsApp threads into structured CRM activity (summaries, signals, follow-ups)",
@@ -54,6 +56,7 @@ const SystemModules = () => {
     {
       id: 3,
       icon: "/icons/sms-tracking.svg",
+      iconSelected: "/icons/sms-tracking-selected.svg",
       title: "AI Inbox Zero",
       description:
         "Unified view that triages conversations and produces next steps.",
@@ -80,6 +83,7 @@ const SystemModules = () => {
     {
       id: 5,
       icon: "/icons/lamp-charge.svg",
+      iconSelected: "/icons/lamp-charge-selected.svg",
       title: "Smart Close",
       description: "Offer + payment request + embedded e-sign to close faster.",
       output: {
@@ -116,32 +120,52 @@ const SystemModules = () => {
   const visibleModule = modules[visibleModuleIndex];
 
   return (
-    <section className="section-container w-full font-sf-pro">
+    <section id="product" className="section-container w-full font-sf-pro">
       <div className="  section-content  flex flex-col items-center">
         <p className=" font-medium  text-3xl md:text-[40px] text-center">
           System Modules
         </p>
-        <p className="text-muted-foreground mt-6 ">
+        <p className="text-muted-foreground mt-6 text-center ">
           One operating layer. Each module produces signals you can act on.
         </p>
         <div className=" max-lg:hidden grid grid-cols-2 w-full mt-14 gap-30">
           <div className=" flex flex-col">
             {modules.map((module, index) => (
-              <button
+              <div
                 key={module.id}
                 className={cn(
-                  "h-fit  flex items-center gap-4 rounded-[20px] p-5 transition-all bg-background border border-background",
-                  index == visibleModuleIndex && "bg-card border-border",
+                  "relative w-full h-full rounded-[21px]  from-white/10 via-primary/30 to-white/10 p-px   overflow-hidden",
+                  index == visibleModuleIndex && "bg-linear-to-br ",
                 )}
-                onClick={() => setVisibleModuleIndex(index)}
               >
-                {typeof module.icon === "string" ? (
-                  <img src={module.icon} alt="" className="w-6 h-6" />
-                ) : (
-                  <module.icon className="w-6 h-6 text-white opacity-80" />
-                )}
-                {module.title}
-              </button>
+                <button
+                  className={cn(
+                    "h-fit w-full  flex items-center gap-4 rounded-[20px] p-5 transition-all bg-background border border-background",
+                    index == visibleModuleIndex && "bg-card ",
+                  )}
+                  onClick={() => setVisibleModuleIndex(index)}
+                >
+                  {typeof module.icon === "string" ? (
+                    <img
+                      src={
+                        visibleModule.id == module.id
+                          ? module.iconSelected
+                          : module.icon
+                      }
+                      alt=""
+                      className="w-6 h-6"
+                    />
+                  ) : (
+                    <module.icon
+                      className={cn(
+                        "w-6 h-6  opacity-80",
+                        visibleModule.id === module.id && "text-primary",
+                      )}
+                    />
+                  )}
+                  {module.title}
+                </button>
+              </div>
             ))}
           </div>
           <div className="">
@@ -149,7 +173,7 @@ const SystemModules = () => {
             <p className="text-white/60 mt-6">{visibleModule.description}</p>
             <div className="mt-14">
               {typeof visibleModule.output == "string" ? (
-                <img src={visibleModule.output} className="w-full h-full" />
+                <AskAstrah />
               ) : (
                 <GlassCard
                   Icon={visibleModule.output.Icon}

@@ -16,7 +16,7 @@ const PricingCTA = () => {
 
         <GlowCard
           outerClassName="z-10 z-10 w-[80%] rounded-3xl  "
-          className=" max-md:text-center h-fit rounded-[23px]   mx-auto flex flex-col p-6 items-center  "
+          className=" max-md:text-center h-fit rounded-[23px] shadow-[inset_0_0px_30px_rgba(255,255,255,0.02)]   mx-auto flex flex-col p-6 items-center  "
         >
           <img
             src="/icons/pricing.png"

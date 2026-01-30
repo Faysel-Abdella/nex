@@ -24,11 +24,12 @@
       "privacy": "Privacy",
       "terms": "Terms",
       "acceptableUse": "Acceptable Use",
-      "refunds": "Refunds/Cancellation"
+      "refunds": "Refunds"
     },
     "contact": {
       "title": "GET IN TOUCH",
-      "description": "Question or feedback? we'd love to listen from you.",
+      "description-1": "Questions or feedback?",
+      "description-2": "We'd love to hear from you.",
       "button": "Contact Us"
     },
     "infra": "Infrastructure: AWS (UAE region)",
@@ -80,7 +81,7 @@
         "title": "Demand, built in.",
         "desc": "Astrah doesn't just manage leads. It helps generate pipeline inside your OS.",
         "list1": "Discover and rank opportunities",
-        "list2": "Region-tuned signals (GCC context) Draft outreach (never auto-sends)",
+        "list2": "Region-tuned signals (GCC context)",
         "list3": "Draft outreach (never auto-sends)"
       },
       "revenue": {

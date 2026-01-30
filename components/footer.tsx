@@ -25,7 +25,8 @@ const footerLinks = [
   },
   {
     titleKey: "contact.title",
-    descriptionKey: "contact.description",
+    description1Key: "contact.description-1",
+    description2Key: "contact.description-2",
     buttonKey: "contact.button",
   },
 ];
@@ -48,9 +49,14 @@ const Footer = () => {
               <h3 className=" font-semibold mb-5 text-white/40">
                 {t(section.titleKey)}
               </h3>
-              {section.descriptionKey && (
+              {section.description1Key && (
+                <p className="text-white/75  max-w-50">
+                  {t(section.description1Key)}
+                </p>
+              )}
+              {section.description2Key && (
                 <p className="text-white/75 mb-8 max-w-50">
-                  {t(section.descriptionKey)}
+                  {t(section.description2Key)}
                 </p>
               )}
               {section.buttonKey && (
