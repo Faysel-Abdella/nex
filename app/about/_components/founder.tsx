@@ -35,7 +35,7 @@ const Founder = () => {
 "
           >
             <Image
-              src="/images/image.jpg"
+              src="/images/founder.png"
               alt="Founder"
               fill
               className="object-cover rtl:scale-x-[-1]"

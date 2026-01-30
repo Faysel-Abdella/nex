@@ -132,7 +132,7 @@ const PlanModal = ({
                 {isEnterprisePlan(id) ? (
                   <div className="flex gap-3">
                     <InfoIcon className="size-5 text-muted-foreground shrink-0" />
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
                       {t("creditsAndResults")}
                     </p>
                   </div>
@@ -227,7 +227,7 @@ const PlanModal = ({
                 {isEnterprisePlan(id) ? (
                   <div className="flex gap-3">
                     <InfoIcon className="size-5 text-muted-foreground shrink-0" />
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-sm leading-relaxed text-muted-foreground">
                       {t("creditsAndResults")}
                     </p>
                   </div>

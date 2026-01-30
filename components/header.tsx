@@ -90,7 +90,7 @@ function MobileMenuPanel({
         ))}
         <Link href="/contact" onClick={closeMenu}>
           <button
-            className="cursor-pointer w-full mt-4 px-4 py-2.5 rounded-full font-medium transition-colors text-black"
+            className="cursor-pointer w-full mt-4 px-4 py-2.5 rounded-md font-medium transition-colors text-black"
             style={{ backgroundColor: "#00d4ff" }}
           >
             {t.rich("talkToAstrah", {

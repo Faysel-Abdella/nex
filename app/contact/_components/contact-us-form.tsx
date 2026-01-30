@@ -261,7 +261,7 @@ const ContactUsForm = ({ className }: ContactMeFormProps) => {
         </div>
 
         <div className="flex flex-col gap-3">
-          <label className="text-muted-foreground text-sm">
+          <label className="text-muted-foreground text-sm flex-nowrap flex">
             {t("labels.whatsapp")} <StyledAstrix />
           </label>
           <Input

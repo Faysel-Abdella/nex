@@ -400,12 +400,12 @@
         {
           "id": "faq2",
           "question": "Can you migrate WhatsApp history?",
-          "answer": "Yes, we can migrate WhatsApp history if the data export is available from your current CRM or messaging platform."
+          "answer": "We can connect communication going forward through the unified inbox. Full historical imports depend on platform access and are handled case-by-case."
         },
         {
           "id": "faq3",
           "question": "Will my team need training?",
-          "answer": "Most teams adapt quickly to Astrah's intuitive interface. We provide documentation and optional training sessions to ensure a smooth transition."
+          "answer": "Astrah is designed to be operational immediately. We provide a short onboarding orientation if needed."
         }
       ]
     },
@@ -420,7 +420,8 @@
       "badge": "PRICING",
       "title": "Transparent pricing for GCC operators.",
       "description": "Astrah OS is built for WhatsApp-first revenue teams in the Gulf. Choose a plan that matches your volume and intelligence needs.",
-      "secondaryCta": "View Product",
+      "primaryCta": "Start Free Trial",
+      "secondaryCta": "Talk to Astrah",
       "footer": "Operating outside the GCC? We offer regional pricing for MENA.<bold> Talk to us.</bold>"
     },
     "modal": {
@@ -543,7 +544,7 @@
         "tagline": "For Established Teams.",
         "team": "Up to 15 users included.",
         "cta": "Start Free Trial",
-        "migrationNote": "~72 hours standard",
+        "migrationNote": "Advanced",
         "inclusionLabel": "Everything in Business, Plus:",
         "summarizedFeatures": [
           "Management & control: Role-based access control (RBAC) + manager visibility, dashboards & KPIs",
@@ -661,12 +662,12 @@
         {
           "id": "faq2",
           "question": "What are “External AI tokens”?",
-          "answer": "External AI tokens are used when Astrah integrates with external AI services. These tokens are separate from the internal AI usage included in your plan."
+          "answer": "External AI usage is capped by plan. Core intelligence features are included."
         },
         {
           "id": "faq3",
           "question": "Is migration included?",
-          "answer": "Migration support varies by plan. The Starter plan includes a one-time migration fee, while the Business and Pro plans include migration support at no additional cost."
+          "answer": "Starter has a one-time migration fee. Business and Pro include migration."
         }
       ]
     },

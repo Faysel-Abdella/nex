@@ -7,7 +7,7 @@ export default function HeroSection() {
   const t = useTranslations("landing.hero");
 
   return (
-    <section className="section-container mb-0 relative  pt-28 md:pt-32   lg:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
+    <section className="section-container mb-0 relative  pt-34 md:pt-40   lg:min-h-screen flex flex-col md:flex-row md:items-center overflow-hidden bg-background">
       {/* Background gradient overlay */}
       {/* <div className="absolute inset-0 bg-gradient-to-b from-cyan-950/10 to-background pointer-events-none" /> */}
 
