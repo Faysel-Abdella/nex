@@ -16,10 +16,10 @@ const Hero = () => {
             <Dot size={26} />{" "}
             <span className="text-muted-foreground">{t("badge")}</span>
           </div>
-          <p className=" font-medium text-2xl md:text-4xl lg:text-[53px] mt-5">
+          <p className=" font-medium text-2xl md:text-4xl lg:text-[53px] mt-5 tracking-tighter">
             {t("title")}
           </p>
-          <p className="text-muted-foreground mt-5 max-w-xl ">
+          <p className="text-muted-foreground mt-5 max-w-sm ">
             {t("description")}
           </p>
           <div className="flex mt-10 gap-5 ">

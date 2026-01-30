@@ -87,9 +87,9 @@
       "revenue": {
         "title": "Stop revenue leaks.",
         "desc": "Astrah detects risk before it becomes loss.",
-        "list1": "Silence detection",
-        "list2": "Stagnation alerts",
-        "list3": "Priority queue for follow-ups",
+        "list1": "Silence detection → “No reply in 5d”",
+        "list2": "Stagnation alerts → “Stage unchanged 14d”",
+        "list3": "Priority queue for follow-ups → “Next actions ranked”",
         "footer": "No auto-sending. No surprise actions. You stay in control."
       },
       "inbox": {

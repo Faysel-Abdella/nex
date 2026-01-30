@@ -3,10 +3,10 @@ import DepthCard from "@/components/depth-card";
 const OnTheRoadmap = () => {
   const roadmapContents = [
     "AI Agents (Sales / Support / Analyst)",
-    "Voice & call intelligence",
-    "Campaigns (Email + WhatsApp)",
     "Advanced workflow engine",
+    "Voice & call intelligence",
     "Full audit logging / SSO",
+    "Campaigns (Email + WhatsApp)",
   ];
 
   return (

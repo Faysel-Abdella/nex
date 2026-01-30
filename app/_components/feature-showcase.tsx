@@ -43,12 +43,14 @@ const FeatureShowcase = () => {
   return (
     <section id="product" className="relative section-container  font-sf-pro">
       <div className="section-content  flex flex-col gap-30 items-center ">
-        <div className="flex gap-10 md:gap-20 max-md:flex-col  ">
+        <div className="flex w-full gap-10 md:gap-20 max-md:flex-col md:justify-between  ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
               {t("demand.title")}
             </p>
-            <p className="text-muted-foreground mt-6">{t("demand.desc")}</p>
+            <p className="text-muted-foreground mt-6 max-w-133">
+              {t("demand.desc")}
+            </p>
             <ul className="text-muted-foreground list-disc ps-5 mt-4 max-md:max-w-sm text-start">
               <li>{t("demand.list1")}</li>
               <li>{t("demand.list2")}</li>
@@ -65,7 +67,7 @@ const FeatureShowcase = () => {
             />
           </div>
         </div>
-        <div className="flex  gap-10 md:gap-20  flex-row-reverse max-md:flex-col ">
+        <div className="flex w-full gap-10 md:gap-20  flex-row-reverse max-md:flex-col ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
               {t("revenue.title")}
@@ -88,7 +90,7 @@ const FeatureShowcase = () => {
             />
           </div>
         </div>
-        <div className="flex gap-10 md:gap-20  max-md:flex-col ">
+        <div className="flex w-full gap-10 md:gap-20  max-md:flex-col ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]">
               {t("inbox.title")}
@@ -105,7 +107,7 @@ const FeatureShowcase = () => {
             />
           </div>
         </div>
-        <div className="flex gap-10 md:gap-20 flex-row-reverse max-md:flex-col ">
+        <div className="flex w-full gap-10 md:gap-20 flex-row-reverse max-md:flex-col ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium text-3xl md:text-[40px]  mt-6 md:mt-8 lg:mt-10">
               {t("cash.title")}
@@ -127,7 +129,7 @@ const FeatureShowcase = () => {
             />
           </div>
         </div>
-        <div className="flex  gap-10 md:gap-20 max-md:flex-col ">
+        <div className="flex w-full  gap-10 md:gap-20 max-md:flex-col ">
           <div className="md:w-1/2 flex flex-col  justify-center  ">
             <p className="font-medium  text-3xl md:text-[40px]">
               {t("alive.title")}

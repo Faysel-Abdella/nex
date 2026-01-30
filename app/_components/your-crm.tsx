@@ -12,7 +12,7 @@ const YourCRM = () => {
           <br /> {t("p2")}
           <br></br> {t("p3")}
         </p>
-        <p className="font-semibold mt-5">{t("astrahDoes")}</p>
+        <p className="font-semibold text-xl mt-5">{t("astrahDoes")}</p>
       </div>
     </section>
   );

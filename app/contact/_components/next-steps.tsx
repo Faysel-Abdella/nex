@@ -12,7 +12,7 @@ const NextSteps = () => {
   return (
     <section className="section-container w-full font-sf-pro">
       <div className="section-content flex flex-col items-center">
-        <p className=" font-medium text-3xl md:text-[40px] text-center">
+        <p className=" font-medium text-3xl md:text-[40px] text-center tracking-tighter">
           {t("title")}
         </p>
 

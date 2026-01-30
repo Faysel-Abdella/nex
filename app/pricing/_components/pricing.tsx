@@ -265,7 +265,7 @@ const Pricing = () => {
               </button>
               <div className="h-px w-full bg-border shrink-0 my-5"></div>
 
-              <p className="text-muted-foreground w-full text-start font-light ">
+              <p className="text-muted-foreground w-full text-start text-sm font-light ">
                 {plan.inclusionLabel}
               </p>
 
@@ -275,7 +275,9 @@ const Pricing = () => {
                     <div className="bg-primary/25 size-5 rounded-full shrink-0 flex items-center justify-center mt-0.5">
                       <Check className="size-3 text-primary" />
                     </div>
-                    <span className="text-muted-foreground ">{feature}</span>
+                    <span className="text-muted-foreground text-sm">
+                      {feature}
+                    </span>
                   </li>
                 ))}
               </ul>

@@ -8,7 +8,9 @@ const ContactUsCTA = () => {
     <section className="w-full font-sf-pro">
       <div className="max-w-5xl w-full mx-auto pt-px bg-linear-to-r from-transparent via-border to-transparent">
         <div className="bg-background pb-10 section-container relative overflow-hidden pt-20 text-center items-center flex flex-col justify-center  ">
-          <p className=" font-medium text-3xl md:text-[40px]">{t("title")}</p>
+          <p className=" font-medium text-3xl md:text-[40px] lg:text-5xl tracking-tighter">
+            {t("title")}
+          </p>
 
           <div className="flex mt-10 gap-5 ">
             <Button className=" font-gilroy h-13.5 px-7">

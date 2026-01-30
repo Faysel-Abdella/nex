@@ -163,7 +163,15 @@ const SystemModules = () => {
                       )}
                     />
                   )}
-                  {module.title}
+                  <span
+                    className={cn(
+                      visibleModule.id == module.id
+                        ? "text-foreground text-xl font-medium"
+                        : "text-muted-foreground text-lg",
+                    )}
+                  >
+                    {module.title}
+                  </span>
                 </button>
               </div>
             ))}

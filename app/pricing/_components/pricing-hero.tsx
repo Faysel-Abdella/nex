@@ -13,7 +13,7 @@ const PricingHero = () => {
         <div className="flex text-muted-foreground text-base items-center">
           <Dot size={26} className="text-white" /> <span>{t("badge")}</span>
         </div>
-        <p className=" font-medium text-3xl md:text-[40px] mt-5">
+        <p className=" font-medium text-3xl md:text-[40px] lg:text-5xl tracking-tighter mt-5">
           {t("title")}
         </p>
         <p className="text-muted-foreground mt-5 max-w-xl ">

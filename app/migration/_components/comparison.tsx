@@ -12,7 +12,7 @@ const Comparison = () => {
     <section className=" section-container ">
       <div className="section-content flex gap-10 max-md:flex-col max-md:items-center justify-between ">
         <div className="md:w-1/2 flex flex-col  w-full  justify-center max-w-133 ">
-          <p className="font-medium text-3xl  md:text-[40px] text-start">
+          <p className="font-medium text-3xl  md:text-[40px] text-start tracking-tighter">
             {t("title")}
           </p>
           <p className="text-muted-foreground mt-6 ">{t("sub")}</p>
