@@ -1,6 +1,7 @@
 "use client";
 
 import DepthCard from "@/components/depth-card";
+import GlowCard from "@/components/glow-card";
 import StyledIcon from "@/components/styled-icon";
 import { FileUp, List, Timer, CheckSquare } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -10,7 +11,6 @@ export default function Requirments() {
   const items = t.raw("items") as string[];
 
   const icons = [FileUp, CheckSquare, List, Timer];
-
   return (
     <section className="section-container relative font-sf-pro">
       <div className="section-content flex gap-10 items-center max-lg:flex-col max-lg:justify-center">
@@ -20,13 +20,15 @@ export default function Requirments() {
         <div className=" w-full lg:w-2/3">
           <div className=" md:columns-2 gap-8 ">
             {items.map((content, index) => (
-              <DepthCard
+              <GlowCard
                 key={index}
-                className="flex break-inside-avoid h-full  rounded-2xl bg-card border flex-col mb-4 gap-4 flex-1 py-5 px-8 items-center"
+                outerClassName="h-full  mb-4 flex-1"
+                className="flex     flex-col gap-4  py-5 px-8 items-center"
+                glowDirection={index == 0 || index == 3 ? "top" : "bottom"}
               >
                 <StyledIcon Icon={icons[index]} />
                 <p className="text-muted-foreground text-center ">{content}</p>
-              </DepthCard>
+              </GlowCard>
             ))}
           </div>
         </div>

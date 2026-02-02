@@ -7,12 +7,19 @@ import {
   SlidersHorizontal,
 } from "lucide-react";
 import DepthCard from "@/components/depth-card";
+import GlowCard, { GlowCardDirections } from "@/components/glow-card";
 
 const MigrationSafety = () => {
   const t = useTranslations("migration.safety");
   const principlesLabels = t.raw("principles") as string[];
 
   const icons = [Network, SlidersHorizontal, CircleCheck, LocateFixed];
+  const glowDirections: GlowCardDirections[] = [
+    "top",
+    "right",
+    "left",
+    "bottom",
+  ];
 
   return (
     <section className="section-container w-full font-sf-pro">
@@ -25,13 +32,15 @@ const MigrationSafety = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-12 gap-7">
           {principlesLabels.map((label, index) => (
-            <DepthCard
+            <GlowCard
               key={label}
-              className="flex break-inside-avoid h-full rounded-2xl bg-card border flex-col p-5 "
+              outerClassName="h-full "
+              className="flex   flex-col p-5 "
+              glowDirection={glowDirections[index]}
             >
               <StyledIcon Icon={icons[index]} />
               <p className="text-lg font-medium mt-6 ">{label}</p>
-            </DepthCard>
+            </GlowCard>
           ))}
         </div>
         <p className="text-center mt-12 max-w-132 md:text-lg lg:text-xl text-white font-semibold">

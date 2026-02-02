@@ -1,4 +1,5 @@
 import DepthCard from "@/components/depth-card";
+import GlowCard from "@/components/glow-card";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import React from "react";
@@ -16,16 +17,21 @@ const BillingAndTrials = () => {
         </div>
         <div className="flex flex-wrap justify-center gap-6 mt-12 w-full max-w-6xl mx-auto">
           {billingInfo.map((info, index) => (
-            <DepthCard
+            <GlowCard
               key={index}
-              className={cn(
-                "flex items-start flex-col bg-card border rounded-2xl gap-3 p-5 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] md:min-h-34 ",
+              outerClassName={cn(
+                "w-full md:w-[calc(50%-12px)] lg:w-[calc(33.33%-16px)] md:min-h-34 ",
                 index > 2 && "ltr:xl:min-h-10",
               )}
+              className={cn(
+                "flex items-start flex-col  gap-3 p-5 h-full md:min-h-34 ",
+                index > 2 && "ltr:xl:min-h-10",
+              )}
+              glowDirection={index % 2 == 0 ? "bottom" : "top"}
             >
               <div className="bg-third-background size-6 rounded-full shrink-0 flex items-center justify-center mt-1 border-t border-white/25"></div>
               <p className="text-lg text-muted-foreground ">{info}</p>
-            </DepthCard>
+            </GlowCard>
           ))}
         </div>
       </div>

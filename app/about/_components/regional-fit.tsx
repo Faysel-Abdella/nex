@@ -1,32 +1,42 @@
 "use client";
 import DepthCard from "@/components/depth-card";
+import GlowCard, { GlowCardDirections } from "@/components/glow-card";
 import StyledIcon from "@/components/styled-icon";
-import { Globe, Languages } from "lucide-react";
+import { Globe, Languages, LucideIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function RegionalFit() {
   const t = useTranslations("about.regionalFit");
 
-  const features = [
+  const features: {
+    id: number;
+    icon: LucideIcon | string;
+    content: string;
+    glowDirection: GlowCardDirections;
+  }[] = [
     {
       id: 1,
       icon: "/icons/WhatsappLogo.svg",
       content: t("features.whatsapp"),
+      glowDirection: "top",
     },
     {
       id: 2,
       icon: Globe,
       content: t("features.regionAware"),
+      glowDirection: "right",
     },
     {
       id: 3,
       icon: Languages,
       content: t("features.bilingual"),
+      glowDirection: "left",
     },
     {
       id: 4,
       icon: "/icons/UsersThree.svg",
       content: t("features.teams"),
+      glowDirection: "bottom",
     },
   ];
 
@@ -45,16 +55,18 @@ export default function RegionalFit() {
         </div>
         <div className=" w-full ">
           <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
-            {features.map((feature) => (
-              <DepthCard
+            {features.map((feature, index) => (
+              <GlowCard
                 key={feature.id}
-                className="flex break-inside-avoid h-full  rounded-2xl  bg-card border flex-col  mb-4 gap-4  flex-1 py-5 px-5  items-center"
+                outerClassName="h-full  mb-4 flex-1"
+                className="flex   flex-col gap-4   py-5 px-5  items-center"
+                glowDirection={feature.glowDirection}
               >
                 <StyledIcon Icon={feature.icon} />
                 <p className="text-muted-foreground text-center ">
                   {feature.content}
                 </p>
-              </DepthCard>
+              </GlowCard>
             ))}
           </div>
         </div>

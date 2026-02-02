@@ -1,8 +1,5 @@
-import React from "react";
-import { useTranslations } from "next-intl";
-import DepthCard from "@/components/depth-card";
 import GlowCard, { GlowCardDirections } from "@/components/glow-card";
-import Pricing from "@/app/pricing/_components/pricing";
+import { useTranslations } from "next-intl";
 
 interface Step {
   id: string;

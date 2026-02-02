@@ -4,6 +4,7 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import PlanModal from "./plan-modal";
 import { PricingPlan } from "@/types";
+import GlowCard from "@/components/glow-card";
 
 export const isEnterprisePlan = (id: string) => id == "enterprise";
 
@@ -70,6 +71,7 @@ const Pricing = () => {
     },
     {
       id: "business",
+
       name: t("business.name"),
       price: 99,
       billingPeriod: t("business.billingPeriod"),
@@ -234,15 +236,22 @@ const Pricing = () => {
     <section className="section-container gap-5">
       <div className=" max-w-7xl mx-auto grid md:grid-cols-2 xl:grid-cols-4  gap-5">
         {pricingPlans.map((plan) => (
-          <div
+          <GlowCard
             key={plan.id}
             className={cn(
-              "bg-card overflow-hidden relative shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)] w-full border flex flex-col h-full p-6 justify-between rounded-2xl",
+              " relative shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)]  flex flex-col  p-6 justify-between rounded-2xl",
               plan.id === "enterprise" &&
                 "border-primary shadow-[inset_0_0px_50px_rgba(255,255,255,0.15)]",
               plan.id === "starter" &&
                 "bg-background shadow-[inset_0_0px_50px_rgba(255,255,255,0.05)]",
             )}
+            hasGlow={plan.id !== "starter"}
+            outerClassName={cn(
+              "overflow-hidden w-full h-full",
+              plan.id == "starter" && "via-white/10 rounded-2xl",
+              plan.id == "enterprise" && "bg-primary/80 rounded-2xl",
+            )}
+            glowDirection={plan.id == "pro" ? "bottom" : undefined}
           >
             <div className="flex flex-col items-center text-center h-full">
               <p className="text-muted-foreground uppercase  text-sm font-light tracking-widest mb-4">
@@ -334,7 +343,7 @@ const Pricing = () => {
                 }
               />
             )}
-          </div>
+          </GlowCard>
         ))}
       </div>
     </section>

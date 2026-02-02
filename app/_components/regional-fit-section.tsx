@@ -1,6 +1,7 @@
 "use client";
 
 import DepthCard from "@/components/depth-card";
+import GlowCard from "@/components/glow-card";
 import StyledIcon from "@/components/styled-icon";
 import { Languages } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -39,16 +40,18 @@ export default function RegionalFitSection() {
         </p>
         <div className=" w-full lg:w-2/3">
           <div className="  md:columns-2  gap-6 ">
-            {features.map((feature) => (
-              <DepthCard
+            {features.map((feature, index) => (
+              <GlowCard
                 key={feature.id}
-                className="flex break-inside-avoid h-full  flex-col  mb-6 gap-4  flex-1 py-5 px-10.5  items-center"
+                className="flex break-inside-avoid   flex-col   gap-4   py-5 px-10.5  items-center"
+                outerClassName="mb-6 h-full flex-1 flex "
+                glowDirection={index == 0 || index == 3 ? "top" : "bottom"}
               >
                 <StyledIcon Icon={feature.icon} />
                 <p className="text-muted-foreground text-center max-w-68">
                   {t(feature.contentKey)}
                 </p>
-              </DepthCard>
+              </GlowCard>
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import React from "react";
 import { useTranslations } from "next-intl";
 import DepthCard from "@/components/depth-card";
+import GlowCard from "@/components/glow-card";
 
 const MigrationPlan = () => {
   const t = useTranslations("migration.plan");
@@ -15,7 +16,10 @@ const MigrationPlan = () => {
             {t("title")}
           </p>
         </div>
-        <DepthCard className="w-full md:w-1/2 bg-card h-full rounded-3xl border p-8 max-w-156">
+        <GlowCard
+          outerClassName="w-full md:w-1/2  h-full rounded-3xl "
+          className=" p-8  rounded-[23px]"
+        >
           <p className="text-muted-foreground">{t("description")}</p>
           <div className="flex flex-col mt-6 gap-4.5">
             {environments.map((environment, index) => (
@@ -28,7 +32,7 @@ const MigrationPlan = () => {
             ))}
           </div>
           <p className="text-muted-foreground mt-6 ">{t("footer")}</p>
-        </DepthCard>
+        </GlowCard>
       </div>
     </section>
   );
