@@ -86,9 +86,9 @@
           "title": "WhatsApp Intelligence",
           "description": "Turns WhatsApp threads into structured CRM activity (summaries, signals, follow-ups)",
           "output": {
-            "title": "Thread requires follow-up",
+            "title": "Follow-up needed",
             "evidence": "Pricing & timeline mentioned",
-            "suggestion": "Suggested: clarify scope + send offer"
+            "suggestion": "Clarify scope + send offer"
           }
         },
         "dealHealth": {
@@ -99,7 +99,7 @@
           "output": {
             "title": "Silence detected",
             "evidence": "Last inbound WhatsApp: 6 days ago",
-            "suggestion": "Suggested: draft follow-up"
+            "suggestion": "Draft follow-up"
           }
         },
         "inboxZero": {
@@ -108,9 +108,9 @@
           "title": "AI Inbox Zero",
           "description": "Unified view that triages conversations and produces next steps.",
           "output": {
-            "title": "Unread conversation",
-            "evidence": "3 messages awaiting reply · 2 high priority",
-            "suggestion": "Suggested: Review and respond"
+            "title": "Unread thread flagged",
+            "evidence": "3 messages waiting · 2 high priority",
+            "suggestion": "Review and respond"
           }
         },
         "priorityQueue": {
@@ -121,7 +121,7 @@
           "output": {
             "title": "Pricing inquiry detected",
             "evidence": "Client asked about pricing + timeline",
-            "suggestion": "Suggested: clarify scope + send offer"
+            "suggestion": "Clarify scope + send offer"
           }
         },
         "leadGen": {
@@ -130,9 +130,9 @@
           "title": "AI Lead Generator",
           "description": "Finds and ranks target companies using GCC-tuned signals and enrichment.",
           "output": {
-            "title": "High-intent lead detected",
-            "evidence": "Match score: 84/100 · High intent signals",
-            "suggestion": "Suggested: draft outreach message"
+            "title": "New company matched",
+            "evidence": "Tech startup · Dubai · 84/100 score",
+            "suggestion": "Draft outreach message"
           }
         },
         "askAstrah": {
@@ -140,7 +140,7 @@
 
           "title": "Ask Astrah (Orb AI Assistant)",
           "description": "Answers across CRM + WhatsApp + docs, with optional general knowledge mode.",
-          "placeholder": "Ask anything"
+          "placeholder": "Ask anything about your pipeline, deals, or next steps..."
         },
         "smartClose": {
           "buttonTitle": "Smart Close",
@@ -148,9 +148,9 @@
           "title": "Smart Close",
           "description": "Offer + payment request + embedded e-sign to close faster.",
           "output": {
-            "title": "Payment Request",
+            "title": "Payment request ready",
             "evidence": "Amount: 50,000 AED",
-            "suggestion": "Suggested: send secure payment link"
+            "suggestion": "Send payment request (Tap)"
           }
         }
       }
@@ -165,7 +165,7 @@
         "output": {
           "title": "Silence detected",
           "evidence": "Last inbound WhatsApp: 6 days ago",
-          "suggestion": "Suggested: draft follow-up"
+          "suggestion": "Draft follow-up"
         }
       },
       "revenue": {
@@ -177,7 +177,7 @@
         "output": {
           "title": "Pricing inquiry detected",
           "evidence": "Client asked about pricing + timeline",
-          "suggestion": "Suggested: clarify scope + send offer"
+          "suggestion": "Clarify scope + send offer"
         },
         "footer": "No auto-sending. No surprise actions. You stay in control."
       },
@@ -185,9 +185,9 @@
         "title": "Inbox intelligence.",
         "desc": "One unified view. Thread summaries. Priority signals. Clear next steps.",
         "output": {
-          "title": "Thread requires follow-up",
-          "evidence": "Pricing & timeline mentioned",
-          "suggestion": "Suggested: clarify scope + send offer"
+          "title": "Unread thread flagged",
+          "evidence": "3 messages waiting · 2 high priority",
+          "suggestion": "Review and respond"
         }
       },
       "cash": {
@@ -197,9 +197,9 @@
         "list2": "WhatsApp OTP acceptance",
         "list3": "Card/Apple Pay/Mada support (where available)",
         "output": {
-          "title": "Payment Request",
+          "title": "Payment request ready",
           "evidence": "Amount: 50,000 AED",
-          "suggestion": "Suggested: send secure payment link"
+          "suggestion": "Send payment request (Tap)"
         }
       },
       "alive": {
@@ -207,9 +207,9 @@
         "desc1": "Persistent intelligence layer that surfaces signals, risks, and next actions.",
         "desc2": "Not a chatbot toy. Not random guesses. Supports decisions. You decide.",
         "output": {
-          "title": "High-intent lead detected",
-          "evidence": "Match score: 84/100 · High intent signals",
-          "suggestion": "Suggested: draft outreach message"
+          "title": "New company matched",
+          "evidence": "Tech startup · Dubai · 84/100 score",
+          "suggestion": "Draft outreach message"
         }
       }
     },
