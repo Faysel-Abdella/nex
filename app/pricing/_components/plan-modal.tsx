@@ -14,6 +14,7 @@ import React from "react";
 import { isEnterprisePlan } from "./pricing";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 interface PlanModalProps {
   pricingPlan: PricingPlan;
@@ -43,7 +44,11 @@ const PlanModal = ({
     !!searchParams.get("priceModal") && searchParams.get("id") === id;
 
   const handleClose = () => {
-    router.back();
+    if (typeof window !== "undefined" && window.history.length > 2) {
+      router.back();
+    } else {
+      router.replace(pathname, { scroll: false });
+    }
   };
 
   const onOpenChange = (open: boolean, openingId?: string) => {
@@ -151,29 +156,33 @@ const PlanModal = ({
                           <span className="text-xl font-medium text-white">
                             ${migration.price}
                           </span>
-                          <span className="text-sm text-muted-foreground">
-                            {migration.type}
-                          </span>
                         </div>
                       )}
                       <span className="text-muted-foreground text-sm">
-                        ({migration.note})
+                        {migration.note}
                       </span>
                     </div>
                   </div>
                 )}
 
                 <div className="h-px w-full bg-border shrink-0 my-6"></div>
-
-                <button
+                <Link
+                  href={"/contact"}
                   className={cn(
-                    "bg-third-background border  border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
-                    id === "enterprise" &&
-                      "bg-primary text-black border-transparent max-md:mt-37 hover:bg-primary/90",
+                    " w-full",
+                    isEnterprisePlan(id) && "max-md:mt-37",
                   )}
                 >
-                  {cta}
-                </button>
+                  <button
+                    className={cn(
+                      "bg-third-background border  border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
+                      isEnterprisePlan(id) &&
+                        "bg-primary text-black border-transparent max-md:mt-37 hover:bg-primary/90",
+                    )}
+                  >
+                    {cta}
+                  </button>
+                </Link>
               </div>
 
               {isEnterprisePlan(id) && (
@@ -246,29 +255,27 @@ const PlanModal = ({
                           <span className="text-xl font-medium text-white">
                             ${migration.price}
                           </span>
-                          <span className="text-sm text-muted-foreground">
-                            {migration.type}
-                          </span>
                         </div>
                       )}
                       <span className="text-muted-foreground text-sm">
-                        ({migration.note})
+                        {migration.note}
                       </span>
                     </div>
                   </div>
                 )}
 
                 <div className="h-px w-full bg-border shrink-0 my-6"></div>
-
-                <button
-                  className={cn(
-                    "bg-third-background border  border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
-                    id === "enterprise" &&
-                      "bg-primary text-black border-transparent  hover:bg-primary/90",
-                  )}
-                >
-                  {cta}
-                </button>
+                <Link href={"/contact"} className={cn(" w-full")}>
+                  <button
+                    className={cn(
+                      "bg-third-background border  border-white/10 w-full py-3 rounded-lg text-sm font-medium transition-colors hover:bg-white/5",
+                      id === "enterprise" &&
+                        "bg-primary text-black border-transparent  hover:bg-primary/90",
+                    )}
+                  >
+                    {cta}
+                  </button>
+                </Link>
               </div>
 
               {isEnterprisePlan(id) && (

@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import PlanModal from "./plan-modal";
 import { PricingPlan } from "@/types";
 import GlowCard from "@/components/glow-card";
+import Link from "next/link";
 
 export const isEnterprisePlan = (id: string) => id == "enterprise";
 
@@ -274,15 +275,23 @@ const Pricing = () => {
                 {plan.tagline}
               </p>
 
-              <button
+              <Link
+                href={"/contact"}
                 className={cn(
-                  "bg-third-background border mt-5 border-white/10 w-full py-3 rounded-lg text-sm transition-colors hover:bg-white/5",
-                  isEnterprisePlan(plan.id) &&
-                    "bg-primary text-black border-transparent max-md:mt-37 hover:bg-primary/90",
+                  "mt-5 w-full",
+                  isEnterprisePlan(plan.id) && "max-md:mt-37",
                 )}
               >
-                {plan.cta}
-              </button>
+                <button
+                  className={cn(
+                    "bg-third-background border  border-white/10 w-full py-3 rounded-lg text-sm transition-colors hover:bg-white/5",
+                    isEnterprisePlan(plan.id) &&
+                      "bg-primary text-black border-transparent  hover:bg-primary/90",
+                  )}
+                >
+                  {plan.cta}
+                </button>{" "}
+              </Link>
               <div className="h-px w-full bg-border shrink-0 my-5"></div>
               {plan.inclusionLabel && (
                 <p className="text-muted-foreground w-full text-start text-sm font-light ">
