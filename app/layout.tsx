@@ -1,7 +1,7 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
 
@@ -10,6 +10,45 @@ import Header from "@/components/header";
 import type React from "react";
 import "./globals.css";
 import { Toaster } from "sonner";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+  const t = await getTranslations("metadata.landing");
+
+  // Get domain from env, fallback to localhost if not set
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
+  const title = t("title");
+  const description = t("description");
+
+  return {
+    // This now dynamically scales based on your environment
+    metadataBase: new URL(siteUrl),
+
+    title: {
+      default: title,
+      template: `%s | Astrah OS`,
+    },
+    description,
+
+    alternates: {
+      canonical: "./",
+    },
+
+    openGraph: {
+      title,
+      description,
+      locale: locale === "ar" ? "ar_AE" : "en_US",
+      type: "website",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -90,29 +129,6 @@ export const gilroy = localFont({
   variable: "--font-gilroy",
   display: "swap",
 });
-
-export const metadata: Metadata = {
-  title: "ASTRAH OS - Business Operating System for the Gulf",
-  description:
-    "Stop managing chaos. Start managing revenue. The AI-native OS built for WhatsApp-first sales teams.",
-  icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
-  },
-};
 
 export default async function RootLayout({
   children,

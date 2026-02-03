@@ -1,4 +1,44 @@
 {
+  "metadata": {
+    "landing": {
+      "title": "Astrah OS - WhatsApp-First AI Business OS for GCC Companies",
+      "description": "Astrah OS is a WhatsApp-first AI Business Operating System for GCC companies. CRM, sales, follow-ups, and payments—built for real operators."
+    },
+    "pricing": {
+      "title": "Pricing - Astrah OS | AI Business OS for GCC Teams",
+      "description": "Simple, transparent pricing for Astrah OS. CRM, WhatsApp intelligence, AI follow-ups, and payments—built for growing GCC businesses."
+    },
+    "migration": {
+      "title": "CRM Migration to Astrah OS - Fast, Assisted, Secure",
+      "description": "Migrate from spreadsheets or legacy CRMs to Astrah OS. Assisted setup, WhatsApp history, and zero downtime for GCC teams."
+    },
+    "about": {
+      "title": "About Astrah OS - Built for Operators, Not Sales Demos",
+      "description": "Astrah OS is built by operators for real businesses. A WhatsApp-first AI Business OS designed for how GCC teams actually work."
+    },
+    "contact": {
+      "title": "Contact Astrah OS - Talk to the Team",
+      "description": "Have questions about Astrah OS? Contact our team to discuss your workflow, use case, or migration needs."
+    },
+    "legal": {
+      "terms": {
+        "title": "Terms of Service – Astrah OS",
+        "description": "Defines the legal agreement governing access to Astrah OS, including user responsibilities, licensing, intellectual property rights, and liability limitations."
+      },
+      "privacy": {
+        "title": "Privacy Policy – Astrah OS",
+        "description": "Outlines how Astrah OS collects, secures, and processes data to operate the system, including user rights, data retention, and prohibited data uses."
+      },
+      "aup": {
+        "title": "Acceptable Use Policy – Astrah OS",
+        "description": "Specifies prohibited activities and usage boundaries for Astrah OS, covering system security, messaging compliance, AI usage, and enforcement actions."
+      },
+      "refunds": {
+        "title": "Refunds & Cancellations – Astrah OS",
+        "description": "Details the procedures for subscription cancellations, the handling of billing disputes, and the conditions under which refunds or service credits apply."
+      }
+    }
+  },
   "header": {
     "product": "Product",
     "pricing": "Pricing",

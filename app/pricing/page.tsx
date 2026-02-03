@@ -6,6 +6,34 @@ import PricingCTA from "./_components/pricing-cta";
 import BillingAndTrials from "./_components/billing-and-trials";
 import OnTheRoadmap from "./_components/on-roadmap";
 import PlanComparison from "./_components/plan-comparison";
+import { Metadata } from "next";
+import { getLocale, getTranslations } from "next-intl/server";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getLocale();
+
+  const t = await getTranslations("metadata.pricing");
+
+  const title = t("title");
+  const description = t("description");
+
+  return {
+    title,
+    description,
+
+    openGraph: {
+      title,
+      description,
+      locale: locale === "ar" ? "ar_AE" : "en_US",
+      type: "website",
+    },
+
+    twitter: {
+      title,
+      description,
+    },
+  };
+}
 
 const PricingPage = () => {
   return (
