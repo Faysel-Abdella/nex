@@ -23,10 +23,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import AskAstrah from "@/components/ask-astrah";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const SystemModules = () => {
   const t = useTranslations("landing.SystemModules");
   const [visibleModuleIndex, setVisibleModuleIndex] = useState(0);
+  const isMobile = useIsMobile();
 
   const modules = [
     {
@@ -142,107 +144,109 @@ const SystemModules = () => {
         <p className="text-muted-foreground mt-6 text-center">
           {t("sectionSubtitle")}
         </p>
-        <div className="max-lg:hidden grid grid-cols-2 w-full mt-14 gap-30">
-          <div className="flex flex-col">
-            {modules.map((module, index) => (
-              <div
-                key={module.id}
-                className={cn(
-                  "relative w-full h-full rounded-[21px] from-white/10 via-primary/30 to-white/10 p-px overflow-hidden",
-                  index == visibleModuleIndex && "bg-linear-to-br",
-                )}
-              >
-                <button
-                  className={cn(
-                    "h-fit w-full flex items-center gap-4 rounded-[20px] p-5 transition-all bg-background border border-background text-start",
-                    index == visibleModuleIndex && "bg-card",
-                  )}
-                  onClick={() => setVisibleModuleIndex(index)}
-                >
-                  {typeof module.icon === "string" ? (
-                    <img
-                      src={
-                        visibleModule.id == module.id
-                          ? module.iconSelected
-                          : module.icon
-                      }
-                      alt=""
-                      className="w-6 h-6"
-                    />
-                  ) : (
-                    <module.icon
-                      className={cn(
-                        "w-6 h-6 opacity-80 shrink-0",
-                        visibleModule.id === module.id && "text-primary",
-                      )}
-                    />
-                  )}
-                  <span
-                    className={cn(
-                      visibleModule.id == module.id
-                        ? "text-foreground text-xl font-medium"
-                        : "text-muted-foreground text-lg",
+        {isMobile ? (
+          <Carousel
+            opts={{ loop: true, duration: 20 }}
+            className="lg:hidden w-full mt-15"
+            dir="ltr"
+          >
+            <CarouselContent className="h-min">
+              {modules.map((module) => (
+                <CarouselItem key={module.id} className="h-fit transform-gpu">
+                  <p className="text-2xl font-medium text-center">
+                    {module.title}
+                  </p>
+                  <p className="text-white/60 mt-6 text-center">
+                    {module.description}
+                  </p>
+                  <div className="mt-14 flex justify-center max-w-96 pb-10 mx-auto">
+                    {typeof module.output == "string" ? (
+                      <AskAstrah placeholder={module.output} />
+                    ) : (
+                      <GlassCard
+                        Icon={module.output.Icon}
+                        evidence={module.output.evidence}
+                        suggestion={module.output.suggestion}
+                        title={module.output.title}
+                        glowDirection={module.id % 2 == 0 ? "top" : "bottom"}
+                      />
                     )}
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="start-10 size-10 left-8 rtl:rotate-180  z-10" />
+            <CarouselNext className="end-10 size-10 right-8 rtl:rotate-180 z-10" />
+            <CarouselDots className="-bottom-1" />
+          </Carousel>
+        ) : (
+          <div className="max-lg:hidden grid grid-cols-2 w-full mt-14 gap-30">
+            <div className="flex flex-col">
+              {modules.map((module, index) => (
+                <div
+                  key={module.id}
+                  className={cn(
+                    "relative w-full h-full rounded-[21px] from-white/10 via-primary/30 to-white/10 p-px overflow-hidden",
+                    index == visibleModuleIndex && "bg-linear-to-br",
+                  )}
+                >
+                  <button
+                    className={cn(
+                      "h-fit w-full flex items-center gap-4 rounded-[20px] p-5 transition-all bg-background border border-background text-start",
+                      index == visibleModuleIndex && "bg-card",
+                    )}
+                    onClick={() => setVisibleModuleIndex(index)}
                   >
-                    {module.buttonTitle}
-                  </span>
-                </button>
+                    {typeof module.icon === "string" ? (
+                      <img
+                        src={
+                          visibleModule.id == module.id
+                            ? module.iconSelected
+                            : module.icon
+                        }
+                        alt=""
+                        className="w-6 h-6"
+                      />
+                    ) : (
+                      <module.icon
+                        className={cn(
+                          "w-6 h-6 opacity-80 shrink-0",
+                          visibleModule.id === module.id && "text-primary",
+                        )}
+                      />
+                    )}
+                    <span
+                      className={cn(
+                        visibleModule.id == module.id
+                          ? "text-foreground text-xl font-medium"
+                          : "text-muted-foreground text-lg",
+                      )}
+                    >
+                      {module.buttonTitle}
+                    </span>
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div className="">
+              <p className="text-2xl font-medium">{visibleModule.title}</p>
+              <p className="text-white/60 mt-6">{visibleModule.description}</p>
+              <div className="mt-14">
+                {typeof visibleModule.output == "string" ? (
+                  <AskAstrah placeholder={visibleModule.output} />
+                ) : (
+                  <GlassCard
+                    Icon={visibleModule.output.Icon}
+                    evidence={visibleModule.output.evidence}
+                    suggestion={visibleModule.output.suggestion}
+                    title={visibleModule.output.title}
+                    glowDirection={visibleModule.id % 2 == 0 ? "top" : "bottom"}
+                  />
+                )}
               </div>
-            ))}
-          </div>
-          <div className="">
-            <p className="text-2xl font-medium">{visibleModule.title}</p>
-            <p className="text-white/60 mt-6">{visibleModule.description}</p>
-            <div className="mt-14">
-              {typeof visibleModule.output == "string" ? (
-                <AskAstrah placeholder={visibleModule.output} />
-              ) : (
-                <GlassCard
-                  Icon={visibleModule.output.Icon}
-                  evidence={visibleModule.output.evidence}
-                  suggestion={visibleModule.output.suggestion}
-                  title={visibleModule.output.title}
-                  glowDirection={visibleModule.id % 2 == 0 ? "top" : "bottom"}
-                />
-              )}
             </div>
           </div>
-        </div>
-
-        <Carousel
-          opts={{ loop: true }}
-          className="lg:hidden w-full mt-15"
-          dir="ltr"
-        >
-          <CarouselContent className="h-min">
-            {modules.map((module) => (
-              <CarouselItem key={module.id} className="h-fit">
-                <p className="text-2xl font-medium text-center">
-                  {module.title}
-                </p>
-                <p className="text-white/60 mt-6 text-center">
-                  {module.description}
-                </p>
-                <div className="mt-14 flex justify-center max-w-96 pb-10 mx-auto">
-                  {typeof module.output == "string" ? (
-                    <AskAstrah placeholder={module.output} />
-                  ) : (
-                    <GlassCard
-                      Icon={module.output.Icon}
-                      evidence={module.output.evidence}
-                      suggestion={module.output.suggestion}
-                      title={module.output.title}
-                      glowDirection={module.id % 2 == 0 ? "top" : "bottom"}
-                    />
-                  )}
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="start-10 left-10 rtl:rotate-180 rtl:right-10 rtl:left-auto" />
-          <CarouselNext className="end-10 right-10 rtl:rotate-180 rtl:left-10 rtl:right-auto" />
-          <CarouselDots />
-        </Carousel>
+        )}
       </div>
     </section>
   );
