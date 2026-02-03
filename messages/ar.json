@@ -629,6 +629,35 @@
         ]
       }
     },
+    "planComparison": {
+      "comparison_title": "جدول المقارنة",
+      "plans": {
+        "starter": "Starter",
+        "business": "Business",
+        "pro": "Pro",
+        "enterprise": "Enterprise"
+      },
+      "features": {
+        "users_included": "المستخدمين المشمولين",
+        "ask_astrah_business": "Ask Astrah (بيانات العمل)",
+        "ask_astrah_general": "Ask Astrah (الذكاء الاصطناعي العام)",
+        "ai_lead_generator": "AI Lead Generator",
+        "smart_close": "Smart Close",
+        "priority_support": "Priority support",
+        "onboarding": "جلسة تهيئة وتدريب",
+        "custom_branding": "هوية مخصصة"
+      },
+      "values": {
+        "unlimited": "غير محدود",
+        "per_month": "شهرياً",
+        "custom": "مخصص",
+        "custom_unlimited": "مخصص/غير محدود",
+        "hour": "ساعة",
+        "yes": "نعم",
+        "no": "لا",
+        "sla_24h": "24h SLA"
+      }
+    },
     "billingAndTrials": {
       "title": "Billings & Trials",
       "billingInfo": [

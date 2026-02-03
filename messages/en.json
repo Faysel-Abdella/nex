@@ -634,6 +634,35 @@
         ]
       }
     },
+    "planComparison": {
+      "comparison_title": "Comparison Table",
+      "plans": {
+        "starter": "Starter",
+        "business": "Business",
+        "pro": "Pro",
+        "enterprise": "Enterprise"
+      },
+      "features": {
+        "users_included": "Users included",
+        "ask_astrah_business": "Ask Astrah (business data)",
+        "ask_astrah_general": "Ask Astrah (general AI)",
+        "ai_lead_generator": "AI Lead Generator",
+        "smart_close": "Smart Close",
+        "priority_support": "Priority support",
+        "onboarding": "Onboarding session",
+        "custom_branding": "Custom branding"
+      },
+      "values": {
+        "unlimited": "Unlimited",
+        "per_month": "per month",
+        "custom": "Custom",
+        "custom_unlimited": "Custom/Unlimited",
+        "hour": "hour",
+        "yes": "Yes",
+        "no": "No",
+        "sla_24h": "24h SLA"
+      }
+    },
     "billingAndTrials": {
       "title": "Billings & Trials",
       "billingInfo": [

@@ -1,59 +1,90 @@
 import { cn } from "@/lib/utils";
 import React from "react";
+import { useTranslations } from "next-intl"; // Or your preferred i18n library
 
 const PlanComparison = () => {
+  const t = useTranslations("pricingPage.planComparison");
+
   const features = [
-    { label: "Users included", values: ["1", "5", "15", "Custom/Unlimited"] },
     {
-      label: "Ask Astrah (business data)",
-      values: ["Unlimited", "Unlimited", "Unlimited", "Unlimited"],
+      label: t("features.users_included"),
+      values: ["1", "5", "15", t("values.custom_unlimited")],
     },
     {
-      label: "Ask Astrah (general AI)",
+      label: t("features.ask_astrah_business"),
+      values: Array(4).fill(t("values.unlimited")),
+    },
+    {
+      label: t("features.ask_astrah_general"),
       values: [
-        "200 per month",
-        "1,000 per month",
-        "5,000 per month",
-        "20,000 per month",
+        `200 ${t("values.per_month")}`,
+        `1,000 ${t("values.per_month")}`,
+        `5,000 ${t("values.per_month")}`,
+        `20,000 ${t("values.per_month")}`,
       ],
     },
     {
-      label: "AI Lead Generator",
+      label: t("features.ai_lead_generator"),
       values: [
-        "100 per month",
-        "500 per month",
-        "2,000 per month",
-        "5,000–10,000 per month",
+        `100 ${t("values.per_month")}`,
+        `500 ${t("values.per_month")}`,
+        `2,000 ${t("values.per_month")}`,
+        `5,000–10,000 ${t("values.per_month")}`,
       ],
     },
-    { label: "Smart Close", values: ["No", "Yes", "Yes", "Yes"] },
     {
-      label: "Priority support",
-      values: ["No", "No", "Yes (24h SLA)", "Yes (24h SLA)"],
+      label: t("features.smart_close"),
+      values: [
+        t("values.no"),
+        t("values.yes"),
+        t("values.yes"),
+        t("values.yes"),
+      ],
     },
-    { label: "Onboarding session", values: ["-", "-", "1 hour", "Custom"] },
-    { label: "Custom branding", values: ["No", "No", "No", "Yes"] },
+    {
+      label: t("features.priority_support"),
+      values: [
+        t("values.no"),
+        t("values.no"),
+        `${t("values.yes")} (${t("values.sla_24h")})`,
+        `${t("values.yes")} (${t("values.sla_24h")})`,
+      ],
+    },
+    {
+      label: t("features.onboarding"),
+      values: ["-", "-", `1 ${t("values.hour")}`, t("values.custom")],
+    },
+    {
+      label: t("features.custom_branding"),
+      values: [t("values.no"), t("values.no"), t("values.no"), t("values.yes")],
+    },
   ];
 
-  const plans = ["Starter", "Business", "Pro", "Enterprise"];
+  const plans = [
+    t("plans.starter"),
+    t("plans.business"),
+    t("plans.pro"),
+    t("plans.enterprise"),
+  ];
+
   return (
     <section className="section-container">
-      <div className="section-content ">
+      <div className="section-content">
         <div className="flex w-full justify-center">
           <p className="font-medium text-3xl md:text-[40px] text-center">
-            Comparison Table
+            {t("comparison_title")}
           </p>
         </div>
         <div className="w-full overflow-x-auto">
-          <table className="mt-12 min-w-full border-collapse text-left ">
+          <table className="mt-12 min-w-full border-collapse text-start">
             <thead className="bg-card border-y">
-              <tr className="">
+              <tr>
                 <th className="py-4 px-6"></th>
                 {plans.map((plan) => (
-                  <th key={plan} className={cn("py-4 px-6 font-medium ")}>
+                  <th key={plan} className="py-4 px-6 font-medium">
                     <span
                       className={
-                        plan == "Enterprise"
+                        plan === t("plans.enterprise")
                           ? "bg-linear-to-bl text-xl from-white via-primary to-white bg-clip-text text-transparent"
                           : ""
                       }
@@ -70,7 +101,7 @@ const PlanComparison = () => {
                   key={index}
                   className="border-b border-white/10 hover:bg-card/50"
                 >
-                  <td className="py-5.5 px-6 font-medium  text-sm">
+                  <td className="py-5.5 px-6 font-medium text-sm">
                     {feature.label}
                   </td>
                   {feature.values.map((val, i) => (
