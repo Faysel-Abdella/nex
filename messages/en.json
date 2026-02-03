@@ -151,7 +151,7 @@
           "buttonTitle": "Smart Close",
 
           "title": "Smart Close",
-          "description": "Quote/Offer + embedded <bold>e-sign</bold> + Tap payment (where available)",
+          "description": "Quote/Offer + embedded e-sign (BoldSign) + Tap payment (where available)",
           "output": {
             "title": "Payment request ready",
             "evidence": "Amount: 50,000 AED",
@@ -163,9 +163,9 @@
     "featureShowcase": {
       "demand": {
         "title": "Demand, built in.",
-        "desc": "Astrah doesn't just manage leads. It helps generate pipeline inside your OS.",
-        "list1": "Discover and rank opportunities",
-        "list2": "Region-tuned signals (GCC context)",
+        "desc": "Astrah doesn't just manage leads. It helps generate pipeline inside your system.",
+        "list1": "Discover and rank target companies worldwide",
+        "list2": "Region-tuned signals + enrichment",
         "list3": "Draft outreach (never auto-sends)",
         "output": {
           "title": "Silence detected",
@@ -199,8 +199,7 @@
         "title": "From agreement to cash.",
         "desc": "Close the admin gap. Go from “yalla” to paid.",
         "list1": "Mobile-first offer link",
-        "list2": "WhatsApp OTP acceptance",
-        "list3": "Card/Apple Pay/Mada support (where available)",
+        "list2": "Card/Apple Pay/Mada support (where available)",
         "output": {
           "title": "Payment request ready",
           "evidence": "Amount: 50,000 AED",
@@ -448,7 +447,7 @@
         "tagline": "For Solo Operators And Small Service Teams.",
         "team": "1 user included.",
         "cta": "Start Free Trial",
-        "migrationNote": "Standard",
+        "migrationNote": "one-time (Standard)",
         "inclusionLabel": "Core:",
         "modalInclusionLabel": "Includes",
         "summarizedFeatures": [
@@ -499,7 +498,7 @@
         "tagline": "For Growing Teams.",
         "team": "Up to 5 users included",
         "cta": "Start Free Trial",
-        "migrationNote": "~72 hours standard",
+        "migrationNote": "(~72 hours standard)",
         "inclusionLabel": "Everything in Starter, Plus:",
         "summarizedFeatures": [
           "Smart Close: Quote/Offer + embedded e-sign (BoldSign) + Tap payment (where available)",
@@ -549,7 +548,7 @@
         "tagline": "For Established Teams.",
         "team": "Up to 15 users included.",
         "cta": "Start Free Trial",
-        "migrationNote": "Advanced",
+        "migrationNote": "(Advanced)",
         "inclusionLabel": "Everything in Business, Plus:",
         "summarizedFeatures": [
           "Management & control: Role-based access control (RBAC) + manager visibility, dashboards & KPIs",

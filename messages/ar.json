@@ -144,7 +144,7 @@
         "smartClose": {
           "buttonTitle": "Smart Close",
           "title": "Smart Close",
-          "description": "عرض سعر + <bold>توقيع إلكتروني</bold> مدمج + الدفع عبر النقر (حيثما توفر)",
+          "description": "عرض سعر/عرض + توقيع إلكتروني مدمج (BoldSign) + دفع بالنقرة (حيثما كان متاحًا)",
           "output": {
             "title": "طلب دفع جاهز",
             "evidence": "المبلغ: 50,000 درهم",
@@ -157,9 +157,9 @@
       "demand": {
         "title": "الطلب… مدمج في النظام.",
         "desc": "Astrah لا يكتفي بإدارة العملاء المحتملين. بل يساعد على إنشاء خط مبيعات داخل نظامك.",
-        "list1": "اكتشاف الفرص وترتيبها",
-        "list2": "إشارات مُكيّفة للمنطقة (سياق دول GCC)",
-        "list3": "صياغة رسائل تواصل (ولا يرسل تلقائيًا)",
+        "list1": "اكتشاف وتصنيف الشركات المستهدفة عالميًا",
+        "list2": "إشارات مكيّفة حسب المنطقة + إثراء البيانات",
+        "list3": "صياغة رسائل التواصل (دون إرسال تلقائي)",
         "output": {
           "title": "تم رصد صمت",
           "evidence": "آخر رسالة واردة عبر واتساب: قبل 6 أيام",
@@ -192,8 +192,7 @@
         "title": "من الاتفاق إلى التحصيل.",
         "desc": "أغلق فجوة الإدارة. انتقل من “يلا” إلى مدفوع.",
         "list1": "رابط عرض مهيأ للجوال",
-        "list2": "قبول عبر OTP على WhatsApp",
-        "list3": "دعم Card / Apple Pay / Mada (حيث يتوفر)",
+        "list2": "دعم Card / Apple Pay / Mada (حيث يتوفر)",
         "output": {
           "title": "طلب دفع جاهز",
           "evidence": "المبلغ: 50,000 درهم",
@@ -441,7 +440,7 @@
         "tagline": "للمستقلين وفرق الخدمات الصغيرة.",
         "team": "مستخدم واحد مشمول",
         "cta": "ابدأ التجربة المجانية",
-        "migrationNote": "Standard",
+        "migrationNote": "مرة واحدة (قياسي)",
         "inclusionLabel": "الأساسية:",
         "modalInclusionLabel": "يشمل",
         "summarizedFeatures": [
@@ -492,7 +491,7 @@
         "tagline": "للفرق المتنامية.",
         "team": "حتى 5 مستخدمين",
         "cta": "ابدأ التجربة المجانية",
-        "migrationNote": "hours standard 72~\u200E",
+        "migrationNote": "(72 ساعة (قياسي))",
         "inclusionLabel": "كل شيء في خطة Starter، بالإضافة إلى:",
         "summarizedFeatures": [
           "Smart Close: Quote/Offer + embedded e-sign (BoldSign) + الدفع عبر النقر (حيثما كان ذلك متاحاً)",
@@ -542,7 +541,7 @@
         "tagline": "للفرق المنشأة.",
         "team": "حتى 15 مستخدماً",
         "cta": "ابدأ التجربة المجانية",
-        "migrationNote": "Advanced",
+        "migrationNote": "(متقدم)",
         "inclusionLabel": "كل شيء في خطة Business، بالإضافة إلى:",
         "summarizedFeatures": [
           "Role-based access: الإدارة والتحكم control (RBAC) + رؤية المدير + لوحات التحكم ومؤشرات الأداء الرئيسية",

@@ -323,13 +323,10 @@ const Pricing = () => {
                         <span className="text-xl font-medium text-white">
                           ${plan.migration.price}
                         </span>
-                        <span className="text-sm text-muted-foreground">
-                          {plan.migration.type}
-                        </span>
                       </div>
                     )}
                     <span className="text-muted-foreground text-sm">
-                      ({plan.migration.note})
+                      {plan.migration.note}
                     </span>
                   </div>
                 </div>
