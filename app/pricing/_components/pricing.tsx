@@ -275,13 +275,7 @@ const Pricing = () => {
                 {plan.tagline}
               </p>
 
-              <Link
-                href={"/contact"}
-                className={cn(
-                  "mt-5 w-full",
-                  isEnterprisePlan(plan.id) && "max-md:mt-37",
-                )}
-              >
+              <Link href={"/contact"} className={cn("mt-5 w-full")}>
                 <button
                   className={cn(
                     "bg-third-background border  border-white/10 w-full py-3 rounded-lg text-sm transition-colors hover:bg-white/5",
@@ -290,7 +284,7 @@ const Pricing = () => {
                   )}
                 >
                   {plan.cta}
-                </button>{" "}
+                </button>
               </Link>
               <div className="h-px w-full bg-border shrink-0 my-5"></div>
               {plan.inclusionLabel && (
