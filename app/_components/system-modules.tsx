@@ -136,7 +136,10 @@ const SystemModules = () => {
   const visibleModule = modules[visibleModuleIndex];
 
   return (
-    <section id="product" className="section-container w-full font-sf-pro">
+    <section
+      id="product"
+      className="section-container w-full font-sf-pro scroll-mt-24"
+    >
       <div className="section-content flex flex-col items-center">
         <p className="font-medium text-3xl md:text-[40px] text-center">
           {t("sectionTitle")}

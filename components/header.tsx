@@ -8,6 +8,7 @@ import Logo from "./logo";
 import MobileMenu from "./mobile-menu";
 import Navigation from "./navigation";
 import { cn } from "@/lib/utils";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,12 +65,23 @@ function MobileMenuPanel({
   };
 
   const mobileMenuItems = [
-    { label: t("product"), href: "/#product" },
     { label: t("pricing"), href: "/pricing" },
     { label: t("migration"), href: "/migration" },
     { label: t("about"), href: "/about" },
   ];
 
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleScroll = () => {
+    closeMenu();
+    if (pathname === "/") {
+      const el = document.getElementById("product");
+      el?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/#product");
+    }
+  };
   return (
     <div
       className={cn(
@@ -78,6 +90,12 @@ function MobileMenuPanel({
       )}
     >
       <nav className="px-4 py-4 space-y-3">
+        <button
+          className="block text-sm text-gray-400 hover:text-[#00d4ff] transition-colors"
+          onClick={handleScroll}
+        >
+          {t("product")}
+        </button>
         {mobileMenuItems.map((item) => (
           <Link
             key={item.href}
