@@ -472,7 +472,7 @@
       "modalOpenButton": "View full features",
       "creditsAndResults": "Lead credits and results vary by category, location, and enrichment depth. Migration timelines apply to standard CSV-based migrations; complex scopes are scoped separately. WhatsApp includes a monthly allowance; higher volume is available via add-on bundles.",
       "team": "Team",
-      "whatsappDesc": "includes allowance; usage beyond allowance is metered.",
+      "whatsappDesc": "Includes allowance; higher usage is available via add-on bundles.",
       "migration": "Migration",
       "included": "Included"
     },
@@ -780,12 +780,12 @@
       },
       "placeholders": {
         "fullName": "Eg, Peter",
-        "companyName": "Eg, United kingdom",
+        "companyName": "",
         "country": "Select Country",
         "teamSize": "Eg, 1-3",
-        "email": "example1@gmail.com",
-        "whatsapp": "+251947344248",
-        "purpose": "Write here ...",
+        "email": "example@gmail.com",
+        "whatsapp": "+971 5X XXX XXXX",
+        "purpose": "Write here . . .",
         "system": "Select System",
         "language": "Select Language"
       },

@@ -49,42 +49,46 @@ const StyledAstrix = () => <span className="text-sky-400">*</span>;
 interface ContactMeFormProps {
   className?: string;
 }
-
-// Data arrays (You can also move these to a constant file or translate options if needed)
 const countries = [
-  { name: "Saudi Arabia", value: "SA" },
-  { name: "United Arab Emirates", value: "AE" },
-  { name: "Kuwait", value: "KW" },
+  { name: "UAE", value: "AE" },
+  { name: "KSA", value: "SA" },
   { name: "Qatar", value: "QA" },
+  { name: "Kuwait", value: "KW" },
   { name: "Bahrain", value: "BH" },
   { name: "Oman", value: "OM" },
+  { name: "Other", value: "other" },
 ];
 
 const teamSizes = [
   { name: "1-3", value: "1-3" },
   { name: "4-10", value: "4-10" },
-  { name: "10-20", value: "10-20" },
-  { name: "20+", value: "20+" },
+  { name: "11-25", value: "11-25" },
+  { name: "26-50", value: "26-50" },
+  { name: "51-100", value: "51-100" },
+  { name: "101-250", value: "101-250" },
+  { name: "251-500", value: "251-500" },
+  { name: "500+", value: "500+" },
 ];
 
 const systems = [
-  { name: "Salesforce", value: "salesforce" },
-  { name: "HubSpot CRM", value: "hubspot" },
+  { name: "WhatsApp only", value: "whatsapp" },
+  { name: "Excel/Google Sheets", value: "excel_sheets" },
+  { name: "Odoo", value: "odoo" },
+  { name: "HubSpot", value: "hubspot" },
   { name: "Zoho CRM", value: "zoho" },
-  { name: "Microsoft Dynamics 365", value: "dynamics365" },
+  { name: "Salesforce", value: "salesforce" },
   { name: "Pipedrive", value: "pipedrive" },
-  { name: "Freshsales (Freshworks CRM)", value: "freshsales" },
-  { name: "SugarCRM", value: "sugarcrm" },
-  { name: "Insightly", value: "insightly" },
-  { name: "Monday Sales CRM", value: "monday" },
-  { name: "Close CRM", value: "close" },
-  { name: "Copper CRM", value: "copper" },
-  { name: "Nimble", value: "nimble" },
+  { name: "Monday.com", value: "monday" },
+  { name: "Notion", value: "notion" },
+  { name: "Freshsales", value: "freshsales" },
+  { name: "Bitrix24", value: "bitrix24" },
+  { name: "Other", value: "other" },
 ];
 
 const languages = [
   { name: "English", value: "en" },
   { name: "Arabic", value: "ar" },
+  { name: "English + Arabic", value: "en_ar" },
 ];
 
 const ContactUsForm = ({ className }: ContactMeFormProps) => {
