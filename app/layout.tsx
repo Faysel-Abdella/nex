@@ -149,6 +149,8 @@ export default async function RootLayout({
   const defaultFont = locale === "ar" ? sfArabic : sfPro;
 
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const pixelId = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID;
+
   return (
     <html lang={locale} dir={isRTL ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>
