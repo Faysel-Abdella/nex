@@ -79,14 +79,15 @@ export default function HeroSection() {
              lg:max-w-88"
             >
               {/* Brain visualization */}
-              <div className="relative w-full aspect-square rounded-full overflow-hidden animate-pulse">
-                <Image
-                  src="/brain.png"
-                  alt="Neural network brain visualization"
-                  fill
-                  className="object-cover object-bottom opacity-75"
-                  priority
-                  quality={100}
+              <div className="relative w-full aspect-square   overflow-hidden ">
+                <video
+                  src="/orb_clip.webm"
+                  className="w-full h-full object-cover  
+             mask-[radial-gradient(circle_at_center,black_60%,transparent_100%)]
+             [-webkit-mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]"
+                  autoPlay
+                  muted
+                  loop
                 />
               </div>
             </div>
