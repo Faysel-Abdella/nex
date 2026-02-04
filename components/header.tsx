@@ -86,10 +86,10 @@ function MobileMenuPanel({
     <div
       className={cn(
         "lg:hidden bg-background transition-all overflow-hidden ",
-        isOpen ? "h-56" : "h-0",
+        isOpen ? "h-62" : "h-0",
       )}
     >
-      <nav className="px-4 py-4 space-y-3">
+      <nav className="px-4 py-4 space-y-5">
         <button
           className="block text-sm text-gray-400 hover:text-[#00d4ff] transition-colors"
           onClick={handleScroll}
