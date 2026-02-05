@@ -9,7 +9,7 @@ import SystemModules from "./_components/system-modules";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background overflow-x-hidden space-y-24 lg:space-y-30 ">
+    <main className="min-h-screen bg-background overflow-x-hidden space-y-28 lg:space-y-30 ">
       <HeroSection />
       <YourCRM />
       <RegionalFitSection />

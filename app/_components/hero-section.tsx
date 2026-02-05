@@ -78,13 +78,15 @@ export default function HeroSection() {
               {/* Brain visualization */}
               <div className="relative w-full aspect-square   overflow-hidden ">
                 <video
-                  src="/orb_clip.webm"
+                  src="/orb_clip_mobile.webm"
                   className="w-full h-full object-cover  
              mask-[radial-gradient(circle_at_center,black_60%,transparent_100%)]
              [-webkit-mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]"
                   autoPlay
                   muted
                   loop
+                  playsInline
+                  poster="/orb_clip_poster.webp"
                 />
               </div>
             </div>

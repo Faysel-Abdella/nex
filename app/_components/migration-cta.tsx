@@ -9,7 +9,9 @@ const MigrationCTA = () => {
   return (
     <section className="section-container w-full font-sf-pro">
       <div className="max-w-2xl text-center items-center flex flex-col justify-center mx-auto ">
-        <p className=" font-medium text-3xl md:text-[40px]">{t("title")}</p>
+        <p className=" font-semibold md:font-medium text-3xl md:text-[40px]">
+          {t("title")}
+        </p>
         <p className="text-muted-foreground mt-6 max-w-xl ">{t("desc-1")}</p>
         <p className="text-muted-foreground  max-w-xl ">{t("desc-2")}</p>
 

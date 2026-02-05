@@ -35,7 +35,7 @@ export default function RegionalFitSection() {
   return (
     <section className="section-container relative  font-sf-pro">
       <div className="section-content   flex gap-10 items-center max-lg:flex-col max-lg:justify-center">
-        <p className=" text-3xl md:text-[40px] font-medium  lg:w-1/3 max-lg:text-center">
+        <p className=" text-3xl md:text-[40px]  font-semibold md:font-medium  lg:w-1/3 max-lg:text-center">
           {t("title")}
         </p>
         <div className=" w-full lg:w-2/3">

@@ -10,7 +10,7 @@ const OnTheRoadmap = () => {
     <section className="section-container">
       <div className="section-content">
         <div className="flex w-full justify-center">
-          <p className="font-medium text-3xl md:text-[40px] text-center">
+          <p className="font-semibold md:font-semibold md:font-medium text-3xl md:text-[40px] text-center">
             {t("title")}
           </p>
         </div>

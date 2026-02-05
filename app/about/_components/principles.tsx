@@ -12,7 +12,7 @@ const Principles = () => {
     <section className=" section-container ">
       <div className="section-content flex gap-10 md:gap-4 max-md:flex-col max-md:items-center ">
         <div className="md:w-1/2 flex flex-col  w-full  justify-center ">
-          <p className="font-medium text-3xl  md:text-[40px] text-start">
+          <p className="font-semibold md:font-medium text-3xl  md:text-[40px] text-start">
             {t("mainTitle")}
           </p>
           <p className="text-muted-foreground mt-6 ">{t("combines")}</p>

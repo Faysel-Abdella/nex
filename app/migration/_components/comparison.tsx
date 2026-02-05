@@ -10,7 +10,10 @@ const Comparison = () => {
   const reasons = t.raw("reasons") as string[];
 
   return (
-    <section className=" section-container ">
+    <section
+      id="migration-included"
+      className=" section-container  scroll-mt-32"
+    >
       <div className="section-content flex gap-10 max-md:flex-col max-md:items-center justify-between ">
         <div className="md:w-1/2 flex flex-col  w-full  justify-center max-w-133 ">
           <p className="font-medium text-3xl  md:text-[40px] text-start tracking-tighter">

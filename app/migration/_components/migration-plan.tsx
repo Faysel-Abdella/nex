@@ -12,7 +12,7 @@ const MigrationPlan = () => {
     <section className=" section-container ">
       <div className="section-content flex gap-10 max-md:flex-col max-md:items-center justify-between ">
         <div className="md:w-1/2 flex flex-col w-full justify-center max-w-133 ">
-          <p className="font-medium text-3xl md:text-[40px] text-start ">
+          <p className="font-semibold md:font-medium text-3xl md:text-[40px] text-start ">
             {t("title")}
           </p>
         </div>

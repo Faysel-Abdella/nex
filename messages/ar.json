@@ -399,7 +399,7 @@
         "وصول إلى ملفات التصدير (CSV) أو صلاحية مدير على نظام CRM الحالي",
         "نقطة اتصال واحدة للموافقات السريعة",
         "مراحل مسار البيع وتعريفات الصفقات (قائمة بسيطة)",
-        "30-60 دقيقة لمكالمة تحقق نهائية (اختيارية لكن موصى بها)"
+        "30-60 دقيقة لمراجعة الإعداد (اختياري). يمكن إجراؤها بشكل غير متزامن عبر واتساب أو البريد الإلكتروني حسب التفضيل."
       ]
     },
     "plan": {
@@ -484,9 +484,9 @@
         "inclusionLabel": "الأساسية:",
         "modalInclusionLabel": "يشمل",
         "summarizedFeatures": [
-          "النواة: CRM (contacts, companies, deals, tasks, calendar)، عرض خطوط الأنابيب + مؤشرات الأداء الأساسية",
-          "Unified Inbox: التواصل واجهة ثنائية (WhatsApp + Email) (EN/AR with RTL) اللغة",
-          "AI Modules: Deal Health + AI Inbox Zero + AI Priority Queue (core signals + next steps)",
+          "النواة: CRM (جهات الاتصال، الشركات، الصفقات، المهام، التقويم)، عرض خطوط الأنابيب + مؤشرات الأداء الأساسية",
+          "Unified Inbox: واجهة تواصل ثنائية (WhatsApp + البريد الإلكتروني) (تدعم العربية/الترتيب من اليمين لليسار)",
+          "AI Modules: ميزات Deal Health + AI Inbox Zero + AI Priority Queue (الإشارات الأساسية + الخطوات التالية)",
           "AI Lead Generator: رصيد 100 عملاء محتملين / شهر",
           "Ask Astrah: بيانات الأعمال متضمنة + General AI: 200 استفسار / شهر",
           "يشمل الحصة الشهرية: WhatsApp حجم أعلى متاح عبر حزم إضافية"
@@ -495,24 +495,24 @@
           {
             "title": "النواة",
             "features": [
-              "CRM (contacts, companies, deals, tasks, calendar)",
+              "CRM (جهات الاتصال، الشركات، الصفقات، المهام، التقويم)",
               "عرض خطوط الأنابيب + مؤشرات الأداء الأساسية",
-              "الأدوار والصلاحيات (basic)"
+              "الأدوار والصلاحيات (أساسية)"
             ]
           },
           {
             "title": "التواصل:",
             "features": [
-              "Unified Inbox (WhatsApp + Email)",
+              "Unified Inbox (WhatsApp + البريد الإلكتروني)",
               "واجهة عربية/إنجليزية (RTL)"
             ]
           },
           {
             "title": "الذكاء (Lite Intelligence):",
             "features": [
-              "WhatsApp Intelligence (Lite)",
-              "Deal Health (Lite)",
-              "AI Inbox Zero (Lite)",
+              "WhatsApp Intelligence (نسخة مخففة)",
+              "Deal Health (نسخة مخففة)",
+              "AI Inbox Zero (نسخة مخففة)",
               "AI Lead Generator: رصيد 100 عملاء محتملين / شهر"
             ]
           },
@@ -534,10 +534,10 @@
         "migrationNote": "(72 ساعة (قياسي))",
         "inclusionLabel": "كل شيء في خطة Starter، بالإضافة إلى:",
         "summarizedFeatures": [
-          "Smart Close: Quote/Offer + embedded e-sign (BoldSign) + الدفع عبر النقر (حيثما كان ذلك متاحاً)",
-          "Automations (Rules): قواعد + تذكيرات (Reminders) + إشعارات (Notifications)",
-          "التكاملات: Make.com (standard)",
-          "الدعم: دعم (48h standard response time)",
+          "Smart Close: عروض أسعار/عروض + توقيع إلكتروني مدمج (BoldSign) + الدفع عبر النقر (حيثما كان ذلك متاحاً)",
+          "Automations (Rules): القواعد + التذكيرات (Reminders) + الإشعارات (Notifications)",
+          "التكاملات: Make.com (قياسي)",
+          "الدعم: دعم فني (وقت استجابة قياسي 48 ساعة)",
           "AI Lead Generator: رصيد 500 عملاء محتملين / شهر",
           "بيانات الأعمال: Ask Astrah متضمنة + General AI: 1,000 استفسار / شهر"
         ],
@@ -545,25 +545,22 @@
           {
             "title": "الذكاء (Full Intelligence):",
             "features": [
-              "WhatsApp Intelligence (Full)",
-              "Deal Health (Full)",
-              "AI Inbox Zero (Full)",
+              "WhatsApp Intelligence (كامل)",
+              "Deal Health (كامل)",
+              "AI Inbox Zero (كامل)",
               "AI Priority Queue",
               "AI Lead Generator: رصيد 500 عملاء محتملين / شهر"
             ]
           },
           {
             "title": "Smart Close:",
-            "features": [
-              "Offer + payment request",
-              "Embedded e-sign (BoldSign)"
-            ]
+            "features": ["العرض + طلب الدفع", "توقيع إلكتروني مدمج (BoldSign)"]
           },
           {
             "title": "Automations:",
             "features": [
               "قواعد + تذكيرات + إشعارات (Notifications)",
-              "تكامل (Make.com (standard))"
+              "تكامل (Make.com (قياسي))"
             ]
           },
           {
@@ -584,9 +581,9 @@
         "migrationNote": "(متقدم)",
         "inclusionLabel": "كل شيء في خطة Business، بالإضافة إلى:",
         "summarizedFeatures": [
-          "Role-based access: الإدارة والتحكم control (RBAC) + رؤية المدير + لوحات التحكم ومؤشرات الأداء الرئيسية",
+          "Role-based access: التحكم في الوصول القائم على الأدوار (RBAC) + رؤية المدير + لوحات التحكم ومؤشرات الأداء الرئيسية",
           "التكاملات: Make.com + Webhooks",
-          "الدعم: دعم أولوي (24h SLA) + جلسة onboarding لمدة 1 ساعة + دعم متقدم للهجرة",
+          "الدعم: دعم ذو أولوية (اتفاقية مستوى خدمة 24 ساعة) + جلسة تهيئة (Onboarding) لمدة 1 ساعة + دعم متقدم للترحيل",
           "AI Lead Generator: رصيد 2,000 عملاء محتملين / شهر",
           "بيانات الأعمال متضمنة: Ask Astrah + General AI: 5,000 استفسار / شهر"
         ],
@@ -594,7 +591,7 @@
           {
             "title": "الإدارة والتحكم :",
             "features": [
-              "Role-based access control",
+              "التحكم في الوصول القائم على الأدوار (RBAC)",
               "رؤية المدير + الصلاحيات",
               "لوحات إدارة ومؤشرات الأداء الرئيسية"
             ]
@@ -606,9 +603,9 @@
           {
             "title": "الدعم:",
             "features": [
-              "دعم أولوي (24h response SLA)",
-              "جلسة الإعداد لمدة 1 ساعة",
-              "دعم متقدم للهجرة"
+              "دعم ذو أولوية (استجابة خلال 24 ساعة)",
+              "إعداد موجه عبر واتساب/البريد الإلكتروني (لا حاجة لمكالمات)",
+              "دعم متقدم للترحيل"
             ]
           },
           {
@@ -630,7 +627,7 @@
         "tagline": "للمنظمات الكبيرة والمجموعات القابضة.",
         "team": "للمنظمات الكبيرة والمجموعات القابضة.",
         "cta": "تحدث إلى Astrah",
-        "migrationNote": "Advanced",
+        "migrationNote": "متقدم",
         "inclusionLabel": "كل شيء في خطة Pro، بالإضافة إلى:",
         "summarizedFeatures": [
           "ضوابط على مستوى المؤسسة",
@@ -647,8 +644,8 @@
             "title": "",
             "features": [
               "ضوابط على مستوى المؤسسة",
-              "مدير نجاح مخصص",
-              "جلسات الإعداد وورش عمل مخصصة",
+              "دعم مخصص",
+              "جلسات تهيئة (Onboarding) وورش عمل مخصصة",
               "دعم التكاملات المتقدمة (Make.com + Webhooks)",
               "خيارات العلامة التجارية المخصصة (النطاق / تسجيل الدخول / العلامة التجارية)"
             ]
@@ -683,7 +680,7 @@
         "ask_astrah_general": "Ask Astrah (الذكاء الاصطناعي العام)",
         "ai_lead_generator": "AI Lead Generator",
         "smart_close": "Smart Close",
-        "priority_support": "Priority support",
+        "priority_support": "دعم ذو أولوية",
         "onboarding": "جلسة تهيئة وتدريب",
         "custom_branding": "هوية مخصصة"
       },
@@ -699,7 +696,7 @@
       }
     },
     "billingAndTrials": {
-      "title": "Billings & Trials",
+      "title": "الفوترة والتجارب المجانية",
       "billingInfo": [
         "تتوفر خطط شهرية وسنوية",
         "الفوترة السنوية = سعر 10 أشهر (≈ شهران مجانًا)",
@@ -709,7 +706,7 @@
       ]
     },
     "onRoadmap": {
-      "title": "On the Roadmap",
+      "title": "على خارطة الطريق",
       "roadmap": [
         "وكلاء الذكاء الاصطناعي (المبيعات / الدعم / التحليلات)",
         "محرك سير العمل المتقدم",
@@ -720,7 +717,7 @@
     },
     "faq": {
       "badge": "FAQ",
-      "title": "Frequently asked questions",
+      "title": "الأسئلة الشائعة",
       "questions": [
         {
           "id": "faq1",
@@ -730,7 +727,7 @@
         {
           "id": "faq2",
           "question": "ما هي \"External AI tokens\"؟",
-          "answer": "استخدام External AI محدود حسب الخطة. ميزات الذكاء الأساسية متضمنة."
+          "answer": "استخدام الذكاء الاصطناعي الخارجي (External AI) محدود حسب الخطة. ميزات الذكاء الأساسية متضمنة."
         },
         {
           "id": "faq3",

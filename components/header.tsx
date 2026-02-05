@@ -71,17 +71,16 @@ function MobileMenuPanel({
   ];
 
   const pathname = usePathname();
-  const router = useRouter();
 
-  const handleScroll = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     closeMenu();
     if (pathname === "/") {
+      e.preventDefault();
       const el = document.getElementById("product");
       el?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      router.push("/#product");
     }
   };
+
   return (
     <div
       className={cn(
@@ -90,12 +89,13 @@ function MobileMenuPanel({
       )}
     >
       <nav className="px-4 py-4 space-y-5">
-        <button
+        <Link
+          href={"/#product"}
           className="block text-sm text-gray-400 hover:text-[#00d4ff] transition-colors"
           onClick={handleScroll}
         >
           {t("product")}
-        </button>
+        </Link>
         {mobileMenuItems.map((item) => (
           <Link
             key={item.href}

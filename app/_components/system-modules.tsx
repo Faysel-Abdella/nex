@@ -141,7 +141,7 @@ const SystemModules = () => {
       className="section-container w-full font-sf-pro scroll-mt-24"
     >
       <div className="section-content flex flex-col items-center">
-        <p className="font-medium text-3xl md:text-[40px] text-center">
+        <p className="font-semibold md:font-medium text-3xl md:text-[40px] text-center">
           {t("sectionTitle")}
         </p>
         <p className="text-muted-foreground mt-6 text-center">
@@ -150,7 +150,7 @@ const SystemModules = () => {
         {isMobile ? (
           <Carousel
             opts={{ loop: true, duration: 20 }}
-            className="lg:hidden w-full mt-15"
+            className=" w-full mt-15"
             dir="ltr"
           >
             <CarouselContent className="h-min">
@@ -183,7 +183,7 @@ const SystemModules = () => {
             <CarouselDots className="-bottom-1" />
           </Carousel>
         ) : (
-          <div className="max-lg:hidden grid grid-cols-2 w-full mt-14 gap-30">
+          <div className=" grid grid-cols-2 w-full mt-14 gap-16 lg:gap-30">
             <div className="flex flex-col">
               {modules.map((module, index) => (
                 <div

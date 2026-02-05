@@ -12,7 +12,7 @@ const AboutUsCTA = () => {
     <section className="w-full  font-sf-pro">
       <div className="max-w-5xl  w-full mx-auto pt-px bg-linear-to-r from-transparent via-border to-transparent">
         <div className="bg-background section-container relative overflow-hidden  pt-20 text-center items-center flex flex-col justify-center  ">
-          <p className=" font-medium text-3xl md:text-[40px] lg:text-[48px] tracking-tighter">
+          <p className=" font-semibold md:font-medium text-3xl md:text-[40px] lg:text-[48px] tracking-tighter">
             {tHero("title")}
           </p>
           <p className="text-muted-foreground mt-6 max-w-lg ">

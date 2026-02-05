@@ -35,7 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const AboutUsPage = () => {
   return (
-    <main className="min-h-screen bg-background overflow-x-hidden space-y-24 lg:space-y-30 pt-34 md:pt-45">
+    <main className="min-h-screen bg-background overflow-x-hidden space-y-28 lg:space-y-30 pt-34 md:pt-45">
       <AboutUsHero />
       <Principles />
       <RegionalFit />

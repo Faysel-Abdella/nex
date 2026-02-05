@@ -10,12 +10,11 @@ export default function Navigation() {
   const pathname = usePathname();
   const router = useRouter();
 
-  const handleScroll = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (pathname === "/") {
+      e.preventDefault();
       const el = document.getElementById("product");
       el?.scrollIntoView({ behavior: "smooth" });
-    } else {
-      router.push("/#product");
     }
   };
   const navItems = [
@@ -26,12 +25,13 @@ export default function Navigation() {
 
   return (
     <nav className="hidden lg:flex gap-8">
-      <button
+      <Link
+        href={"/#product"}
         className=" text-foreground hover:text-cyan-400 transition-colors font-gilroy"
         onClick={handleScroll}
       >
         {t("product")}
-      </button>
+      </Link>
       {navItems.map((item) => (
         <Link
           key={item.href}

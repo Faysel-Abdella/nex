@@ -3,6 +3,7 @@ import Logo from "./logo";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import ScrollToLink from "./scroll-to-button";
 
 const footerLinks = [
   {
@@ -70,16 +71,28 @@ const Footer = () => {
               )}
               {section.links && (
                 <ul className="mt-5 flex flex-col gap-4.5">
-                  {section.links.map((link, linkIndex) => (
-                    <li key={linkIndex} className="mb-2">
-                      <Link
-                        href={link.url}
-                        className="text-white/75 hover:text-white"
-                      >
-                        {t(link.nameKey)}
-                      </Link>
-                    </li>
-                  ))}
+                  {section.links.map((link, linkIndex) =>
+                    link.url == "/#product" ? (
+                      <li key={linkIndex} className="mb-2">
+                        <ScrollToLink
+                          sectionId="product"
+                          sourcePath="/"
+                          className="text-white/75 hover:text-white"
+                        >
+                          {t(link.nameKey)}
+                        </ScrollToLink>
+                      </li>
+                    ) : (
+                      <li key={linkIndex} className="mb-2">
+                        <Link
+                          href={link.url}
+                          className="text-white/75 hover:text-white"
+                        >
+                          {t(link.nameKey)}
+                        </Link>
+                      </li>
+                    ),
+                  )}
                 </ul>
               )}
             </div>

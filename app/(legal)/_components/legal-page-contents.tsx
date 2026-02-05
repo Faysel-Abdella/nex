@@ -23,7 +23,9 @@ export default async function LegalPageContents({
   return (
     <main className="section-container">
       <div className="section-content pt-24 md:pt-32 ">
-        <p className=" text-3xl lg:text-[40px] font-medium my-12">{t(title)}</p>
+        <p className=" text-3xl lg:text-[40px] font-semibold md:font-medium my-12">
+          {t(title)}
+        </p>
         <div className="flex gap-12 max-md:flex-col-reverse">
           <article className="prose prose-invert max-w-none flex-1">
             <ReactMarkdown rehypePlugins={[rehypeSlug]}>

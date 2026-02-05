@@ -406,7 +406,7 @@
         "Access to exports (CSV) or admin access to your existing CRM",
         "One point of contact for quick approvals",
         "Your pipeline stages and deal definitions (simple list)",
-        "30-60 minutes for a final validation call (optional but recommended)"
+        "30-60 minutes for a setup review (optional). Can be done async via WhatsApp/email if preferred."
       ]
     },
     "plan": {
@@ -614,7 +614,7 @@
             "title": "Support:",
             "features": [
               "Priority support (24h response SLA)",
-              "1-hour onboarding session",
+              "Guided onboarding via WhatsApp/email (no calls required)",
               "Advanced migration support"
             ]
           },
@@ -654,7 +654,7 @@
             "title": "",
             "features": [
               "Organization-wide controls",
-              "Dedicated success manager",
+              "Dedicated support",
               "Custom onboarding & workshops",
               "Advanced integrations support (Make.com + Webhooks)",
               "Custom branding options (domain/login/branding)"

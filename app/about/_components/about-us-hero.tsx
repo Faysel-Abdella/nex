@@ -1,3 +1,4 @@
+import ScrollToLink from "@/components/scroll-to-button";
 import { Button } from "@/components/ui/button";
 import { Dot } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -30,13 +31,16 @@ const AboutUsHero = () => {
           <Button
             variant="outline"
             className=" border-white px-7 font-sf-pro text-sm shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)]  text-white/75  h-13.5 hover:border-primary rounded-md"
+            asChild
           >
-            {t("viewProduct")}
+            <ScrollToLink sectionId="product" sourcePath="/">
+              {t("viewProduct")}
+            </ScrollToLink>
           </Button>
         </div>
       </div>
       <div className="max-w-2xl text-center mx-auto mt-30">
-        <p className=" font-medium text-3xl md:text-[40px]">
+        <p className=" font-semibold md:font-medium text-3xl md:text-[40px]">
           {t("secondaryTitle")}
         </p>
         <p className="text-muted-foreground mt-6">{t("p1")}</p>

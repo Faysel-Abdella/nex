@@ -45,7 +45,7 @@ export default function RegionalFit() {
       <div className="section-content   flex gap-10 items-center flex-col justify-center">
         <div className="full  justify-center">
           <div className="max-w-127 text-center flex flex-col items-center">
-            <p className=" text-3xl md:text-[40px] font-medium   text-center">
+            <p className=" text-3xl md:text-[40px] font-semibold md:font-medium   text-center">
               {t("title")}
             </p>
             <p className="text-muted-foreground mt-5 text-center max-w-96">

@@ -36,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 const MigrationPage = () => {
   return (
-    <main className="min-h-screen bg-background overflow-x-hidden space-y-24 lg:space-y-30 pt-34 md:pt-45 ">
+    <main className="min-h-screen bg-background overflow-x-hidden space-y-28 lg:space-y-30 pt-34 md:pt-45 ">
       <MigrationHero />
       <Comparison />
       <LiveProgress />
