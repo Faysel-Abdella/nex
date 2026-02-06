@@ -127,7 +127,7 @@
       "modules": {
         "whatsapp": {
           "buttonTitle": "WhatsApp Intelligence",
-          "title": "الذكاء واتس اب",
+          "title": "WhatsApp Intelligence",
           "description": "يحول محادثات واتساب إلى أنشطة منظمة لإدارة علاقات العملاء (ملخصات، إشارات، متابعات)",
           "output": {
             "title": "المحادثة تتطلب متابعة",
@@ -137,7 +137,7 @@
         },
         "dealHealth": {
           "buttonTitle": "Deal Health",
-          "title": "صحة الصفقة",
+          "title": "Deal Health",
           "description": "يكتشف المخاطر مبكراً (الصمت + الركود) ويوصي بأفضل إجراء تالٍ.",
           "output": {
             "title": "تم رصد صمت",
@@ -157,7 +157,7 @@
         },
         "priorityQueue": {
           "buttonTitle": "AI Priority Queue",
-          "title": "قائمة أولويات الذكاء الاصطناعي",
+          "title": "AI Priority Queue",
           "description": "يُرتب ما يجب فعله الآن عبر الصفقات والمحادثات حتى لا يفوت أي شيء.",
           "output": {
             "title": "تم رصد استفسار عن الأسعار",
@@ -167,7 +167,7 @@
         },
         "leadGen": {
           "buttonTitle": "AI Lead Generator",
-          "title": "مولد الرصاص بالذكاء الاصطناعي",
+          "title": "AI Lead Generator",
           "description": "يحدد الشركات المستهدفة ويصنفها عالمياً باستخدام إشارات مُحسّنة إقليمياً وإثراء البيانات.",
           "output": {
             "title": "شركة جديدة مطابقة",
@@ -177,7 +177,7 @@
         },
         "askAstrah": {
           "buttonTitle": "Ask Astrah (Orb AI Assistant)",
-          "title": "اسأل أسترا (Orb)",
+          "title": "Ask Astrah (Orb)",
           "description": "إجابات عبر نظام إدارة علاقات العملاء (CRM) + واتساب + المستندات، مع وضع المعرفة العامة الاختياري.",
           "placeholder": "اسأل أي شيء عن صفقاتك أو خط المبيعات..."
         },
@@ -486,7 +486,7 @@
         "summarizedFeatures": [
           "النواة: CRM (جهات الاتصال، الشركات، الصفقات، المهام، التقويم)، عرض خطوط الأنابيب + مؤشرات الأداء الأساسية",
           "Unified Inbox: واجهة تواصل ثنائية (WhatsApp + البريد الإلكتروني) (تدعم العربية/الترتيب من اليمين لليسار)",
-          "AI Modules: ميزات Deal Health + AI Inbox Zero + AI Priority Queue (الإشارات الأساسية + الخطوات التالية)",
+          "وحدات الذكاء (AI Modules): ميزات Deal Health + AI Inbox Zero + AI Priority Queue (الإشارات الأساسية + الخطوات التالية)",
           "AI Lead Generator: رصيد 100 عملاء محتملين / شهر",
           "Ask Astrah: بيانات الأعمال متضمنة + General AI: 200 استفسار / شهر",
           "يشمل الحصة الشهرية: WhatsApp حجم أعلى متاح عبر حزم إضافية"
@@ -508,11 +508,11 @@
             ]
           },
           {
-            "title": "الذكاء (Lite Intelligence):",
+            "title": "الذكاء الأساسي (Lite Intelligence):",
             "features": [
-              "WhatsApp Intelligence (نسخة مخففة)",
-              "Deal Health (نسخة مخففة)",
-              "AI Inbox Zero (نسخة مخففة)",
+              "WhatsApp Intelligence (الذكاء الأساسي)",
+              "Deal Health (الأساسي)",
+              "AI Inbox Zero (الأساسي)",
               "AI Lead Generator: رصيد 100 عملاء محتملين / شهر"
             ]
           },
@@ -535,7 +535,7 @@
         "inclusionLabel": "كل شيء في خطة Starter، بالإضافة إلى:",
         "summarizedFeatures": [
           "Smart Close: عروض أسعار/عروض + توقيع إلكتروني مدمج (BoldSign) + الدفع عبر النقر (حيثما كان ذلك متاحاً)",
-          "Automations (Rules): القواعد + التذكيرات (Reminders) + الإشعارات (Notifications)",
+          "الأتمتة (Automations): القواعد (Rules) + التذكيرات (Reminders) + الإشعارات (Notifications)",
           "التكاملات: Make.com (قياسي)",
           "الدعم: دعم فني (وقت استجابة قياسي 48 ساعة)",
           "AI Lead Generator: رصيد 500 عملاء محتملين / شهر",
@@ -543,11 +543,11 @@
         ],
         "featureCategories": [
           {
-            "title": "الذكاء (Full Intelligence):",
+            "title": "الذكاء الكامل (Full Intelligence):",
             "features": [
-              "WhatsApp Intelligence (كامل)",
-              "Deal Health (كامل)",
-              "AI Inbox Zero (كامل)",
+              "WhatsApp Intelligence (الذكاء الكامل)",
+              "Deal Health (الكامل)",
+              "AI Inbox Zero (الكامل)",
               "AI Priority Queue",
               "AI Lead Generator: رصيد 500 عملاء محتملين / شهر"
             ]
@@ -557,9 +557,9 @@
             "features": ["العرض + طلب الدفع", "توقيع إلكتروني مدمج (BoldSign)"]
           },
           {
-            "title": "Automations:",
+            "title": "الأتمتة (Automations):",
             "features": [
-              "قواعد + تذكيرات + إشعارات (Notifications)",
+              "القواعد (Rules) + التذكيرات (Reminders) + الإشعارات (Notifications)",
               "تكامل (Make.com (قياسي))"
             ]
           },
@@ -581,7 +581,7 @@
         "migrationNote": "(متقدم)",
         "inclusionLabel": "كل شيء في خطة Business، بالإضافة إلى:",
         "summarizedFeatures": [
-          "Role-based access: التحكم في الوصول القائم على الأدوار (RBAC) + رؤية المدير + لوحات التحكم ومؤشرات الأداء الرئيسية",
+          "التحكم في الوصول حسب الأدوار (RBAC) + رؤية المدير + لوحات التحكم ومؤشرات الأداء الرئيسية",
           "التكاملات: Make.com + Webhooks",
           "الدعم: دعم ذو أولوية (اتفاقية مستوى خدمة 24 ساعة) + جلسة تهيئة (Onboarding) لمدة 1 ساعة + دعم متقدم للترحيل",
           "AI Lead Generator: رصيد 2,000 عملاء محتملين / شهر",
@@ -591,7 +591,7 @@
           {
             "title": "الإدارة والتحكم :",
             "features": [
-              "التحكم في الوصول القائم على الأدوار (RBAC)",
+              "التحكم في الوصول حسب الأدوار (RBAC)",
               "رؤية المدير + الصلاحيات",
               "لوحات إدارة ومؤشرات الأداء الرئيسية"
             ]
@@ -616,8 +616,8 @@
             ]
           },
           {
-            "title": "Lead Generator:",
-            "features": ["Lead Generator: رصيد عملاء محتملين 2,000 / شهر"]
+            "title": "AI Lead Generator:",
+            "features": ["AI Lead Generator: رصيد عملاء محتملين 2,000 / شهر"]
           }
         ]
       },
@@ -726,8 +726,8 @@
         },
         {
           "id": "faq2",
-          "question": "ما هي \"External AI tokens\"؟",
-          "answer": "استخدام الذكاء الاصطناعي الخارجي (External AI) محدود حسب الخطة. ميزات الذكاء الأساسية متضمنة."
+          "question": "ما هي حصص الذكاء الاصطناعي الخارجية؟ (External AI tokens)",
+          "answer": "هي رصيد لاستخدام نماذج ذكاء اصطناعي خارج Astrah (مثل ChatGPT) عند اختيار وضع \"الذكاء العام\".\nهذه الحصص تُستخدم فقط عندما تطلب من Astrah تنفيذ مهام تعتمد على نماذج خارجية.\n(يمكن ترقية الرصيد حسب الحاجة)."
         },
         {
           "id": "faq3",
