@@ -61,7 +61,7 @@ const PlanModal = ({
   return (
     <>
       <button
-        className="text-sm font-light mx-auto text-muted-foreground mt-6"
+        className="text-sm font-light mx-auto text-muted-foreground mt-6 "
         onClick={() => onOpenChange(true, id)}
       >
         {t("modalOpenButton")}
@@ -70,7 +70,7 @@ const PlanModal = ({
         <DialogTrigger asChild></DialogTrigger>
         <DialogContent
           showCloseButton={false}
-          className=" max-w-278 w-full  overflow-y-auto max-h-dvh min-h-9/10 p-0 rounded-none xl:rounded-[20px] scrollbar1"
+          className=" max-w-278 w-full  rtl:leading-relaxed overflow-y-auto max-h-dvh min-h-9/10 p-0 rounded-none xl:rounded-[20px] scrollbar1"
         >
           <DialogHeader className="hidden">
             <DialogTitle className="sr-only">Pricing plan modal</DialogTitle>
@@ -197,7 +197,7 @@ const PlanModal = ({
               )}
             </div>
             <div className=" md:w-3/5 bg-white/3 rounded-2xl p-4 md:p-6 lg:p-8 relative">
-              <div className="flex flex-col gap-5 ">
+              <div className="flex flex-col gap-6.5 ">
                 <p className="  md:text-xl font-semibold  leading-relaxed  ">
                   {modalInclusionLabel ? modalInclusionLabel : inclusionLabel}
                 </p>
