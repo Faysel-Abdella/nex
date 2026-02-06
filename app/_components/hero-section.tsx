@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import OrbVideo from "./orb-video";
 
 export default function HeroSection() {
   const t = useTranslations("landing.hero");
@@ -70,25 +71,12 @@ export default function HeroSection() {
           </div>
 
           {/* Right visual - anchored bottom-right */}
-          <div className="lg:relative h-36 lg:h-full w-full top-0  lg:-top-10 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:mt-7 max-lg:mb-10">
+          <div className="lg:relative h-36 lg:h-full w-full top-0  lg:-top-10 lg:pb-0  max-lg:justify-center max-lg:items-center max-lg:flex max-lg:mt-4 max-lg:mb-10">
             <div
               className="lg:absolute lg:bottom-0 ltr:right-0 rtl:left-0 w-full max-w-40
              lg:max-w-88"
             >
-              {/* Brain visualization */}
-              <div className="relative w-full aspect-square   overflow-hidden ">
-                <video
-                  src="/orb_clip_mobile.webm"
-                  className="w-full h-full object-cover  
-             mask-[radial-gradient(circle_at_center,black_60%,transparent_100%)]
-             [-webkit-mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  poster="/orb_clip_poster.webp"
-                />
-              </div>
+              <OrbVideo />
             </div>
           </div>
         </div>
