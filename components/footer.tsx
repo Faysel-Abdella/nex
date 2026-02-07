@@ -44,10 +44,10 @@ const Footer = () => {
           </div>
           <div className="text-white/75 max-w-65 mt-10">{t("tagline")}</div>
         </div>
-        <div className="md:w-2/3 lg:w-3/5 flex justify-between max-sm:flex-wrap max-md:gap-y-6 max-md:gap-x-6  text-sm">
+        <div className="md:w-2/3 lg:w-3/5 flex justify-between max-sm:flex-wrap max-md:gap-y-6 max-md:gap-x-6 lg:ps-20  text-sm">
           {footerLinks.map((section, index) => (
             <div key={index} className="">
-              <h3 className=" font-semibold mb-5 text-white/40">
+              <h3 className=" font-semibold text-base tracking-tight  mb-5 text-white/50">
                 {t(section.titleKey)}
               </h3>
               {section.description1Key && (

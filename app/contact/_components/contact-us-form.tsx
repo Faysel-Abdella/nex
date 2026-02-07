@@ -274,6 +274,7 @@ const ContactUsForm = ({ className }: ContactMeFormProps) => {
               placeholder={t("placeholders.email")}
               value={formData.email}
               name="email"
+              dir="ltr"
               required
               onChange={handleChange}
             />
@@ -288,6 +289,7 @@ const ContactUsForm = ({ className }: ContactMeFormProps) => {
               placeholder={t("placeholders.whatsapp")}
               value={formData.whatsappNumber}
               name="whatsappNumber"
+              dir="ltr"
               required
               onChange={handleChange}
             />

@@ -251,9 +251,9 @@
         "desc1": "Persistent intelligence layer that surfaces signals, risks, and next actions.",
         "desc2": "Not a chatbot toy. Not random guesses. Supports decisions. You decide.",
         "output": {
-          "title": "New company matched",
-          "evidence": "Tech startup · Dubai · 84/100 score",
-          "suggestion": "Draft outreach message"
+          "title": "Deal at risk",
+          "evidence": "No activity for 6 days · Sentiment dropped · Next action ready",
+          "suggestion": "Draft follow-up"
         }
       }
     },
