@@ -31,7 +31,7 @@ const PricingCTA = () => {
             {t("trial")}
             <div className="w-full h-px  mt-8 bg-linear-to-r shrink-0 from-transparent via-border to-transparent" />
           </div>
-          <Button className="mt-8 font-gilroy h-11.5 px-7" asChild>
+          <Button className="mt-8   h-11.5 px-7" asChild>
             <Link href="/pricing">{t("cta")}</Link>
           </Button>
         </GlowCard>

@@ -114,38 +114,6 @@ export const sfArabic = localFont({
   display: "swap",
 });
 
-export const gilroy = localFont({
-  src: [
-    {
-      path: "./fonts/Gilroy-Light.woff",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Gilroy-Regular.woff",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Gilroy-Medium.woff",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Gilroy-SemiBold.woff",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/Gilroy-Bold.woff",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-gilroy",
-  display: "swap",
-});
-
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -170,7 +138,7 @@ export default async function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} ${gilroy.variable} ${defaultFont.className} font-sans antialiased  text-white `}
+        className={`${poppins.variable}  ${defaultFont.className} font-sans antialiased  text-white `}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />

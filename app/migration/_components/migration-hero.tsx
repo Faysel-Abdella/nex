@@ -23,7 +23,7 @@ const MigrationHero = () => {
         </p>
         <p className="text-muted-foreground  max-w-xl ">{t("description-2")}</p>
         <div className="flex mt-10 gap-5 ">
-          <Button className=" font-gilroy h-13.5 sm:px-7" asChild>
+          <Button className="   h-13.5 sm:px-7" asChild>
             <Link href="/contact?intent=talk">
               {tHeader.rich("talkToAstrah", {
                 bold: (chunks) => <span className="font-bold">{chunks}</span>,

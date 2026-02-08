@@ -23,9 +23,7 @@ const Hero = () => {
             {t("description")}
           </p>
           <div className="flex mt-10 gap-5 ">
-            <Button className=" font-gilroy h-13.5 sm:px-7">
-              {t("primaryCta")}
-            </Button>
+            <Button className="   h-13.5 sm:px-7">{t("primaryCta")}</Button>
             <Button
               variant="outline"
               className=" border-white sm:px-7 font-sf-pro shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] text-sm text-white/75 h-13.5 hover:border-primary rounded-md"

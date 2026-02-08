@@ -14,9 +14,7 @@ const ContactUsCTA = () => {
           </p>
 
           <div className="flex mt-10 gap-5 ">
-            <Button className=" font-gilroy h-13.5 px-7">
-              {t("primaryButton")}
-            </Button>
+            <Button className="   h-13.5 px-7">{t("primaryButton")}</Button>
             <Button
               variant="outline"
               className=" border-white px-7 shadow-[inset_0_0px_20px_rgba(0,179,198,0.1)] font-sf-pro text-sm text-white/75 h-13.5 hover:border-primary rounded-md"

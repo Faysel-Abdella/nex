@@ -16,7 +16,7 @@ const PricingCTA = () => {
           <p className="text-muted-foreground mt-6 max-w-150 ">
             {t("description")}
           </p>
-          <Button className=" font-gilroy h-13.5 px-7 mt-10" asChild>
+          <Button className="   h-13.5 px-7 mt-10" asChild>
             <Link href={"/contact?intent=talk"}>{t("button")}</Link>
           </Button>
           <div className=" w-1/2 -top-20 blur-[100px] rounded-full absolute h-40 bg-white/20"></div>

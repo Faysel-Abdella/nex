@@ -27,7 +27,7 @@ export default function Navigation() {
     <nav className="hidden lg:flex gap-8">
       <Link
         href={"/#product"}
-        className=" text-foreground hover:text-cyan-400 transition-colors font-gilroy"
+        className=" text-foreground hover:text-cyan-400 transition-colors  "
         onClick={handleScroll}
       >
         {t("product")}
@@ -36,7 +36,7 @@ export default function Navigation() {
         <Link
           key={item.href}
           href={item.href}
-          className=" text-foreground hover:text-cyan-400 transition-colors font-gilroy"
+          className=" text-foreground hover:text-cyan-400 transition-colors  "
         >
           {item.label}
         </Link>
