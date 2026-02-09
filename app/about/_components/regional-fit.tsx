@@ -1,5 +1,3 @@
-"use client";
-import DepthCard from "@/components/depth-card";
 import GlowCard, { GlowCardDirections } from "@/components/glow-card";
 import StyledIcon from "@/components/styled-icon";
 import { Globe, Languages, LucideIcon } from "lucide-react";
