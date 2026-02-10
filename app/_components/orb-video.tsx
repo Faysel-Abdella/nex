@@ -6,14 +6,31 @@ import React, { useEffect, useRef, useState } from "react";
 const OrbVideo = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [loaded, setLoaded] = useState(false);
+  const [noAutoPlay, setNoAutoPlay] = useState(false);
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      videoRef.current.playbackRate = 0.75;
-      // FIX 1: Safari requires defaultMuted to be true for autoplay to work reliably
-      videoRef.current.defaultMuted = true;
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.playbackRate = 0.75;
+    video.defaultMuted = true;
+
+    // Attempt to play programmatically
+    const playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          // Autoplay started successfully!
+          setLoaded(true);
+        })
+        .catch((error) => {
+          // We still set loaded to true so the poster image shows
+          // without an ugly play button over it.
+          setNoAutoPlay(true);
+          setLoaded(true);
+        });
     }
   }, []);
 
@@ -28,27 +45,34 @@ const OrbVideo = () => {
         loaded && "opacity-100",
       )}
     >
-      <video
-        ref={videoRef}
-        src={"/orb_clip.mp4"}
-        className={cn(
-          "w-full h-full object-cover",
-          "[&::-webkit-media-controls-start-playback-button]:hidden!",
-          "[&::-webkit-media-controls-start-playback-button]:appearance-none! ",
+      {noAutoPlay ? (
+        <img
+          src={"/orb_clip_poster.webp"}
+          className="w-full h-full object-cover"
+        />
+      ) : (
+        <video
+          ref={videoRef}
+          src={"/orb_clip.mp4"}
+          onSuspend={() => console.log("suspended")}
+          className={cn(
+            "w-full h-full object-cover",
+            "[&::-webkit-media-controls-start-playback-button]:hidden!",
+            "[&::-webkit-media-controls-start-playback-button]:appearance-none! ",
 
-          "pointer-events-none ",
-          // Target the overlay play button
-          "[&::-webkit-media-controls-overlay-play-button]:hidden!",
-          "[&::-webkit-media-controls-overlay-play-button]:appearance-none!",
-        )}
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls={false}
-        disablePictureInPicture
-        poster="/orb_clip_poster.webp"
-      />
+            "pointer-events-none ",
+            // Target the overlay play button
+            "[&::-webkit-media-controls-overlay-play-button]:hidden!",
+            "[&::-webkit-media-controls-overlay-play-button]:appearance-none!",
+          )}
+          muted
+          loop
+          playsInline
+          controls={false}
+          disablePictureInPicture
+          poster="/orb_clip_poster.webp"
+        />
+      )}
     </div>
   );
 };
