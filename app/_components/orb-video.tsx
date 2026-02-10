@@ -34,7 +34,9 @@ const OrbVideo = () => {
         className={cn(
           "w-full h-full object-cover",
           "[&::-webkit-media-controls-start-playback-button]:hidden!",
-          "[&::-webkit-media-controls-start-playback-button]:appearance-none!",
+          "[&::-webkit-media-controls-start-playback-button]:appearance-none! ",
+
+          "pointer-events-none ",
           // Target the overlay play button
           "[&::-webkit-media-controls-overlay-play-button]:hidden!",
           "[&::-webkit-media-controls-overlay-play-button]:appearance-none!",
@@ -44,7 +46,6 @@ const OrbVideo = () => {
         loop
         playsInline
         controls={false}
-        // FIX 3: Disable Picture-in-Picture to prevent hover overlays
         disablePictureInPicture
         poster="/orb_clip_poster.webp"
       />
