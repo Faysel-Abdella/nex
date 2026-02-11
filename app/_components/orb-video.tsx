@@ -41,7 +41,7 @@ const OrbVideo = () => {
   return (
     <div
       className={cn(
-        "relative w-full aspect-square h-full opacity-0 transition duration-800 max-lg:scale-115 overflow-hidden mask-[radial-gradient(circle_at_center,black_60%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]",
+        "relative w-full aspect-square h-full opacity-0 transition duration-800 max-lg:scale-115 overflow-hidden mask-[radial-gradient(circle_at_center,black_100%,transparent_100%)] [-webkit-mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]",
         loaded && "opacity-100",
       )}
     >
