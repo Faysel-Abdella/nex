@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { Poppins } from "next/font/google";
@@ -155,6 +156,38 @@ export default async function RootLayout({
           />
         </NextIntlClientProvider>
       </body>
+      <Script id="chatbase" strategy="afterInteractive">
+        {`
+(function(){
+  if(typeof window.chatbase !== "function" || window.chatbase("getState") !== "initialized") {
+    window.chatbase = (...arguments) => {
+      if(!window.chatbase.q) { window.chatbase.q = [] }
+      window.chatbase.q.push(arguments)
+    };
+    window.chatbase = new Proxy(window.chatbase, {
+      get(target, prop) {
+        if (prop === "q") return target.q;
+        return (...args) => target(prop, ...args);
+      }
+    });
+  }
+
+  const onLoad = function() {
+    const script = document.createElement("script");
+    script.src = "https://www.chatbase.co/embed.min.js";
+    script.id = "DzzYLMr97B4PawwYO8Dl4";
+    script.domain = "www.chatbase.co";
+    document.body.appendChild(script);
+  };
+
+  if (document.readyState === "complete") {
+    onLoad();
+  } else {
+    window.addEventListener("load", onLoad);
+  }
+})();
+`}
+      </Script>
       {gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   );
