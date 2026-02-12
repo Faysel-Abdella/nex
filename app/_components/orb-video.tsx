@@ -34,8 +34,8 @@ const OrbVideo = () => {
     <div
       className={cn(
         "relative w-full aspect-square h-full transition duration-800 max-lg:scale-115 overflow-hidden",
-        "mask-[radial-gradient(circle_at_center,black_100%,transparent_100%)]",
-        "[-webkit-mask-image:radial-gradient(circle_at_center,black_60%,transparent_100%)]",
+        "mask-[radial-gradient(circle_at_center,black_35%,transparent_75%)]",
+        "[-webkit-mask-image:radial-gradient(circle_at_center,black_35%,transparent_75%)]",
       )}
     >
       <video
@@ -63,7 +63,7 @@ const OrbVideo = () => {
         src="/orb_clip_poster.webp"
         alt=""
         className={cn(
-          "w-full h-full object-cover absolute inset-0 transition-opacity duration-1000",
+          "w-full h-full object-cover absolute inset-0 transition-opacity duration-2000",
           autoPlayStarted ? "opacity-0" : "opacity-100",
         )}
       />
